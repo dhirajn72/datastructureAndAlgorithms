@@ -33,10 +33,6 @@ hs_err_pid*
 # Java class files
 *.class
 
-# Generated files
-bin/
-gen/
-out/
 
 # Gradle files
 .gradle/
@@ -86,5 +82,5 @@ freeline_project_description.json
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-dsmodule/pom.xml
-dsmodule/src/
+
+
