@@ -4,11 +4,11 @@ package com.java.linkedlist;
  * @author Dhiraj
  * @date 28/02/18
  */
-public class LinkedList{
+ class LinkedList{
 
     private Node head;
 
-   static  class Node {
+    static class Node {
         private int value;
         private Node next;
 
@@ -18,8 +18,6 @@ public class LinkedList{
         }
     }
 
-
-
     public void addToTheLast(Node node) {
 
         if (head == null) {
@@ -28,23 +26,21 @@ public class LinkedList{
             Node temp = head;
             while (temp.next != null)
                 temp = temp.next;
-
             temp.next = node;
         }
     }
 
-
     public void printList() {
         Node temp = head;
         while (temp != null) {
-            System.out.format("%d ", temp.value);
+            System.out.print(temp.value+",");
             temp = temp.next;
         }
         System.out.println();
     }
 
     // This function will find middle element in linkedlist
-    public Node findMiddleNode(Node head)
+    public int findMiddleElement(Node head)
     {
         Node slowPointer, fastPointer;
         slowPointer = fastPointer = head;
@@ -57,7 +53,7 @@ public class LinkedList{
             }
         }
 
-        return slowPointer;
+        return slowPointer.value;
 
     }
 
@@ -82,8 +78,8 @@ public class Test{
 
         list.printList();
         // finding middle element
-        LinkedList.Node middle= list.findMiddleNode(head);
-        System.out.println("Middle node will be: "+ middle.value);
+        int middle= list.findMiddleElement(head);
+        System.out.println("Middle node will be: "+ middle);
 
     }
 }
