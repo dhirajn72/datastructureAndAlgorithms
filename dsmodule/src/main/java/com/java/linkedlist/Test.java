@@ -8,7 +8,7 @@ public class LinkedList{
 
     private Node head;
 
-    private static class Node {
+   static  class Node {
         private int value;
         private Node next;
 
@@ -17,6 +17,8 @@ public class LinkedList{
 
         }
     }
+
+
 
     public void addToTheLast(Node node) {
 
@@ -59,21 +61,32 @@ public class LinkedList{
 
     }
 
+
+}
+
+public class Test{
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         // Creating a linked list
-        Node head=new Node(5);
+        LinkedList.Node head=new LinkedList.Node(5);
         list.addToTheLast(head);
-        list.addToTheLast(new Node(6));
-        list.addToTheLast(new Node(7));
-        list.addToTheLast(new Node(1));
-        list.addToTheLast(new Node(2));
+        list.addToTheLast(new LinkedList.Node(6));
+        list.addToTheLast(new LinkedList.Node(7));
+        list.addToTheLast(new LinkedList.Node(1));
+        list.addToTheLast(new LinkedList.Node(2));
+        list.addToTheLast(new LinkedList.Node(5));
+        //list.addToTheLast(new Node(9));
+
+
 
         list.printList();
         // finding middle element
-        Node middle= list.findMiddleNode(head);
+        LinkedList.Node middle= list.findMiddleNode(head);
         System.out.println("Middle node will be: "+ middle.value);
 
     }
-
 }
+
+
+
