@@ -80,3 +80,5 @@ freeline_project_description.json
 .idea/vcs.xml
 
 
+core/target/
+dsmodule/target/
