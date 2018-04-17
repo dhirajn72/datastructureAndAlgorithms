@@ -1,0 +1,113 @@
+********
+Reason Why Wait , Notify and NotifyAll are in Object Class.
+Here are some thoughts on why they should not be in Thread class which make sense to me :
+
+1) Wait and notify is not just normal methods or synchronization utility, more than that they are communication mechanism between two threads in Java. And Object class is correct place to make them available for every object if this mechanism is not available via any java keyword like synchronized. Remember synchronized and wait notify are two different area and don’t confuse that they are same or related. Synchronized is to provide mutual exclusion and ensuring thread safety of Java class like race condition while wait and notify are communication mechanism between two thread.
+
+
+ 
+2 )Locks are made available on per Object basis, which is another reason wait and notify is declared in Object class rather then Thread class.
+
+3) In Java in order to enter critical section of code, Threads needs lock and they wait for lock, they don't know which threads holds lock instead they just know the lock is hold by some thread and they should wait for lock instead of knowing which thread is inside the synchronized block and asking them to release lock. this analogy fits with wait and notify being on object class rather than thread in Java.
+
+
+Read more: http://javarevisited.blogspot.com/2012/02/why-wait-notify-and-notifyall-is.html#ixzz5Cqq76ZsH
+
+*******
+ThreadLocal class:
+------------------
+ThreadLocal in Java is another way to achieve thread-safety apart from writing immutable classes. If you have been writing multi-threaded or concurrent code in Java then you must be familiar with cost of synchronization or locking which can greatly affect Scalability of application, but there is no choice other than synchronize if you are sharing objects between multiple threads. ThreadLocal in Java is a different way to achieve thread-safety, it doesn't address synchronization requirement, instead it eliminates sharing by providing explicitly copy of Object to each thread. Since Object is no more shared there is no requirement of Synchronization which can improve scalability and performance of application. In this Java ThreadLocal tutorial we will see important points about ThreadLocal in Java, when to use ThreadLocal in Java and a simple Example of ThreadLocal in Java program.
+
+When to use ThreadLocal in Java
+ThreadLocal Code Example in JavaMany Java Programmer question where to use ThreadLocal in Java and some even argue benefit of ThreadLocal variable, but ThreadLocal has many genuine use cases and that's why its added in to standard Java Platform Library. I agree though until you are not in concurrent programming, you will rarely use ThreadLocal. below are some well know usage of ThreadLocal class in Java:
+
+1) ThreadLocal are fantastic to implement Per Thread Singleton classes or per thread context information like transaction id.
+
+2) You can wrap any non Thread Safe object in ThreadLocal and suddenly its uses becomes Thread-safe, as its only being used by Thread Safe. One of the classic example of ThreadLocal is sharing SimpleDateForamt. Since SimpleDateFormat is not thread safe, having a global formatter may not work but having per Thread formatter will certainly work.
+
+3) ThreadLocal provides another way to extend Thread. If you want to preserve or carry information from one method call to another you can carry it by using ThreadLocal. This can provide immense flexibility as you don't need to modify any method.
+
+
+Example:
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ *
+ * @author
+ */
+public class ThreadLocalTest {
+
+    public static void main(String args[]) throws IOException {
+        Thread t1 = new Thread(new Task());   
+        Thread t2 = new Thread( new Task());
+      
+        t1.start();
+        t2.start();       
+      
+    }
+    
+    /*
+     * Thread safe format method because every thread will use its own DateFormat
+     */
+    public static String threadSafeFormat(Date date){
+        DateFormat formatter = PerThreadFormatter.getDateFormatter();
+        return formatter.format(date);
+    }
+    
+}
+
+
+/*
+ * Thread Safe implementation of SimpleDateFormat
+ * Each Thread will get its own instance of SimpleDateFormat which will not be shared between other threads. *
+ */
+class PerThreadFormatter {
+
+    private static final ThreadLocal<SimpleDateFormat> dateFormatHolder = new ThreadLocal<SimpleDateFormat>() {
+
+        /*
+         * initialValue() is called
+         */
+        @Override
+        protected SimpleDateFormat initialValue() {
+            System.out.println("Creating SimpleDateFormat for Thread : " + Thread.currentThread().getName());
+            return new SimpleDateFormat("dd/MM/yyyy");
+        }
+    };
+
+    /*
+     * Every time there is a call for DateFormat, ThreadLocal will return calling
+     * Thread's copy of SimpleDateFormat
+     */
+    public static DateFormat getDateFormatter() {
+        return dateFormatHolder.get();
+    }
+}
+
+class Task implements Runnable{
+    
+    @Override
+    public void run() {
+        for(int i=0; i<2; i++){
+            System.out.println("Thread: " + Thread.currentThread().getName() + " Formatted Date: " + ThreadLocalTest.threadSafeFormat(new Date()) );
+        }       
+    }
+}
+
+Output:
+Creating SimpleDateFormat for Thread : Thread-0
+Creating SimpleDateFormat for Thread : Thread-1
+Thread: Thread-1 Formatted Date: 30/05/2012
+Thread: Thread-1 Formatted Date: 30/05/2012
+Thread: Thread-0 Formatted Date: 30/05/2012
+Thread: Thread-0 Formatted Date: 30/05/2012
+
+
+
+Read more: http://javarevisited.blogspot.com/2012/05/how-to-use-threadlocal-in-java-benefits.html#ixzz5CuNLEB8y
+
+**************

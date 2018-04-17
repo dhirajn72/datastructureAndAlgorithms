@@ -78,7 +78,7 @@ public class BinaryTreeNode {
     }
 
     // Returns a String representation of this BinaryTreeNode.
-    public String toString() {
+    /*public String toString() {
         if (isLeaf()) {
             return this.toString1();
         } else {
@@ -104,13 +104,22 @@ public class BinaryTreeNode {
             result += 7 * right.hashCode();
         }
         return result;
-    }
+    }*/
 
     // Returns the total number of nodes in this binary tree (include the root in the count).
     public int numberOfNodes() {
         int leftCount = this.left == null ? 0 : left.numberOfNodes();
         int rightCount = this.right == null ? 0 : right.numberOfNodes();
         return 1 + leftCount + rightCount;
+    }
+
+    @Override
+    public String toString() {
+        return "BinaryTreeNode{" +
+                "data=" + data +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
     }
 
     // Returns a new BinaryTreeNode equal to (but not the same as) this binary tree.

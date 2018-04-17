@@ -38,3 +38,14 @@ public class PostorderIterativeTraversal {
         return  res;
     }
 }
+
+/*
+        [12]
+       /    \
+   [23]     [56]
+   /  \     /  \
+ [22] [65][88] [99]
+  /
+[45]
+
+ */
