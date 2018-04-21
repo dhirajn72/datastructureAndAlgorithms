@@ -1,7 +1,7 @@
-package com.java.karumanchi.linkedlist.clients;
+package com.java.linkedlist.clients;
 
-import com.java.karumanchi.linkedlist.ListNode;
-import com.java.karumanchi.linkedlist.SinglyLinkedList;
+import com.java.linkedlist.ListNode;
+import com.java.linkedlist.SinglyLinkedList;
 
 /**
  * @author Dhiraj

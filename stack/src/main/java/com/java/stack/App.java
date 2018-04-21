@@ -1,4 +1,4 @@
-package lists;
+package com.java.stack;
 
 /**
  * Hello world!

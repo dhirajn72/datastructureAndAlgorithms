@@ -1,7 +1,7 @@
-package com.java.karumanchi.linkedlist.clients;
+package com.java.linkedlist.clients;
 
-import com.java.karumanchi.linkedlist.ListNode;
-import com.java.karumanchi.linkedlist.SinglyLinkedList2;
+import com.java.linkedlist.ListNode;
+import com.java.linkedlist.SinglyLinkedList2;
 
 /**
  * @author Dhiraj
@@ -9,7 +9,7 @@ import com.java.karumanchi.linkedlist.SinglyLinkedList2;
  */
 public class Client2 {
     public static void main(String[] args) {
-        SinglyLinkedList2  list2 =  new SinglyLinkedList2();
+        SinglyLinkedList2 list2 =  new SinglyLinkedList2();
         list2.insertAtBeginning(new ListNode(99));
         list2.insertAtBeginning(new ListNode(56));
         list2.insertAtBeginning(new ListNode(23));

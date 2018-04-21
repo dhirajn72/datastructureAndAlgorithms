@@ -1,4 +1,4 @@
-package com.java.karumanchi.linkedlist;
+package com.java.linkedlist;
 
 /**
  * @author Dhiraj
