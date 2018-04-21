@@ -4,7 +4,7 @@ package com.java.core;
  * @author Dhiraj
  * @date 15/04/18
  */
-public class Test4 {
+public class VarArgsTest {
     public static void main(String[] args) {
         A a= new A();
         a.show("dk",100);

@@ -1,9 +1,7 @@
 package com.java.ds.client;
 
 import com.java.ds.trees.*;
-import com.java.ds.trees.excercise.In_OrderIterativeTraversal;
-import com.java.ds.trees.excercise.InorderIterativeTraversal;
-import com.java.ds.trees.excercise.Pre_OrderIterativeTraversal;
+import com.java.ds.trees.excercise.MaxInBinaryTreeRecursive;
 
 /**
  * @author Dhiraj
@@ -46,10 +44,10 @@ public class Client1 {
         InorderRecursiveTraversal inorderRecursiveTraversal= new InorderRecursiveTraversal();
         inorderRecursiveTraversal.inorderRecursiveTraversal(binaryTreeNode);*/
 
-       /*System.out.println("\n*****recursive postorder(original)******");
+        /*System.out.println("\n*****recursive postorder(original)******");
         PostOrderIterative postOrderIterative= new PostOrderIterative();
         System.out.println(postOrderIterative.postorderTraversal(binaryTreeNode));
-        System.out.println("\n*****recursive postorder(mine)******");
+        /*System.out.println("\n*****recursive postorder(mine)******");
         PostorderIterativeTraversal postorderIterativeTraversal= new PostorderIterativeTraversal();
         System.out.println(postorderIterativeTraversal.postorderIterativeTraversal(binaryTreeNode));*/
 
@@ -59,12 +57,23 @@ public class Client1 {
         Pre_OrderIterativeTraversal pre_orderIterativeTraversal= new Pre_OrderIterativeTraversal();
         System.out.println(pre_orderIterativeTraversal.preorderTraversal(binaryTreeNode));*/
 
-        System.out.println("\n*****iterative inorder(original)******");
+        /*System.out.println("\n*****iterative inorder(original)******");
         InOrderIterative inOrderIterative= new InOrderIterative();
         System.out.println(inOrderIterative.inorderTraversal(binaryTreeNode));
         System.out.println("\n*****iterative inorder(mine)******");
         In_OrderIterativeTraversal in_orderIterativeTraversal= new In_OrderIterativeTraversal();
-        System.out.println(in_orderIterativeTraversal.inorderTraversal(binaryTreeNode));
+        System.out.println(in_orderIterativeTraversal.inorderTraversal(binaryTreeNode));*/
+
+
+        /*System.out.println("\n*****recursive postorder(original)******");
+        PostOrderIterative postOrderIterative= new PostOrderIterative();
+        System.out.println(postOrderIterative.postorderTraversal(binaryTreeNode));
+        System.out.println("*****recursive postorder(mine)******");
+        Post_OrderIterativeTraversal post_orderIterativeTraversal= new Post_OrderIterativeTraversal();
+        System.out.println(post_orderIterativeTraversal.postOrderIterativeTraversal(binaryTreeNode));*/
+
+        MaxInBinaryTreeRecursive maxInBinaryTree= new MaxInBinaryTreeRecursive();
+        System.out.println(maxInBinaryTree.maxInBinaryTree(binaryTreeNode));
 
     }
 }

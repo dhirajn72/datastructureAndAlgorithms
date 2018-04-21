@@ -36,9 +36,14 @@ public class ThreadJoinExample {
 
         //let all threads finish execution before finishing main thread
         try {
-            t1.join();
+            /*t1.join();
             t2.join();
+            t3.join();*/
+
             t3.join();
+            t2.join();
+            t1.join();
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -54,6 +59,7 @@ class MyRunnable implements Runnable{
         System.out.println("Thread started:::"+Thread.currentThread().getName());
         try {
             Thread.sleep(1000);
+            //Thread.currentThread().join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

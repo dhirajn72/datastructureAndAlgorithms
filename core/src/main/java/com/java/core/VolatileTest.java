@@ -12,7 +12,6 @@ import java.util.logging.Level;
  */
 
 public class VolatileTest {
-    //private static final Logger LOGGER = LoggerFactory.getLogger(VolatileTest.class);
 
     private static volatile int MY_INT = 0;
 
@@ -27,7 +26,6 @@ public class VolatileTest {
             int local_value = MY_INT;
             while ( local_value < 5){
                 if( local_value!= MY_INT){
-                    //LOGGER.info("Got Change for MY_INT : {0}", MY_INT);
                     System.out.println("Got Change for MY_INT :"+ MY_INT);
                     local_value= MY_INT;
                 }
@@ -41,7 +39,6 @@ public class VolatileTest {
 
             int local_value = MY_INT;
             while (MY_INT <5){
-                //LOGGER.info("Incrementing MY_INT to {0}", local_value+1);
                 System.out.println("Incrementing MY_INT to "+ local_value+1);
                 MY_INT = ++local_value;
                 try {

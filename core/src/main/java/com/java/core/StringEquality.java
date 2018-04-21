@@ -4,7 +4,7 @@ package com.java.core;
  * @author Dhiraj
  * @date 11/04/18
  */
-public class Test1 {
+public class StringEquality {
     public static void main(String[] args) {
         String s1= "test";
         String s2= "test";
