@@ -68,7 +68,7 @@ public class SinglyLinkedList {
         }
         return result;
     }
-    public int removeFirst() throws Exception{
+    public int removeFromBeginning() throws Exception{
         if (isEmpty())
             throw new Exception("No elements available");
         ListNode node = root;
@@ -78,4 +78,21 @@ public class SinglyLinkedList {
         return removedData;
     }
 
+
+    public int removeFromEnd() throws Exception{
+        if (isEmpty())
+            throw new Exception("No elements available");
+        ListNode p=root,q=null,temp=root.getNext();
+        if (temp==null){
+            root=null;
+            return p.getData();
+        }
+        while ((temp=p.getNext())!=null ){
+            q=p;
+            p=temp;
+        }
+        q.setNext(null);
+        return p.getData();
+
+    }
 }

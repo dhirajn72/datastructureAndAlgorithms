@@ -22,14 +22,18 @@ public class Client3 {
         //list.insert(1000,34);
         list.insert(1000,3);
         System.out.println(list);
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeFirst());
-        //System.out.println(list.removeFirst()); //java.lang.Exception: No elements available
+        /*System.out.println(list.removeFromBeginning());
+        System.out.println(list.removeFromBeginning());
+        System.out.println(list.removeFromBeginning());
+        System.out.println(list.removeFromBeginning());
+        System.out.println(list.removeFromBeginning());
+        System.out.println(list.removeFromBeginning());
+        System.out.println(list.removeFromBeginning());*/
+        //System.out.println(list.removeFromBeginning()); //java.lang.Exception: No elements available
+
+        System.out.println("****");
+        System.out.println(list.removeFromEnd());
+        System.out.println(list.removeFromEnd());
 
         System.out.println("*****");
         System.out.println(list);
