@@ -96,4 +96,20 @@ public class DoublyLinkedList {
         }
         return result+"]";
     }
+    public int size(){
+        return length;
+    }
+
+    public int getPosition(int data){
+        DLLNode temp= head.getNext();
+        int position=0;
+        while (temp!=null){
+            if (temp.getData()==data)
+                return position;
+            position++;
+            temp=temp.getNext();
+        }
+        return Integer.MIN_VALUE;
+
+    }
 }

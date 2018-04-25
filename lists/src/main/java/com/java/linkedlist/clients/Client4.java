@@ -19,16 +19,20 @@ public class Client4 {
         l.insertAtEnd(2000);
         l.insertAtEnd(3000);
         System.out.println(l);
-        l.remove(1);
+        /*l.remove(1);
         l.remove(2);
         l.remove(3);
         l.remove(4);
         l.remove(5);
         l.remove(6);
         l.remove(7);
-        l.remove(8);
+        l.remove(8);*/
         //l.remove(0); //returns [] because no elements found in list
         System.out.println(l);
+        System.out.println(l.getPosition(100));
+        System.out.println(l.getPosition(3000));
+        System.out.println(l.getPosition(78));
+
 
     }
 }
