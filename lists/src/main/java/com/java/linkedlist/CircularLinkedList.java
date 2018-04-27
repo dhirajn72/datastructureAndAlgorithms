@@ -76,7 +76,7 @@ public class CircularLinkedList {
         return result+"]";
     }
 
-    public int remove(int data){
+   /* public int remove(int data){
         if (isEmpty())
             return Integer.MIN_VALUE;
         CLLNode finger=tail.getNext();
@@ -100,7 +100,41 @@ public class CircularLinkedList {
             return finger.getData();
         }
         return Integer.MIN_VALUE;
-    }
+    }*/
+
+   public int remove(int data){
+       int removed=Integer.MIN_VALUE;
+       if (isEmpty())
+           return removed;
+       CLLNode finger= tail.getNext();
+       CLLNode prev= tail;
+       int compares;
+       for (compares=0;compares<length && (!(finger.getData()==data));compares++){
+           prev=finger;
+           finger=finger.getNext();
+       }
+       if (finger.getData()==data){
+           if (finger==tail.getNext()){
+               tail=null;
+           }
+           else {
+               if (finger==tail)
+                   tail=prev;
+               prev.setNext(prev.getNext().getNext());
+
+           }
+           //removed=finger.getData();
+           length--;
+           finger.setNext(null);
+           return finger.getData();
+
+       }
+       return removed;
+   }
+
+
+
+
     public boolean contains(int data){
         if (isEmpty())
             return Boolean.FALSE;

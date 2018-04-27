@@ -77,8 +77,6 @@ public class SinglyLinkedList {
         length--;
         return removedData;
     }
-
-
     public int removeFromEnd() throws Exception{
         if (isEmpty())
             throw new Exception("No elements available");
@@ -93,6 +91,5 @@ public class SinglyLinkedList {
         }
         q.setNext(null);
         return p.getData();
-
     }
 }

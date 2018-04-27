@@ -11,7 +11,7 @@ public class Client5 {
         CircularLinkedList l = new CircularLinkedList();
         l.add(10);
         l.add(23);
-        l.add(45);
+        /*l.add(45);
         l.add(54);
         l.add(40);
         l.add(70);
@@ -20,11 +20,11 @@ public class Client5 {
         System.out.println(l.size());
         l.addToTail(100);
         System.out.println(l);
-        l.addToHead(111);
+        l.addToHead(111);*/
         System.out.println(l);
-        System.out.println("Removed::::" + l.remove(100));
+        System.out.println("Removed::::" + l.remove(10));
         System.out.println(l);
-        System.out.println(l.contains(40));
+       // System.out.println(l.contains(40));
 
 
     }
