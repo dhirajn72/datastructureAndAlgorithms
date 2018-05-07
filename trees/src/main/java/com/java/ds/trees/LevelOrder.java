@@ -25,7 +25,7 @@ public class LevelOrder {
 			} else {
 				ArrayList<Integer> c_curr = new ArrayList<Integer>(curr);
 				res.add(c_curr);
-				curr.clear(); // Java will clear the reference, so have to new an new ArrayList. 
+				curr.clear(); // Java will clear the reference, so have to new an new ArrayList.
 				// completion of a level;
 				if (!q.isEmpty())
 					q.offer(null);
