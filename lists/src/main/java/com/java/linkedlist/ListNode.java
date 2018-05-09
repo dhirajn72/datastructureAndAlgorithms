@@ -22,6 +22,7 @@ public class ListNode {
     }
 
     public void setNext(ListNode node){
+        System.out.println("****in loop");
         this.next=node;
     }
 

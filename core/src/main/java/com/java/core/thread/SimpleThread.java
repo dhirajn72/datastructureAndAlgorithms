@@ -24,7 +24,7 @@ package com.java.core.thread;
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
  * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR Questions PARTICULAR
  * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
@@ -54,7 +54,7 @@ public class SimpleThread {
                     "Mares eat oats",
                     "Does eat oats",
                     "Little lambs eat ivy",
-                    "A kid will eat ivy too"
+                    "Questions kid will eat ivy too"
             };
             try {
                 for (int i = 0;

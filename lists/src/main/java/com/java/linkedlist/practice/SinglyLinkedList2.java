@@ -2,6 +2,8 @@ package com.java.linkedlist.practice;
 
 import com.java.linkedlist.ListNode;
 
+import java.util.HashSet;
+
 /**
  * @author Dhiraj
  * @date 07/05/18
@@ -89,6 +91,10 @@ public class SinglyLinkedList2 {
         }
     }
 
+    public ListNode getRoot() {
+        return root;
+    }
+
     public int remove(int position) throws Exception {
         if (isEmpty()) {
             throw new Exception("Empty List !!");
@@ -121,7 +127,33 @@ public class SinglyLinkedList2 {
         while (temp != null) {
             result = result + temp.getData() + ",";
             temp = temp.getNext();
+            System.out.println("In loop:::::");
         }
         return result;
+    }
+
+    public int findNthNodeFromEnd(int index) throws Exception{
+        if (index<0)throw new Exception("Negative index");
+        if (index>length)throw new Exception("Index Not found!");
+        else {
+            int indexOfElement=length-index;
+            ListNode temp= root;
+            for (int i=0;i<indexOfElement;i++){
+                temp=temp.getNext();
+            }
+            return temp.getData();
+        }
+    }
+
+    public boolean detectLoop(ListNode list) {
+        ListNode node=list;
+        HashSet<ListNode> nodes= new HashSet<>();
+        while (node!=null){
+            if (nodes.contains(node))
+                return true;
+            nodes.add(node);
+            node=node.getNext();
+        }
+        return  false;
     }
 }
