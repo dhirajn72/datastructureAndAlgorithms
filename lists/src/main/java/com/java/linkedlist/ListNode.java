@@ -22,7 +22,7 @@ public class ListNode {
     }
 
     public void setNext(ListNode node){
-        System.out.println("****in loop");
+        //System.out.println("****in loop");
         this.next=node;
     }
 
@@ -30,11 +30,11 @@ public class ListNode {
         return this.next;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "ListNode{" +
                 "data=" + data +
                 ", next=" + next +
                 '}';
-    }
+    }*/
 }

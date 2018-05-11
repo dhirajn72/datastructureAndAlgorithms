@@ -120,7 +120,7 @@ public class SinglyLinkedList2 {
         }
     }
 
-    @Override
+    /*@Override
     public String toString() {
         String result = "";
         ListNode temp = root;
@@ -130,7 +130,7 @@ public class SinglyLinkedList2 {
             System.out.println("In loop:::::");
         }
         return result;
-    }
+    }*/
 
     public int findNthNodeFromEnd(int index) throws Exception{
         if (index<0)throw new Exception("Negative index");

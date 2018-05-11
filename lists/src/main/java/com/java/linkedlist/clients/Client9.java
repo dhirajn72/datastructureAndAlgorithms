@@ -2,6 +2,10 @@ package com.java.linkedlist.clients;
 
 import com.java.linkedlist.ListNode;
 import com.java.linkedlist.practice.SinglyLinkedList2;
+import com.java.linkedlist.questions.FindHeadOfLoopInList;
+import com.java.linkedlist.questions.FindLengthOfLoopInlist;
+import com.java.linkedlist.questions.FindLoopInLinkedList;
+import com.java.linkedlist.questions.InsertInSortedList;
 
 /**
  * @author Dhiraj
@@ -19,7 +23,7 @@ public class Client9 {
         l.insertAtHead(21);
         l.insertAtTail(100);
         l.insertAtTail(200);
-        l.getRoot().getNext().getNext().getNext().setNext(l.getRoot());
+        //l.getRoot().getNext().getNext().getNext().setNext(l.getRoot());
 
         //l.insertAtTail(300);
         /*l.insert(1000,3);
@@ -38,8 +42,28 @@ public class Client9 {
         //System.out.println(l.findNthNodeFromEnd(4));*/
 
         // Detect loop in List
-        System.out.println(l.detectLoop(l.getRoot()));
+        //System.out.println(new FindLoopInLinkedList().loopExists(l.getRoot()));
+        /*System.out.println(new FindHeadOfLoopInList().findHeadOfLoop(l.getRoot()));
+        System.out.println(new FindHeadOfLoopInList().findHeadOfLoop(l.getRoot()));
+        System.out.println(new FindLengthOfLoopInlist().findLengthOfLoop(l.getRoot()));*/
 
+        ListNode root= new ListNode(50);
+        root.setNext(new ListNode(60));
+        root.getNext().setNext(new ListNode(70));
+        root.getNext().getNext().setNext(new ListNode(80));
+        root.getNext().getNext().getNext().setNext(new ListNode(90));
 
+        ListNode temp=root;
+        while (temp!=null){
+            System.out.print(temp.getData()+", ");
+            temp=temp.getNext();
+        }
+        System.out.println("*****");
+        ListNode addedNode1 = new InsertInSortedList().insertInSortedList(root,new ListNode(40));
+        ListNode temp1=addedNode1;
+        while (temp1!=null){
+            System.out.print(temp1.getData()+", ");
+            temp1=temp1.getNext();
+        }
     }
 }
