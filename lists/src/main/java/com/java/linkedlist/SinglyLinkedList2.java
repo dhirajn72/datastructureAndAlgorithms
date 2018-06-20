@@ -41,7 +41,6 @@ public class SinglyLinkedList2 {
             head=newNode;
         }
         else{
-            ListNode temp = head;
             ListNode newNode= new ListNode(node.getData());
             newNode.setNext(head);
             head=newNode;
