@@ -20,6 +20,7 @@ public class LevelOrderIterative {
         Queue<BinaryTreeNode> q= new LinkedList<>();
         q.offer(root);
         q.offer(null);
+
         ArrayList<Integer> curr= new ArrayList<>();
         while (!q.isEmpty()){
             BinaryTreeNode temp= q.poll();

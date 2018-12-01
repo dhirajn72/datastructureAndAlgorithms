@@ -6,7 +6,7 @@ package com.java.sort;
  */
 public class MergeSort {
 
-    public void mergeSort(int[] arr, int[] temp,int left,int right){
+    /*public void mergeSort(int[] arr, int[] temp,int left,int right){
         int mid;
         if (right>left) {
             mid = (right + left) / 2;
@@ -49,10 +49,10 @@ public class MergeSort {
             arr[right]=temp[right];
             right=right-1;
         }
-    }
+    }*/
 
 
-/*    void merge(int arr[], int left, int mid, int right) {
+   private void merge(int arr[], int left, int mid, int right) {
         int n1 = mid - left + 1;
         int n2 = right - mid;
 
@@ -97,5 +97,5 @@ public class MergeSort {
             sort(arr, m + 1, right);
             merge(arr, left, m, right);
         }
-    }*/
+    }
 }

@@ -1,5 +1,7 @@
 package com.java.core;
 
+import com.java.utils.DataUtils;
+
 import java.util.*;
 
 /**
@@ -8,12 +10,7 @@ import java.util.*;
  */
 public class MapSortByValue {
     public static void main(String[] args) {
-        Map<String,Integer> map= new HashMap<>();
-        map.put("zeplin",1);
-        map.put("apple",7);
-        map.put("violin",2);
-        map.put("box",21);
-        map.put("yack",6);
+        Map<String,Integer> map= DataUtils.getMapObject();
 
         Set<Map.Entry<String,Integer>> set=map.entrySet();
         List<Map.Entry<String,Integer>> list= new ArrayList<>(set);

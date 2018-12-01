@@ -11,8 +11,7 @@ import java.util.Arrays;
 public class Client1 {
     public static void main(String[] args) {
         //int[] arr= new int[]{98,87,10,32,31,43,56,1,5,28};
-        int[] arr= new int[]{81,12,72,35,19};
-
+        int[] arr= new int[]{81,12,72};
         //BubbleSort bubbleSort= new BubbleSort();
         //BubbleSort1 bubbleSort1= new BubbleSort1();
         //System.out.println(Arrays.toString(arr));
@@ -24,11 +23,9 @@ public class Client1 {
         //SelectionSort1 selectionSort1= new SelectionSort1();
         //System.out.println(Arrays.toString(selectionSort.selectionSort(arr)));
         //System.out.println(Arrays.toString(selectionSort1.selectionSort(arr)));
-
         //InsertionSort insertionSort= new InsertionSort();
         //System.out.println(Arrays.toString(insertionSort.insertionSort(arr)));
-
-        //MergeSort mergeSort= new MergeSort();
+        MergeSort mergeSort= new MergeSort();
         //int[] temp=new int[]{};
         //mergeSort.mergeSort(arr,arr,0,arr.length-1);
         //mergeSort.sort(arr,0,arr.length-1);
@@ -36,9 +33,9 @@ public class Client1 {
         //QuickSort quickSort= new QuickSort();
         //quickSort.sort(arr);
         //System.out.println(Arrays.toString(arr));
-
-        QuickSort2 quickSort2= new QuickSort2();
-        System.out.println(Arrays.toString(quickSort2.quickSort(arr)));
-
+        //QuickSort2 quickSort2= new QuickSort2();
+        //System.out.println(Arrays.toString(quickSort2.quickSort(arr)));
+        arr=BubbleSort_2.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

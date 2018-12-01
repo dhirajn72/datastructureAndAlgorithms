@@ -44,7 +44,6 @@ public class Deadlock {
                 System.out.println("Locked OB2, waiting for OB1");
                 synchronized (OB1){
                     System.out.println("Locked OB1, this will never execute");
-
                 }
             }
 
