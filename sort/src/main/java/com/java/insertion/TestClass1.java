@@ -25,6 +25,4 @@ public class TestClass1 {
         sort(arr);
         DataUtils.print(arr);
     }
-
-
 }
