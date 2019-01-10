@@ -18,8 +18,18 @@ public class DataUtils {
         map.put("yack",6);
         return map;
     }
-
     public static int[] getArray(){
         return new int[]{9,8,7,6,5};
+    }
+
+}
+class Test{
+    String name;
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

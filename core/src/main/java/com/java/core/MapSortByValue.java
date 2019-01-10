@@ -3,6 +3,7 @@ package com.java.core;
 import com.java.utils.DataUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author Dhiraj
@@ -23,13 +24,14 @@ public class MapSortByValue {
         });
 
         for (Map.Entry<String,Integer> ob:list){
-            System.out.println(ob.getKey()+":"+ob.getValue());
+           // System.out.println(ob.getKey()+":"+ob.getValue());
 
         }
 
+        System.out.println(map);
+        map=map.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(key,value)->{ System.out.println(key+" "+value);return key; },LinkedHashMap::new));
+        System.out.println(map);
+
     }
-
-
-
-
 }

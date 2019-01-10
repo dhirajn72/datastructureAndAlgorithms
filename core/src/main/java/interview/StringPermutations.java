@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class StringPermutations {
     public static void main(String[] args) {
-        String str="ABC";
+        String str="AB";
         //List<String> list= new ArrayList<>();
         //permutation("",str,list);
         permutation("",str);
