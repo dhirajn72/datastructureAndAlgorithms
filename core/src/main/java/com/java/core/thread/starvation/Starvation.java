@@ -8,16 +8,13 @@ import java.io.IOException;
  */
 public class Starvation {
     public static void main(String[] args) {
-        Worker2 worker= new Worker2();
-        for (int i=1;i<50;i++){
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        worker.work();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+        Worker2 worker = new Worker2();
+        for (int i = 1; i < 50; i++) {
+            new Thread(() -> {
+                try {
+                    worker.work();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }).start();
         }

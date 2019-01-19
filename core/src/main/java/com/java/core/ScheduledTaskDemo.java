@@ -13,10 +13,10 @@ public class ScheduledTaskDemo {
     public static void main(String[] args) {
 
         ScheduledExecutorService service = Executors.newScheduledThreadPool(2);
-        service.scheduleWithFixedDelay(() -> {
+        /*service.scheduleWithFixedDelay(() -> {
             System.out.println("done::" + Thread.currentThread().getName() + "::" + Instant.now());
-        }, 1, 1, TimeUnit.SECONDS);
-        service.scheduleWithFixedDelay(() -> {
+        }, 1, 1, TimeUnit.SECONDS);*/
+        service.scheduleAtFixedRate(() -> {
             System.out.println("done::" + Thread.currentThread().getName() + "::" + Instant.now());
         }, 1, 1, TimeUnit.SECONDS);
     }

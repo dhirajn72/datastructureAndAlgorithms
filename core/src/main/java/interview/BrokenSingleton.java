@@ -8,14 +8,14 @@ import java.util.concurrent.Executors;
  * @date 22/12/18
  */
 public class BrokenSingleton {
-    private static Object object = null;
+    private static  Object object = null;
 
     public static Object getObject() {
         if (object == null)
             synchronized (BrokenSingleton.class) {
                if (object == null) {
                     object = new Object();
-                    System.out.println(object);
+                    System.out.println(Thread.currentThread().getId() +" "+ object);
                 }
             }
         return object;
@@ -24,7 +24,7 @@ public class BrokenSingleton {
     public static void main(String[] args) {
 
         ExecutorService service = Executors.newFixedThreadPool(50);
-        int n = 50;
+        int n =50;
         while (n != 0) {
             service.submit(() -> System.out.println(Thread.currentThread().getId() + " " + BrokenSingleton.getObject()));
             n--;

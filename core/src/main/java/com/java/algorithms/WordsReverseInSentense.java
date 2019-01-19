@@ -7,9 +7,6 @@ import java.util.*;
  * @date 26/11/18
  */
 public class WordsReverseInSentense {
-
-
-
     public static void main(String[] args) {
         String str="Teza is a big huchhi";
         StringTokenizer tokenizer= new StringTokenizer(str," ");
