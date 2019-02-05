@@ -12,7 +12,7 @@ public class GraphDFS
 {
     private int V;   // No. of vertices
     private LinkedList<Integer> adj[];
-    GraphDFS(int v)
+    public GraphDFS(int v)
     {
         V = v;
         adj = new LinkedList[v];
@@ -20,7 +20,7 @@ public class GraphDFS
             adj[i] = new LinkedList();
     }
     //Function to add an edge into the graph
-    void addEdge(int v, int w)
+    public void addEdge(int v, int w)
     {
         adj[v].add(w);  // Add w to v's list.
     }
@@ -42,7 +42,7 @@ public class GraphDFS
     }
 
     // The function to do DFS traversal. It uses recursive DFSUtil()
-    void DFS(int v)
+    public void DFS(int v)
     {
         // Mark all the vertices as not visited(set as
         // false by default in java)

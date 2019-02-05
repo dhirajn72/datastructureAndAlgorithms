@@ -14,10 +14,10 @@ class GraphBFS
     private LinkedList<Integer> adj[]; //Adjacency Lists
     GraphBFS(int v)
     {
-        V = v;
-        adj = new LinkedList[v];
+        this.V = v;
+        this.adj = new LinkedList[v];
         for (int i=0; i<v; ++i)
-            adj[i] = new LinkedList();
+            this.adj[i] = new LinkedList();
     }
 
     // Function to add an edge into the graph
@@ -71,6 +71,7 @@ class GraphBFS
         g.addEdge(2, 0);
         g.addEdge(2, 3);
         g.addEdge(3, 3);
+       // g.addEdge(4, 0);
 
         System.out.println("Following is Breadth First Traversal "+
                 "(starting from vertex 2)");

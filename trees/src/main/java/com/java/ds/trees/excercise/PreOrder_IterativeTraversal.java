@@ -61,7 +61,8 @@ public class PreOrder_IterativeTraversal {
                    Preorder: 1,2,4,5,3,6,7
          */
 
-        ArrayList<Integer> integers= preorder_Iterative(root);
-        System.out.println(integers);
+        //ArrayList<Integer> integers= preorder_Iterative(root);
+        //System.out.println(integers);
+        System.out.println(PreOrderIterative_1.preorder(root));
     }
 }

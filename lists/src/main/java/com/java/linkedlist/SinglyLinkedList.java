@@ -170,4 +170,24 @@ public class SinglyLinkedList {
             return removedNode;
         }
     }
+
+    public static void main(String[] args) {
+        SinglyLinkedList list= new SinglyLinkedList();
+        list.insertAtBeginning(new ListNode(10));
+        list.insertAtBeginning(new ListNode(20));
+        list.insertAtBeginning(new ListNode(30));
+        list.insertAtBeginning(new ListNode(40));
+        list.insertAtBeginning(new ListNode(50));
+        list.insertAtBeginning(new ListNode(60));
+        list.print();
+        list.printInReverseOrder(list.getHead());
+
+    }
+
+    public void printInReverseOrder(ListNode list){
+        if (list==null)
+            return;
+        printInReverseOrder(list.getNext());
+        System.out.print(list.getData()+" ");
+    }
 }

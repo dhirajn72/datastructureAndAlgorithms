@@ -77,9 +77,13 @@ public class PreOrderIterativeTraversal {
 
         */
 
-        System.out.println(preOrderIterativeTraversal(binaryTreeNode));
+        //System.out.println(preOrderIterativeTraversal(binaryTreeNode));
         System.out.println(preOrderIterative(binaryTreeNode));
-        System.out.println(_preOrderIterative(binaryTreeNode));
+        //System.out.println(_preOrderIterative(binaryTreeNode));
+        //System.out.println(PostOrderIterativeTraversal_1.postOrder(binaryTreeNode));
+        //System.out.println(PostOrderIterativeTraversal_2.postOrder(binaryTreeNode));
+        System.out.println(PreOrderIterative_1.preOrder(binaryTreeNode));
+
     }
 
 
