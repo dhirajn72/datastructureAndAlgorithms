@@ -1,18 +1,19 @@
 package com.java.ds.trees.excercise;
 
+import com.java.ds.client.DataUtils;
 import com.java.ds.trees.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class LevelOrder {
-    public ArrayList<ArrayList<Integer>> levelOrder(BinaryTreeNode root) {
+    public static ArrayList<ArrayList<Integer>> levelOrder(BinaryTreeNode root) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
     	if (root == null)
 			return res;
-		// Initialization
-		Queue<BinaryTreeNode> q = new LinkedList<BinaryTreeNode>();
+		Queue<BinaryTreeNode> q = new LinkedList<>();
 		q.offer(root);
 		q.offer(null);
 		ArrayList<Integer> curr = new ArrayList<Integer>();
@@ -27,12 +28,58 @@ public class LevelOrder {
 			} else {
 				ArrayList<Integer> c_curr = new ArrayList<Integer>(curr);
 				res.add(c_curr);
-				curr.clear(); // Java will clear the reference, so have to new an new ArrayList. 
-				// completion of a level;
+				curr.clear();
 				if (!q.isEmpty())
 					q.offer(null);
 			}
 		}
 		return res;
     }
+
+    public static ArrayList<ArrayList<Integer>> levelOrderIterative(BinaryTreeNode root){
+        ArrayList<ArrayList<Integer>> res=new ArrayList<>();
+        if (root==null)
+            return res;
+        Queue<BinaryTreeNode> q= new LinkedList<>();
+        q.offer(root);
+        q.offer(null);
+
+        ArrayList<Integer> curr= new ArrayList<>();
+        while (!q.isEmpty()){
+            BinaryTreeNode temp= q.poll();
+            if (temp!=null){
+                curr.add(temp.data);
+                if (temp.left!=null)
+                    q.offer(temp.left);
+                if (temp.right!=null)
+                    q.offer(temp.right);
+            }
+            else {
+                ArrayList<Integer> c_curr=new ArrayList<>(curr);
+                res.add(c_curr);
+                curr.clear();
+                if (!q.isEmpty())
+                    q.offer(null);
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        BinaryTreeNode root= DataUtils.getBinaryTree();
+        System.out.println(root);
+        System.out.println(levelOrderIterative(root));
+
+        Queue<Integer> integers= new LinkedList<>();
+        integers.offer(1);
+        integers.offer(null);
+        integers.offer(3);
+        System.out.println(integers);
+        System.out.println(integers.poll());
+        System.out.println(integers);
+
+    }
+
+
+
 }

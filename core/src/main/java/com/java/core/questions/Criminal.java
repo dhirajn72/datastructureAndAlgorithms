@@ -5,9 +5,7 @@ package com.java.core.questions;
  * @date 23/04/18
  */
 public class Criminal {
-
     private boolean isHostageReleased=false;
-
     public synchronized void releaseHostage( Police police){
         while (!police.isMoneySent()){
             try {
@@ -20,10 +18,7 @@ public class Criminal {
         System.out.println("Hostage release");
         isHostageReleased=true;
     }
-
     public boolean isHostageReleased(){
         return isHostageReleased;
     }
-
-
 }

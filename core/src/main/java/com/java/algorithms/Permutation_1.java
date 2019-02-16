@@ -2,17 +2,16 @@ package com.java.algorithms;
 
 /**
  * @author Dhiraj
- * @date 18/01/19
+ * @date 15/02/19
  */
-public class Permutation {
+public class Permutation_1 {
     public static void main(String[] args) {
-        permutation("AB");
+        permutation("ABCD");
     }
-
     private static void permutation(String str) {
         permutation("",str);
     }
-    public static void permutation(String prefix,String str){
+    private static void permutation(String prefix, String str) {
         if (str.length()==0)
             System.out.println(prefix);
         else
