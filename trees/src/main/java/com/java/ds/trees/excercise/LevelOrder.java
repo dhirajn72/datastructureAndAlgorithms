@@ -70,13 +70,6 @@ public class LevelOrder {
         System.out.println(root);
         System.out.println(levelOrderIterative(root));
 
-        Queue<Integer> integers= new LinkedList<>();
-        integers.offer(1);
-        integers.offer(null);
-        integers.offer(3);
-        System.out.println(integers);
-        System.out.println(integers.poll());
-        System.out.println(integers);
 
     }
 

@@ -10,11 +10,10 @@ import java.util.Stack;
  * @date 26/04/18
  */
 public class PostOrder_IterativeTraversal {
-    public ArrayList<Integer> postOrderIterativeTraversal(BinaryTreeNode root) {
+    public static ArrayList<Integer> postOrderIterativeTraversal(BinaryTreeNode root) {
         ArrayList<Integer> res = new ArrayList<>();
         Stack<BinaryTreeNode> s = new Stack<>();
         s.push(root);
-
         BinaryTreeNode prev = null;
         while (!s.isEmpty()) {
             BinaryTreeNode curr = s.peek();
@@ -53,6 +52,8 @@ public class PostOrder_IterativeTraversal {
 
                    Preorder: 1,2,4,5,3,6,7
          */
+
+        System.out.println(postOrderIterativeTraversal(root));
 
 
 

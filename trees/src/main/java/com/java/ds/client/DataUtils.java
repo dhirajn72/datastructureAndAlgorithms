@@ -34,4 +34,32 @@ public class DataUtils {
 
         return binaryTreeNode;
     }
+    public static BinaryTreeNode getBinaryOrderedTree(){
+        BinaryTreeNode binaryTreeNode= new BinaryTreeNode(1);
+        binaryTreeNode.left=new BinaryTreeNode(2);
+        binaryTreeNode.left.left=new BinaryTreeNode(4);
+        binaryTreeNode.left.right=new BinaryTreeNode(5);
+        binaryTreeNode.right=new BinaryTreeNode(3);
+        binaryTreeNode.right.left=new BinaryTreeNode(6);
+        binaryTreeNode.right.right=new BinaryTreeNode(7);
+
+        /*      1
+              /    \
+            2      3
+          /   \     / \
+        4     5   6    7
+
+
+        */
+
+        //preorder: 1,2,4,5,3,6,7
+        //postorder: 4,5,2,6,7,3,1
+        //levelorder: [[1],[2,3],[4,5,6,7]]
+
+        return binaryTreeNode;
+    }
+
+
+
+
 }

@@ -14,5 +14,12 @@ public class Test {
         list.add(3);
         list.add(4);
         System.out.println(list);
+        Integer i=new Integer(10);
+        System.out.println(incrementAndGet(i));
+    }
+
+    private static Integer incrementAndGet(Integer i) {
+        i++;
+        return ++i;
     }
 }

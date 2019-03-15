@@ -1,17 +1,17 @@
 package practice;
 
+import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.ListIterator;
 
 /**
  * @author Dhiraj
- * @date 25/01/19
+ * @date 17/02/19
  */
-public class Dfs {
+public class DFS_1 {
     private int v;
     private LinkedList<Integer> adj[];
 
-    public Dfs(int v){
+    public DFS_1(int v){
         this.v=v;
         this.adj=new LinkedList[v];
         for (int i=0;i<v;i++)
@@ -20,40 +20,30 @@ public class Dfs {
 
     public void dfs(int s){
         boolean[] visited=new boolean[v];
-        dfsUtil(s,visited);
+        dfsUtils(s,visited);
+
     }
 
-    private void dfsUtil(int s, boolean[] visited) {
+    private void dfsUtils(int s, boolean[] visited) {
+        LinkedList<Integer> queue=new LinkedList<>();
         visited[s]=true;
-        System.out.print(s+" ");
-        ListIterator<Integer> iterator=adj[s].listIterator();
-        while (iterator.hasNext()){
-            int n=iterator.next();
-            if (!visited[n]){
-                dfsUtil(n,visited);
+        queue.add(s);
+        while (!queue.isEmpty()){
+            s= queue.poll();
+            Iterator<Integer> it= adj[s].listIterator();
+            while (it.hasNext()){
+                int n=it.next();
+                if (!visited[n]){
+                    visited[n]=true;
+                    dfsUtils(n,visited);
+                }
             }
         }
     }
-    public void addEdge(int v,int w){
-        this.adj[v].add(w);
-    }
 
-    public static void main(String args[])
-    {
-        Dfs g = new Dfs(6);
-        /*g.addEdge(0, 1);
-        g.addEdge(0, 2);
-        g.addEdge(1, 2);
-        g.addEdge(2, 0);
-        g.addEdge(2, 3);
-        g.addEdge(3, 3);*/
 
-        /*bfs.addEdge(0,1);
-        bfs.addEdge(1,3);
-        bfs.addEdge(3,2);
-        bfs.addEdge(2,1);
-        bfs.addEdge(2,0);*/
-
+    public static void main(String[] args) {
+        Dfs g= new Dfs(6);
         g.addEdge(0,1);
         g.addEdge(0,2);
         g.addEdge(1,0);
@@ -68,7 +58,6 @@ public class Dfs {
         g.addEdge(4,2);
         g.addEdge(4,3);
         g.addEdge(4,5);
-
         System.out.println("Following is Depth First Traversal "+
                 "(starting from vertex 2)");
 

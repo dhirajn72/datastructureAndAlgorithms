@@ -20,13 +20,14 @@ public class BinarySearch1 {
     }
 
     public static int searchRecursive(int[] arr, int low, int high, int data) {
-        int mid = low + (high - low) / 2;
+        int mid = (low + high)/ 2;
         if (low <= high) {
             if (arr[mid] == data)
                 return mid;
-            else if (arr[mid] < data)
+            else if (data > arr[mid] )
                 return searchRecursive(arr, mid + 1, high, data);
-            return searchRecursive(arr, low, mid - 1, data);
+            return
+                    searchRecursive(arr, low, mid - 1, data);
         }
         return -1;
 
