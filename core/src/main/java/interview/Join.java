@@ -18,6 +18,7 @@ public class Join {
             try {
                 System.out.println(Thread.currentThread().getName() + " is Started");
                 Thread.sleep(2000);
+                System.out.println("********");
                 System.out.println(Thread.currentThread().getName() + " is Completed");
             } catch (InterruptedException ex) {
                 Logger.getLogger(Join.class.getName()).log(Level.SEVERE, null, ex);
@@ -27,6 +28,7 @@ public class Join {
             try {
                 System.out.println(Thread.currentThread().getName() + " is Started");
                 Thread.sleep(2000);
+                System.out.println("********");
                 System.out.println(Thread.currentThread().getName() + " is Completed");
             } catch (InterruptedException ex) {
                 Logger.getLogger(Join.class.getName()).log(Level.SEVERE, null, ex);
@@ -36,6 +38,7 @@ public class Join {
             try {
                 System.out.println(Thread.currentThread().getName() + " is Started");
                 Thread.sleep(2000);
+                System.out.println("********");
                 System.out.println(Thread.currentThread().getName() + " is Completed");
             } catch (InterruptedException ex) {
                 Logger.getLogger(Join.class.getName()).log(Level.SEVERE, null, ex);
@@ -45,12 +48,13 @@ public class Join {
         t2.setName("Thread two");
         t3.setName("Thread three ");
         t1.start();
-        t2.start();
-        t3.start();
-        t1.join();
         //t2.start();
-        t2.join();
         //t3.start();
+
+        t1.join();
+        t2.start();
+        t2.join();
+        t3.start();
         t3.join();
         System.out.println(Thread.currentThread().getName() + " is Completed");
     }

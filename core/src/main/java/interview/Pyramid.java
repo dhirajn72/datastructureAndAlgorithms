@@ -7,13 +7,11 @@ package interview;
 public class Pyramid {
     public static void main(String[] args) {
         int n = 10;
-        //printTriagle(n);
-        //prntStars(n);
         printStars(n);
 
     }
 
-    /*public static void printTriagle(int n) {
+    public static void printStars(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = n - i; j > 1; j--){
                 System.out.print(" ");
@@ -25,7 +23,7 @@ public class Pyramid {
         }
     }
 
-    public static void prntStars(int n) {
+    /*public static void printStars(int n) {
         int i, j;
         for (i = 0; i < n; i++) {
             for (j = 0; j <= i; j++) {
@@ -33,9 +31,9 @@ public class Pyramid {
             }
             System.out.println();
         }
-    }
-*/
-    public static void printStars(int n) {
+    }*/
+
+   /* public static void printStars(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 2 * (n - i); j >= 0; j--) {
                 System.out.print(" ");
@@ -45,5 +43,5 @@ public class Pyramid {
             }
             System.out.println();
         }
-    }
+    }*/
 }
