@@ -9,16 +9,17 @@ import java.util.StringTokenizer;
 public class CamelCase {
     public static void main(String[] args) {
         String str="I am in bangalore";
-        getCamelCase(str);
+        System.out.println(getCamelCase(str));;
     }
 
-    private static void getCamelCase(String str) {
+    private static String getCamelCase(String str) {
         StringTokenizer token= new StringTokenizer(str," ");
         String result="";
         while (token.hasMoreTokens()){
             StringBuilder s=new StringBuilder(token.nextToken());
             String first=String.valueOf(s.charAt(0)).toUpperCase();
-            result=s.delete(0,1).insert(0,first).toString()+" ";
+            result+=s.delete(0,1).insert(0,first).toString()+" ";
         }
+        return result;
     }
 }

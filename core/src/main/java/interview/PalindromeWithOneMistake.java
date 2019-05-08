@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 public class PalindromeWithOneMistake {
     public static void main(String[] args) {
-        String str = "abcbat";
+        String str = "abcwba";
         checkPalindrome(str);
     }
 

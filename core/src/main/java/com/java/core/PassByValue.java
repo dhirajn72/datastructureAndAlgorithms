@@ -11,10 +11,11 @@ public class PassByValue {
         Test test2= new Test();
         test2.setName("Singh");
 
-        System.out.println("Before Changing::::::"+test1.getName()+" "+test2.getName());
+        //System.out.println("Before Changing::::::"+test1.getName()+" "+test2.getName());
         PassByValue passByValue= new PassByValue();
-        passByValue.passByValue(test1,test2);
-        System.out.println("Pass by Value::::::::"+test1.getName()+" "+test2.getName());
+       // passByValue.passByValue(test1,test2);
+        //System.out.println("Pass by Value::::::::"+test1.getName()+" "+test2.getName());
+
 
         System.out.println("***********");
         passByValue.passByReference(test1,test2);
@@ -26,8 +27,9 @@ public class PassByValue {
         test2=temp;
     }
     void passByReference(Test test1,Test  test2){
-        test1.setName("XXXXX");
-        test2.setName("YYYYY");
+        /*test1.setName("XXXXX");
+        test2.setName("YYYYY");*/
+        test1=new Test();
     }
 }
 
