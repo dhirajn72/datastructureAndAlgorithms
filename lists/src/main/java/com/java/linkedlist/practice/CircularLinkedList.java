@@ -1,3 +1,15 @@
+
+
+/*
+ * *
+ *
+ *  All Right Reserved@Dhiraj Singh
+ *
+ *
+ * /
+ *
+ */
+
 package com.java.linkedlist.practice;
 
 import com.java.linkedlist.CLLNode;
