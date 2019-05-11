@@ -1,5 +1,6 @@
 package com.java.utils;
 
+import com.java.algorithms.LinkedList;
 import interview.Person;
 
 import java.util.HashMap;
@@ -47,6 +48,16 @@ public class DataUtils {
                     return p;
                 }).
                 collect(Collectors.toList());
+    }
+
+    public static LinkedList getList() {
+        LinkedList list=new LinkedList();
+        list.add(10);
+        list.add(11);
+        list.add(12);
+        list.add(13);
+        list.add(14);
+        return list;
     }
 }
 
