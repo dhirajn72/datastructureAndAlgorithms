@@ -1,15 +1,3 @@
-/*Copyright (c) Dec 21, 2014 CareerMonk Publications and others.
- * E-Mail           	: info@careermonk.com 
- * Creation Date    	: 2015-01-10 06:15:46 
- * Last modification	: 2006-05-31 
-               by		: Narasimha Karumanchi 
- * File Name			: DeepestNode.java
- * Book Title			: Data Structures And Algorithms Made In Java
- * Warranty         	: This software is provided "as is" without any 
- * 							warranty; without even the implied warranty of 
- * 							merchantability or fitness for a particular purpose. 
- * 
- */
 
 
 package com.java.ds.trees;
@@ -34,4 +22,32 @@ public class DeepestNode {
         }
 		return tmp;
 	}
+
+    public static void main(String[] args) {
+/*
+                            50
+                       /        \
+                      49        51
+                     /  \           \
+                   48    57         60
+                   /     \
+                  47      58
+                            \
+                            59
+
+
+ */
+
+        BinaryTreeNode root= new BinaryTreeNode(50);
+        root.setLeft(new BinaryTreeNode(49));
+        root.getLeft().setLeft(new BinaryTreeNode(48));
+        root.getLeft().getLeft().setLeft(new BinaryTreeNode(47));
+        root.getLeft().setRight(new BinaryTreeNode(57));
+        root.getLeft().getRight().setRight(new BinaryTreeNode(58));
+        root.getLeft().getRight().getRight().setRight(new BinaryTreeNode(59));
+        root.setRight(new BinaryTreeNode(51));
+        root.getRight().setRight(new BinaryTreeNode(60));
+
+        System.out.println(new DeepestNode().deepestNodeinBinaryTree(root));
+    }
 }

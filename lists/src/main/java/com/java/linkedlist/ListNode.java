@@ -30,11 +30,11 @@ public class ListNode {
         return this.next;
     }
 
-    /*@Override
+    @Override
     public String toString() {
         return "ListNode{" +
                 "data=" + data +
                 ", next=" + next +
                 '}';
-    }*/
+    }
 }

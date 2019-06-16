@@ -81,6 +81,7 @@ public class BinarySeacrhTreeOperations {
         System.out.println("Deleted node is::"+del);
         System.out.println();
         System.out.println(root);
+        System.out.println("*****");
 
     }
 }

@@ -14,15 +14,15 @@ public class Client4 {
         BinarySearchTreeOperations binarySearchTreeOperations= new BinarySearchTreeOperations();
         binarySearchTreeOperations.insert(root,150);
         binarySearchTreeOperations.insert(root,50);
-        binarySearchTreeOperations.insert(root,40);
-        root=binarySearchTreeOperations.insert(root,45);
+        /*binarySearchTreeOperations.insert(root,40);
+        root=binarySearchTreeOperations.insert(root,45);*/
         System.out.println(root);
         System.out.println(">>>>LevelOrder traversal of BinarySearchTreeNode>>>>>");
         LevelOrderTraversalBinarySearchTreeNode levelOrderTraversalBinarySearchTreeNode= new LevelOrderTraversalBinarySearchTreeNode();
         System.out.println(levelOrderTraversalBinarySearchTreeNode.levelOrderTraversalBinarySearchTreeNode(root));
         System.out.println(">>>Deletion>>>>");
-        System.out.println(binarySearchTreeOperations.delete(root,50));
-        System.out.println(levelOrderTraversalBinarySearchTreeNode.levelOrderTraversalBinarySearchTreeNode(root));
+        System.out.println(binarySearchTreeOperations.delete(root,100));
+       // System.out.println(levelOrderTraversalBinarySearchTreeNode.levelOrderTraversalBinarySearchTreeNode(root));
 
 
     }

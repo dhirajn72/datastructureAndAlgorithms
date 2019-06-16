@@ -45,4 +45,13 @@ public class BinarySearchTreeNode {
 	public void setRight(BinarySearchTreeNode right) {
 		this.right = right;
 	}
+
+	@Override
+	public String toString() {
+		return "BinarySearchTreeNode{" +
+				"data=" + data +
+				", left=" + left +
+				", right=" + right +
+				'}';
+	}
 }

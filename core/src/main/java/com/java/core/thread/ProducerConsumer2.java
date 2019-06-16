@@ -20,11 +20,6 @@ public class ProducerConsumer2 {
         }
         this.data=data;
         System.out.println("Produced:::"+data);
-        try {
-            Thread.sleep(500);
-        }catch ( InterruptedException e){
-            e.printStackTrace();
-        }
         flag=true;
         notify();
     }
