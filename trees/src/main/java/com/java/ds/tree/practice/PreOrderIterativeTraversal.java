@@ -29,24 +29,6 @@ public class PreOrderIterativeTraversal {
         return res;
     }
 
-    public static ArrayList<Integer> preOrderIterativeTraversal(BinaryTreeNode root) {
-        ArrayList<Integer> res = new ArrayList<>();
-        if (root == null)
-            return res;
-        Stack<BinaryTreeNode> s = new Stack<>();
-        s.push(root);
-
-        while (!s.isEmpty()) {
-            BinaryTreeNode temp = s.pop();
-            res.add(temp.getData());
-            if (temp.right != null)
-                s.push(temp.right);
-            if (temp.left != null)
-                s.push(temp.left);
-        }
-        return res;
-    }
-
     public void preOrderRecursiveTraversal(BinaryTreeNode root) {
         if (root != null) {
             preOrderRecursiveTraversal(root.getLeft());

@@ -1,6 +1,7 @@
 package com.java.ds.client;
 
-import com.java.ds.trees.BinaryTreeNode;
+
+import interview.BinaryTreeNode;
 
 /**
  * @author Dhiraj
@@ -28,7 +29,7 @@ public class DataUtils {
 
         */
 
-        //preorder: 45,22,23,65,12,88,56,99
+        //preorder: 12,23,22,45,65,56,88,99
         //postorder: 45,22,65,23,88,99,56,12
         //levelorder: [[12],[23,56],[22,65,88,99],[45]]
 
@@ -54,9 +55,20 @@ public class DataUtils {
 
         //preorder: 1,2,4,5,3,6,7
         //postorder: 4,5,2,6,7,3,1
+        //Inorder: 4,2,5,1,6,3,7
         //levelorder: [[1],[2,3],[4,5,6,7]]
 
         return binaryTreeNode;
+    }
+
+    public static BinaryTreeNode getLeftSkeewedBinaryOrderedTree(){
+        BinaryTreeNode root=new BinaryTreeNode(1);
+        root.setLeft(new BinaryTreeNode(2));
+        root.getLeft().setLeft(new BinaryTreeNode(3));
+        root.getLeft().getLeft().setLeft(new BinaryTreeNode(4));
+        root.getLeft().getLeft().getLeft().setLeft(new BinaryTreeNode(5));
+        root.getLeft().getLeft().getLeft().getLeft().setLeft(new BinaryTreeNode(6));
+        return root;
     }
 
 

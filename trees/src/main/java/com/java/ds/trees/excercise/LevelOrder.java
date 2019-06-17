@@ -1,7 +1,7 @@
 package com.java.ds.trees.excercise;
 
 import com.java.ds.client.DataUtils;
-import com.java.ds.trees.BinaryTreeNode;
+import interview.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

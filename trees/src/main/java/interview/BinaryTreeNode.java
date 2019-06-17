@@ -5,9 +5,9 @@ package interview;
  * @date 18/03/19
  */
 public class BinaryTreeNode {
-    private int data;
-    private BinaryTreeNode left;
-    private BinaryTreeNode right;
+    public int data;
+    public BinaryTreeNode left;
+    public BinaryTreeNode right;
 
     public BinaryTreeNode(int data) {
         this.data = data;
@@ -34,5 +34,14 @@ public class BinaryTreeNode {
 
     public void setRight(BinaryTreeNode right) {
         this.right = right;
+    }
+
+    @Override
+    public String toString() {
+        return "BinaryTreeNode{" +
+                "data=" + data +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
     }
 }

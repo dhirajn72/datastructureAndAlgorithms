@@ -27,21 +27,7 @@ public class PreOrder_IterativeTraversal {
         }
         return res;
     }
-    public static ArrayList<Integer> preorder_Iterative(BinaryTreeNode root){
-        ArrayList<Integer> res= new ArrayList<>();
-        if (root==null)return res;
 
-        Stack<BinaryTreeNode> stack =  new Stack<>();
-        stack.push(root);
-
-        while (!stack.isEmpty()){
-            BinaryTreeNode temp=stack.pop();
-            res.add(temp.getData());
-            if (temp.right!=null)stack.push(temp.right);
-            if (temp.left!=null)stack.push(temp.left);
-        }
-        return res;
-    }
     public static void main(String[] args) {
         BinaryTreeNode root= new BinaryTreeNode(1);
         root.left=new BinaryTreeNode(2);
@@ -63,6 +49,5 @@ public class PreOrder_IterativeTraversal {
 
         //ArrayList<Integer> integers= preorder_Iterative(root);
         //System.out.println(integers);
-        System.out.println(PreOrderIterative_1.preorder(root));
     }
 }

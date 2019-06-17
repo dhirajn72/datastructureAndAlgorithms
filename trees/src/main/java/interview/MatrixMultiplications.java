@@ -29,7 +29,7 @@ public class MatrixMultiplications {
 
          */
 
-        matrixMul(arrA,arrB);
+        matrixMul(arrA,arrB); // TODO!  Incorrect, need to work on the logic
     }
 
     private static void matrixMul(int[][] arrA, int[][] arrB) {

@@ -2,8 +2,6 @@ package com.java.ds.client;
 
 import com.java.ds.tree.practice.*;
 import com.java.ds.trees.*;
-import com.java.ds.trees.excercise.In_Order_IterativeTraversal;
-import com.java.ds.trees.excercise.Post_Order_IterativeTraversal;
 import com.java.ds.trees.excercise.PreOrder_IterativeTraversal;
 
 /**
@@ -57,13 +55,7 @@ public class Client3 {
         System.out.println("*******");
         InOrderIterative inOrderIterative= new InOrderIterative();
         System.out.println(inOrderIterative.inorderTraversal(root));
-        In_Order_IterativeTraversal in_order_iterativeTraversal= new In_Order_IterativeTraversal();
-        System.out.println(in_order_iterativeTraversal.inOrderIterativeTraversal(root));
         System.out.println("*******");
-        PostOrderIterativeTraversal postOrderIterativeTraversal= new PostOrderIterativeTraversal();
-        System.out.println(postOrderIterativeTraversal.postOrderIterativeTraversal(root));
-        Post_Order_IterativeTraversal post_order_iterativeTraversal= new Post_Order_IterativeTraversal();
-        System.out.println(post_order_iterativeTraversal.postOrderterativeTraversal(root));
 
 
     }
