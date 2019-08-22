@@ -4,9 +4,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigInteger;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
 
@@ -33,9 +30,11 @@ public class FibbonacciSeries {
         File file=new File("output.txt");
         FileWriter fileWriter= new FileWriter(file);
         while (i<=n){
-            fileWriter.write(String.valueOf(first));
-            fileWriter.write(" ");
+            //fileWriter.write(String.valueOf(first));
+            //fileWriter.write(" ");
+
             BigInteger sum=first.add(second);
+            System.out.println(sum);
             first=second;
             second=sum;
             i++;

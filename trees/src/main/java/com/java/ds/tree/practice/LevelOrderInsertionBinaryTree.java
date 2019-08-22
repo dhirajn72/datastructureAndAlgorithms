@@ -9,34 +9,15 @@ import java.util.Queue;
  */
 public class LevelOrderInsertionBinaryTree {
     public static void main(String[] args) {
-        BinaryTree root = new BinaryTree(7);
-        /*insert(root, 2);
-        insert(root, 3);
-        insert(root, 4);
-        insert(root, 5);
-        insert(root, 6);
-        insert(root, 7);*/
-        /*insert(root, 6);
-        insert(root, 5);
-        insert(root, 4);
-        insert(root, 3);
-        insert(root, 2);
-        insert(root, 1);*/
+        BinaryTreeNode root = new BinaryTreeNode(7);
 
-        /*insert(root, 4);
+        insert(root, 4);
         insert(root, 6);
         insert(root, 8);
         insert(root, 3);
         insert(root, 1);
-        insert(root, 2);*/
-
-        insertAnotherWay(root, 4);
-        insertAnotherWay(root, 6);
-        insertAnotherWay(root, 8);
-        insertAnotherWay(root, 3);
-        insertAnotherWay(root, 1);
-        insertAnotherWay(root, 2);
-        insertAnotherWay(root, 100);
+        insert(root, 2);
+        insert(root, 100);
 
         System.out.println(root);
         //delete(root, 6);
@@ -45,7 +26,7 @@ public class LevelOrderInsertionBinaryTree {
 
     }
 
-    private static BinaryTree delete(BinaryTree root, int data) {
+    private static BinaryTreeNode delete(BinaryTreeNode root, int data) {
         if (root == null) {
             System.out.println("No elements to delete !");
         } else if (data < root.getData()) {
@@ -58,7 +39,7 @@ public class LevelOrderInsertionBinaryTree {
             } else if (root.getRight() == null) {
                 return root.getLeft();
             }
-            BinaryTree min = findMin(root.getRight());
+            BinaryTreeNode min = findMin(root.getRight());
             root.setData(min.getData());
             root.setRight(delete(min.getRight(), min.getData()));
         }
@@ -66,12 +47,12 @@ public class LevelOrderInsertionBinaryTree {
 
     }
 
-    public static BinaryTree findDeepestNode(BinaryTree root){
+    public static BinaryTreeNode findDeepestNode(BinaryTreeNode root){
         if (root==null)
             return null;
-        Queue<BinaryTree> q= new LinkedList<>();
+        Queue<BinaryTreeNode> q= new LinkedList<>();
         q.offer(root);
-        BinaryTree temp=null;
+        BinaryTreeNode temp=null;
         while (!q.isEmpty()){
             temp=q.poll();
             if (temp.getLeft()!=null)
@@ -82,58 +63,32 @@ public class LevelOrderInsertionBinaryTree {
         return temp;
     }
 
-    private static BinaryTree findMin(BinaryTree node) {
-        BinaryTree temp = node;
+    private static BinaryTreeNode findMin(BinaryTreeNode node) {
+        BinaryTreeNode temp = node;
         while (temp.getLeft() != null) {
             temp = temp.getLeft();
         }
         return temp;
     }
-
-    private static void insert(BinaryTree root, int data) {
-        if (root == null) {
-            root = new BinaryTree(data);
-        } else {
-            Queue<BinaryTree> q = new LinkedList<>();
-            q.add(root);
-            while (!q.isEmpty()) {
-                BinaryTree node = q.poll();
-                if (node.getLeft() != null && node.getRight() != null) {
-                    q.add(node.getLeft());
-                    q.add(node.getRight());
-                } else {
-                    if (node.getLeft() == null) {
-                        node.setLeft(new BinaryTree(data));
-                    } else {
-                        node.setRight(new BinaryTree(data));
-                    }
-                    break;
-                }
-
-            }
-        }
-    }
-
-    private static void insertAnotherWay(BinaryTree root, int data) {
+    private static void insert(BinaryTreeNode root, int data) {
         if (root==null){
-            root=new BinaryTree(data);
+            root=new BinaryTreeNode(data);
             return;
         }
-        Queue<BinaryTree>  q= new LinkedList<>();
+        Queue<BinaryTreeNode>  q= new LinkedList<>();
         q.offer(root);
-        BinaryTree temp=null;
         while (!q.isEmpty()){
-            temp=q.poll();
+            BinaryTreeNode temp=q.poll();
             if (temp.getLeft()!=null)
                 q.offer(temp.getLeft());
             else {
-                temp.setLeft(new BinaryTree(data));
+                temp.setLeft(new BinaryTreeNode(data));
                 return;
             }
             if (temp.getRight()!=null)
                 q.offer(temp.getRight());
             else {
-                temp.setRight(new BinaryTree(data));
+                temp.setRight(new BinaryTreeNode(data));
                 return;
             }
         }
@@ -143,8 +98,8 @@ public class LevelOrderInsertionBinaryTree {
 
 class BinaryTree {
     private int data;
-    private BinaryTree left;
-    private BinaryTree right;
+    private BinaryTreeNode left;
+    private BinaryTreeNode right;
 
     public BinaryTree(int data) {
         this.data = data;
@@ -158,25 +113,25 @@ class BinaryTree {
         this.data = data;
     }
 
-    public BinaryTree getLeft() {
+    public BinaryTreeNode getLeft() {
         return left;
     }
 
-    public void setLeft(BinaryTree left) {
+    public void setLeft(BinaryTreeNode left) {
         this.left = left;
     }
 
-    public BinaryTree getRight() {
+    public BinaryTreeNode getRight() {
         return right;
     }
 
-    public void setRight(BinaryTree right) {
+    public void setRight(BinaryTreeNode right) {
         this.right = right;
     }
 
     @Override
     public String toString() {
-        return "BinaryTree{" +
+        return "BinaryTreeNode{" +
                 "data=" + data +
                 ", left=" + left +
                 ", right=" + right +

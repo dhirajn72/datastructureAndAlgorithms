@@ -1,0 +1,83 @@
+Called same method:: remaining is::[3, 1, 2, 4] >>target is::5>>partial_rec is ::[]
+Remaining is::[1]
+Remaining is::[1, 2]
+Remaining is::[1, 2, 4]
+Partial rec is::[3]
+ going to call, same method:: remaining is::[1, 2, 4] >>target is::5>>partial_rec is ::[3]
+Called same method:: remaining is::[1, 2, 4] >>target is::5>>partial_rec is ::[3]
+x is:3
+Remaining is::[2]
+Remaining is::[2, 4]
+Partial rec is::[3, 1]
+ going to call, same method:: remaining is::[2, 4] >>target is::5>>partial_rec is ::[3, 1]
+Called same method:: remaining is::[2, 4] >>target is::5>>partial_rec is ::[3, 1]
+x is:3
+x is:4
+Remaining is::[4]
+Partial rec is::[3, 1, 2]
+ going to call, same method:: remaining is::[4] >>target is::5>>partial_rec is ::[3, 1, 2]
+Called same method:: remaining is::[4] >>target is::5>>partial_rec is ::[3, 1, 2]
+x is:3
+x is:4
+x is:6
+Returning 
+Partial rec is::[3, 1, 4]
+ going to call, same method:: remaining is::[] >>target is::5>>partial_rec is ::[3, 1, 4]
+Called same method:: remaining is::[] >>target is::5>>partial_rec is ::[3, 1, 4]
+x is:3
+x is:4
+x is:8
+Returning 
+Remaining is::[4]
+Partial rec is::[3, 2]
+ going to call, same method:: remaining is::[4] >>target is::5>>partial_rec is ::[3, 2]
+Called same method:: remaining is::[4] >>target is::5>>partial_rec is ::[3, 2]
+x is:3
+x is:5
+Returning 
+Partial rec is::[3, 4]
+ going to call, same method:: remaining is::[] >>target is::5>>partial_rec is ::[3, 4]
+Called same method:: remaining is::[] >>target is::5>>partial_rec is ::[3, 4]
+x is:3
+x is:7
+Returning 
+Remaining is::[2]
+Remaining is::[2, 4]
+Partial rec is::[1]
+ going to call, same method:: remaining is::[2, 4] >>target is::5>>partial_rec is ::[1]
+Called same method:: remaining is::[2, 4] >>target is::5>>partial_rec is ::[1]
+x is:1
+Remaining is::[4]
+Partial rec is::[1, 2]
+ going to call, same method:: remaining is::[4] >>target is::5>>partial_rec is ::[1, 2]
+Called same method:: remaining is::[4] >>target is::5>>partial_rec is ::[1, 2]
+x is:1
+x is:3
+Partial rec is::[1, 2, 4]
+ going to call, same method:: remaining is::[] >>target is::5>>partial_rec is ::[1, 2, 4]
+Called same method:: remaining is::[] >>target is::5>>partial_rec is ::[1, 2, 4]
+x is:1
+x is:3
+x is:7
+Returning 
+Partial rec is::[1, 4]
+ going to call, same method:: remaining is::[] >>target is::5>>partial_rec is ::[1, 4]
+Called same method:: remaining is::[] >>target is::5>>partial_rec is ::[1, 4]
+x is:1
+x is:5
+Returning 
+Remaining is::[4]
+Partial rec is::[2]
+ going to call, same method:: remaining is::[4] >>target is::5>>partial_rec is ::[2]
+Called same method:: remaining is::[4] >>target is::5>>partial_rec is ::[2]
+x is:2
+Partial rec is::[2, 4]
+ going to call, same method:: remaining is::[] >>target is::5>>partial_rec is ::[2, 4]
+Called same method:: remaining is::[] >>target is::5>>partial_rec is ::[2, 4]
+x is:2
+x is:6
+Returning 
+Partial rec is::[4]
+ going to call, same method:: remaining is::[] >>target is::5>>partial_rec is ::[4]
+Called same method:: remaining is::[] >>target is::5>>partial_rec is ::[4]
+x is:4

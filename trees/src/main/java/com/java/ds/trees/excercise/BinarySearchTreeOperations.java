@@ -19,6 +19,7 @@ public class BinarySearchTreeOperations {
         return root;
     }
 
+
     public BinarySearchTreeNode delete(BinarySearchTreeNode root, int data) {
         if (root == null){
             System.out.println("No elements in tree !!");

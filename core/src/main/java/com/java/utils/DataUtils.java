@@ -1,6 +1,7 @@
 package com.java.utils;
 
 import com.java.algorithms.LinkedList;
+import com.java.algorithms.ListNode;
 import interview.Person;
 
 import java.util.HashMap;
@@ -27,6 +28,9 @@ public class DataUtils {
     public static int[] getArray() {
         return new int[]{9, 8, 7, 6, 5};
     }
+    public static int[] getUnorderedArray() {
+        return new int[]{9, 2, 8, 1, 7, 3, 6, 5};
+    }
 
     public static int[] getSortedIntArray() {
         int[] arr = new int[100];
@@ -52,12 +56,32 @@ public class DataUtils {
 
     public static LinkedList getList() {
         LinkedList list=new LinkedList();
+
         list.add(10);
         list.add(11);
-        list.add(12);
+        /*list.add(12);
+        list.add(11);
         list.add(13);
-        list.add(14);
+        list.add(15);*/
+
+
         return list;
+    }
+
+
+    public static ListNode _getLoopedList() {
+        ListNode listNode= new ListNode(1);
+        listNode.setNext(new ListNode(2));
+        listNode.getNext().setNext(new ListNode(3));
+        listNode.getNext().getNext().setNext(new ListNode(4));
+        ListNode loop=new ListNode(5);
+        listNode.getNext().getNext().getNext().setNext(loop);
+        listNode.getNext().getNext().getNext().getNext().setNext(new ListNode(6));
+        listNode.getNext().getNext().getNext().getNext().getNext().setNext(new ListNode(7));
+        listNode.getNext().getNext().getNext().getNext().getNext().getNext().setNext(new ListNode(8));
+        listNode.getNext().getNext().getNext().getNext().getNext().getNext().getNext().setNext(loop);
+        //System.out.println(listNode);// !TODO// Don't uncomment, code phat jayega idhar
+        return listNode;
     }
 }
 

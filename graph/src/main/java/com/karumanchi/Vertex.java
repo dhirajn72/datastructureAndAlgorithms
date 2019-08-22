@@ -12,4 +12,12 @@ public class Vertex {
         this.label = label;
         this.visited=false;
     }
+
+    @Override
+    public String toString() {
+        return "Vertex{" +
+                "label=" + label +
+                ", visited=" + visited +
+                '}';
+    }
 }

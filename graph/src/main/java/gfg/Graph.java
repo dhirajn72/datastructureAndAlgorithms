@@ -49,9 +49,35 @@ public class Graph {
 
     public void callDijkstra(int source) {
         dijkstra(adjMatrix, source);
+        //dijkastra(adjMatrix,source);
     }
 
 
+    /* private void dijkstra(int matrix[][], int src) {
+         int dist[] = new int[nVerts];
+         Boolean sptSet[] = new Boolean[nVerts];
+         for (int i = 0; i < nVerts; i++) {
+             dist[i] = Integer.MAX_VALUE;
+             sptSet[i] = false;
+         }
+         dist[src] = 0;
+         for (int i = 0; i < nVerts; i++) {
+             int minIndex = minDistance(dist, sptSet);
+             sptSet[minIndex] = true;
+             for (int j = 0; j < nVerts; j++) {
+                 if (sptSet[j] == false) {
+                     if (dist[minIndex] != Integer.MAX_VALUE) {
+                         if (matrix[minIndex][j] != 0) {
+                             if (dist[minIndex] + matrix[minIndex][j] < dist[j]) {
+                                 dist[j] = dist[minIndex] + matrix[minIndex][j];
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         printSolution(dist, src);
+     }*/
     private void dijkstra(int matrix[][], int src) {
         int dist[] = new int[nVerts];
         Boolean sptSet[] = new Boolean[nVerts];
@@ -64,18 +90,52 @@ public class Graph {
             int minIndex = minDistance(dist, sptSet);
             sptSet[minIndex] = true;
             for (int j = 0; j < nVerts; j++) {
-                if (sptSet[j] == false) {
-                    if (dist[minIndex] != Integer.MAX_VALUE) {
-                        if (matrix[minIndex][j] != 0) {
-                            if (dist[minIndex] + matrix[minIndex][j] < dist[j]) {
-                                dist[j] = dist[minIndex] + matrix[minIndex][j];
-                            }
-                        }
-                    }
+                if (sptSet[j] == false && dist[minIndex] != Integer.MAX_VALUE && matrix[minIndex][j] != 0 && dist[minIndex] + matrix[minIndex][j] < dist[j]) {
+                    dist[j] = dist[minIndex] + matrix[minIndex][j];
                 }
             }
         }
         printSolution(dist, src);
+    }
+
+    private void dijkastra(int[][] adjMatrix,int src){
+        int[] dist=new int[nVerts];
+        boolean[] sptSet= new boolean[nVerts];
+        for (int i=0;i<nVerts;i++){
+            dist[i]=Integer.MAX_VALUE;
+            sptSet[i]=false;
+        }
+        dist[src]=0;
+        for (int i=0;i<nVerts;i++){
+            int minIndex=findMinDistance(dist,sptSet);
+            sptSet[minIndex]=true;
+            for (int j=0;j<nVerts;j++){
+                if (sptSet[j]==false && dist[minIndex]!=Integer.MAX_VALUE && adjMatrix[minIndex][j]!=0 && dist[minIndex]+adjMatrix[minIndex][j]<dist[j]){
+                    dist[j]=adjMatrix[minIndex][j]+dist[minIndex];
+                }
+            }
+        }
+
+        printDijKstraSolution(dist,src);
+    }
+
+    private void printDijKstraSolution(int[] dist, int src) {
+        System.out.println("*********");
+        for (int i=0;i<nVerts;i++)
+            System.out.print(vertexList[src].label+" to "+ vertexList[i].label+" >> "+dist[i]+"\n");
+
+    }
+
+
+    private int findMinDistance(int[] dist, boolean[] sptSet) {
+        int min=Integer.MAX_VALUE, minIndex=-1;
+        for (int i=0;i<nVerts;i++){
+            if (sptSet[i]==false && dist[i]<=min){
+                min=dist[i];
+                minIndex=i;
+            }
+        }
+        return minIndex;
     }
 
 }

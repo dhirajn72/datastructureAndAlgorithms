@@ -73,7 +73,7 @@ public class GraphDFS {
     }
 
     private void displayVertex(int i) {
-        System.out.println(vertexList[i].label);
+        System.out.print(vertexList[i].label+",");
     }
 
 

@@ -26,8 +26,13 @@ public class Client1 {
         myArrayList.display();
         System.out.println(myArrayList.size());
 
+
         System.out.println("Removed: "+myArrayList.remove(4));
         myArrayList.display();
+
+        MyArrayList integerMyArrayList= new MyArrayList<>();
+
+        System.out.println(new java.util.ArrayList<>().get(50));
 
 
 

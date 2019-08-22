@@ -10,10 +10,20 @@ import com.java.ds.trees.excercise.LevelOrderTraversalBinarySearchTreeNode;
  */
 public class Client4 {
     public static void main(String[] args) {
-        BinarySearchTreeNode root= new BinarySearchTreeNode(100);
+        BinarySearchTreeNode root= new BinarySearchTreeNode(20);
+        root.setLeft(new BinarySearchTreeNode(15));
+        root.getLeft().setLeft(new BinarySearchTreeNode(14));
+        root.getLeft().setRight(new BinarySearchTreeNode(19));
+        root.setRight(new BinarySearchTreeNode(30));
+        root.getRight().setLeft(new BinarySearchTreeNode(25));
+        root.getRight().setRight(new BinarySearchTreeNode(35));
+
+
+
+
         BinarySearchTreeOperations binarySearchTreeOperations= new BinarySearchTreeOperations();
-        binarySearchTreeOperations.insert(root,150);
-        binarySearchTreeOperations.insert(root,50);
+        /*binarySearchTreeOperations.insert(root,150);
+        binarySearchTreeOperations.insert(root,50);*/
         /*binarySearchTreeOperations.insert(root,40);
         root=binarySearchTreeOperations.insert(root,45);*/
         System.out.println(root);
@@ -21,8 +31,9 @@ public class Client4 {
         LevelOrderTraversalBinarySearchTreeNode levelOrderTraversalBinarySearchTreeNode= new LevelOrderTraversalBinarySearchTreeNode();
         System.out.println(levelOrderTraversalBinarySearchTreeNode.levelOrderTraversalBinarySearchTreeNode(root));
         System.out.println(">>>Deletion>>>>");
-        System.out.println(binarySearchTreeOperations.delete(root,100));
+        System.out.println(binarySearchTreeOperations.delete(root,20));
        // System.out.println(levelOrderTraversalBinarySearchTreeNode.levelOrderTraversalBinarySearchTreeNode(root));
+        System.out.println();
 
 
     }

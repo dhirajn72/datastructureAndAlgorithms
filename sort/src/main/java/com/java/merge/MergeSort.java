@@ -33,23 +33,8 @@ public class MergeSort {
             leftArray[i]=arr[low+i];
         for (int j=0;j<n2;j++)
             rightArray[j]=arr[mid+1+j];
-
         int i=0,j=0;
-
-        for (int k=low;k<high;k++){
-            if (leftArray[i]<rightArray[j]){
-                arr[k]=leftArray[i];
-                i=i+1;
-            }
-            else {
-                arr[k]=rightArray[j];
-                j=j+1;
-            }
-        }
-
-
-        /*int k = low;
-
+        int k = low;
         while (i < n1 && j < n2) {
             if (leftArray[i] < rightArray[j]) {
                 arr[k] = leftArray[i];
@@ -60,17 +45,15 @@ public class MergeSort {
             }
             k++;
         }
-
         while (i < n1) {
             arr[k] = leftArray[i];
             i++;
             k++;
         }
-
         while (j < n2) {
             arr[k] = rightArray[j];
             j++;
             k++;
-        }*/
+        }
     }
 }

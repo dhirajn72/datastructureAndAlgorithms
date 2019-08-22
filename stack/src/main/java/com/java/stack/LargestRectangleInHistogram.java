@@ -1,6 +1,7 @@
 package com.java.stack;
 
 
+import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -30,14 +31,11 @@ public class LargestRectangleInHistogram {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {2, 3, 4, 2, 1, 5, 6}; // 10
-        System.out.println(largestRectangleInHistogram(arr1));
         int[] arr2 = {2, 3, 4, 2, 1, 5, 6}; // 10
         System.out.println(largestRectangleInHistogram(arr2));
         int[] arr3 = {6, 2, 5, 4, 5, 1, 6}; // 12
         System.out.println(largestRectangleInHistogram(arr3));
-
-
+        System.out.println("******");
     }
 
 }

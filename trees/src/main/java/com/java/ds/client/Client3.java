@@ -1,8 +1,6 @@
 package com.java.ds.client;
 
-import com.java.ds.tree.practice.*;
 import com.java.ds.trees.*;
-import com.java.ds.trees.excercise.PreOrder_IterativeTraversal;
 
 /**
  * @author Dhiraj
@@ -50,8 +48,6 @@ public class Client3 {
         //TODO ! Delete me
         PreOrderIterative preOrderIterative= new PreOrderIterative();
         System.out.println(preOrderIterative.preorderTraversal(root));
-        PreOrder_IterativeTraversal preOrder_iterativeTraversal= new PreOrder_IterativeTraversal();
-        System.out.println(preOrder_iterativeTraversal.preOrder_iterativeTraversals(root));
         System.out.println("*******");
         InOrderIterative inOrderIterative= new InOrderIterative();
         System.out.println(inOrderIterative.inorderTraversal(root));

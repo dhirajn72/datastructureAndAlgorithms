@@ -16,13 +16,13 @@ public class GraphDFS_TopologicalSort {
     private int vertexCount;
     private Stack<Integer> theStack;
     private int[][] adjMatrix;
-    private LinkedList<Character> integers;
+    private Stack<Character> integers;
 
     public GraphDFS_TopologicalSort() {
         vertexList = new Vertex[maxVertices];
         adjMatrix = new int[maxVertices][maxVertices];
         theStack = new Stack<>();
-        integers= new LinkedList<>();
+        integers= new Stack<>();
     }
 
     public void addVertex(char label) {
@@ -43,7 +43,7 @@ public class GraphDFS_TopologicalSort {
             int v = getUnvisitedVertex(theStack.peek());
             if (v == -1) {
                 int popped=theStack.pop();
-                integers.add(vertexList[popped].label)
+                integers.push(vertexList[popped].label)
                 ;
             } else {
                 vertexList[v].visited = true;
@@ -77,17 +77,6 @@ public class GraphDFS_TopologicalSort {
         dfs.addVertex('D');
         dfs.addVertex('E');
 
-        dfs.addEdge(0,1);
-        dfs.addEdge(0,4);
-        dfs.addEdge(1,2);
-        dfs.addEdge(3,1);
-        dfs.addEdge(3,2);
-        dfs.addEdge(4,1);
-        dfs.addEdge(4,3);
-
-
-        // Performing topological sort, for that making DAG
-
         /*dfs.addEdge(0,1);
         dfs.addEdge(0,4);
         dfs.addEdge(1,2);
@@ -96,10 +85,22 @@ public class GraphDFS_TopologicalSort {
         dfs.addEdge(4,1);
         dfs.addEdge(4,3);*/
 
+
+        // Performing topological sort, for that making DAG
+
+        dfs.addEdge(0,1);
+        dfs.addEdge(0,4);
+        dfs.addEdge(1,2);
+        dfs.addEdge(3,1);
+        dfs.addEdge(3,2);
+        dfs.addEdge(4,1);
+        dfs.addEdge(4,3);
+
         dfs.dfs();
         //System.out.println(dfs.integers);
-        Collections.reverse(dfs.integers);
-        System.out.println(dfs.integers);
+        //Collections.reverse(dfs.integers);
+        while (!dfs.integers.isEmpty())
+        System.out.print(dfs.integers.pop()+", ");
     }
 
 }

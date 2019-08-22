@@ -32,6 +32,8 @@ public class ThreadLocalTest {
         service.shutdown();
     }
 
-    private static void  getIds(int num) { INTEGER_THREAD_LOCAL.set(num);
+    private static void  getIds(int num) {
+        System.out.println(Thread.currentThread().getId()+">>>>set>"+num);
+        INTEGER_THREAD_LOCAL.set(num);
     }
 }

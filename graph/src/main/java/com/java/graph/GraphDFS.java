@@ -24,7 +24,7 @@ public class GraphDFS
     {
         adj[v].add(w);  // Add w to v's list.
     }
-    // A function used by DFS
+    // A function used by DFS_Dijkstra_Bellman
     void DFSUtil(int v,boolean visited[])
     {
         // Mark the current node as visited and print it
@@ -41,14 +41,14 @@ public class GraphDFS
         }
     }
 
-    // The function to do DFS traversal. It uses recursive DFSUtil()
+    // The function to do DFS_Dijkstra_Bellman traversal. It uses recursive DFSUtil()
     public void DFS(int v)
     {
         // Mark all the vertices as not visited(set as
         // false by default in java)
         boolean visited[] = new boolean[V];
 
-        // Call the recursive helper function to print DFS traversal
+        // Call the recursive helper function to print DFS_Dijkstra_Bellman traversal
         DFSUtil(v, visited);
 
 

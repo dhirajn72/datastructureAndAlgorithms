@@ -2,6 +2,7 @@ package com.java.ds.client;
 
 
 import interview.BinaryTreeNode;
+import interview.TreeNode;
 
 /**
  * @author Dhiraj
@@ -36,20 +37,13 @@ public class DataUtils {
         return binaryTreeNode;
     }
     public static BinaryTreeNode getBinaryOrderedTree(){
-        BinaryTreeNode binaryTreeNode= new BinaryTreeNode(1);
-        binaryTreeNode.left=new BinaryTreeNode(2);
-        binaryTreeNode.left.left=new BinaryTreeNode(4);
-        binaryTreeNode.left.right=new BinaryTreeNode(5);
-        binaryTreeNode.right=new BinaryTreeNode(3);
-        binaryTreeNode.right.left=new BinaryTreeNode(6);
-        binaryTreeNode.right.right=new BinaryTreeNode(7);
 
-        /*      1
+         /*
+                 1
               /    \
             2      3
           /   \     / \
         4     5   6    7
-
 
         */
 
@@ -58,8 +52,53 @@ public class DataUtils {
         //Inorder: 4,2,5,1,6,3,7
         //levelorder: [[1],[2,3],[4,5,6,7]]
 
+        BinaryTreeNode binaryTreeNode= new BinaryTreeNode(1);
+        binaryTreeNode.left=new BinaryTreeNode(2);
+        binaryTreeNode.left.left=new BinaryTreeNode(4);
+     //   binaryTreeNode.left.left.left=new BinaryTreeNode(40);  // Diameter testing
+     //   binaryTreeNode.left.left.left.right=new BinaryTreeNode(400);  // Diameter testing
+
+
+        binaryTreeNode.left.right=new BinaryTreeNode(5);
+  //      binaryTreeNode.left.right.left=new BinaryTreeNode(50); // Diameter testing
+  //      binaryTreeNode.left.right.left.right=new BinaryTreeNode(500); // Diameter testing
+
+        binaryTreeNode.right=new BinaryTreeNode(3);
+        binaryTreeNode.right.left=new BinaryTreeNode(6);
+        binaryTreeNode.right.right=new BinaryTreeNode(7);
         return binaryTreeNode;
     }
+
+    public static BinaryTreeNode getBinaryMirrorOrderedTree(){
+
+         /*
+                 1
+              /    \
+            3       2
+          /   \     / \
+        7     6   5    4
+
+
+        */
+        BinaryTreeNode binaryTreeNode= new BinaryTreeNode(1);
+        binaryTreeNode.left=new BinaryTreeNode(3);
+        binaryTreeNode.left.left=new BinaryTreeNode(7);
+        //binaryTreeNode.left.left.left=new BinaryTreeNode(40);  // Diameter testing
+        //binaryTreeNode.left.left.left.right=new BinaryTreeNode(400);  // Diameter testing
+
+
+        binaryTreeNode.left.right=new BinaryTreeNode(6);
+        // binaryTreeNode.left.right.left=new BinaryTreeNode(50); // Diameter testing
+        //binaryTreeNode.left.right.left.right=new BinaryTreeNode(500); // Diameter testing
+
+        binaryTreeNode.right=new BinaryTreeNode(2);
+        binaryTreeNode.right.left=new BinaryTreeNode(5);
+        //binaryTreeNode.right.left.right=new BinaryTreeNode(9);  // Diameter testing
+        binaryTreeNode.right.right=new BinaryTreeNode(4);
+        //binaryTreeNode.left.left.right=new BinaryTreeNode(8);  // Diameter testing
+        return binaryTreeNode;
+    }
+
 
     public static BinaryTreeNode getLeftSkeewedBinaryOrderedTree(){
         BinaryTreeNode root=new BinaryTreeNode(1);
@@ -68,10 +107,74 @@ public class DataUtils {
         root.getLeft().getLeft().setLeft(new BinaryTreeNode(4));
         root.getLeft().getLeft().getLeft().setLeft(new BinaryTreeNode(5));
         root.getLeft().getLeft().getLeft().getLeft().setLeft(new BinaryTreeNode(6));
+
+
+        /**
+         *                          1
+         *                         /
+         *                        2
+         *                       /
+         *                      3
+         *                     /
+         *                    4
+         *                   /
+         *                  5
+         *                 /
+         *                6
+         *
+         *
+         */
+
+        return root;
+    }
+
+    public static BinaryTreeNode getSmallBinaryOrderedTree(){
+        BinaryTreeNode root=new BinaryTreeNode(1);
+        root.setLeft(new BinaryTreeNode(2));
+        root.setRight(new BinaryTreeNode(3));
+
+
+        /**
+         *                          1
+         *                         / \
+         *                        2  3
+         *
+         */
+
         return root;
     }
 
 
+    public static TreeNode getTreeNode() {
+        TreeNode treeNode= new TreeNode(1);
+        treeNode.left=new TreeNode(2);
+        treeNode.right=new TreeNode(3);
+        treeNode.left.left=new TreeNode(4);
+        treeNode.left.right=new TreeNode(5);
+        treeNode.right.left=new TreeNode(6);
+        treeNode.right.right=new TreeNode(7);
+        return treeNode;
+    }
 
 
+    /**
+                        10
+                8                 12
+            7        9      11         13
+
+
+     * @return root
+     */
+
+    public static BinaryTreeNode getBinarySearchTree(){
+        BinaryTreeNode root= new BinaryTreeNode(10);
+        root.setLeft(new BinaryTreeNode(8));
+        root.getLeft().setLeft(new BinaryTreeNode(7));
+        root.getLeft().setRight(new BinaryTreeNode(9));
+        root.setRight(new BinaryTreeNode(12));
+        root.getRight().setRight(new BinaryTreeNode(13));
+        root.getRight().setLeft(new BinaryTreeNode(11));
+        return root;
+
+    }
 }

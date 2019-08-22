@@ -45,9 +45,9 @@ public class LinkedStack {
         String result="";
         ListNode current=top;
         while (current!=null){
-            result=result+current.getData() +"\n";
+            result=result+current.getData() +", ";
             current=current.getNext();
         }
-        return result;
+        return result.isEmpty()? result:result.substring(0,result.length()-2);
     }
 }

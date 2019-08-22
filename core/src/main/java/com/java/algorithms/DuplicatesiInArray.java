@@ -8,8 +8,18 @@ public class DuplicatesiInArray {
     public static void main(String[] args) {
         int[] arr = {2, 4, 5, 6, 2, 7, 8, 9,8,6};
         findDuplicate(arr);
-
+        anotherAproach(arr);
     }
+
+    private static void anotherAproach(int[] arr) {
+        boolean[] booleans= new boolean[arr.length];
+        for (int i=0;i<arr.length;i++) {
+            if (booleans[arr[i]])
+                System.out.println("Duplicate found::" + arr[i] + " index::" + i);
+            else booleans[arr[i]] = true;
+        }
+    }
+
     private static void findDuplicate(int[] arr) {
         boolean flag = true;
         for (int i = 0; i < arr.length - 1; i++) {
@@ -18,7 +28,6 @@ public class DuplicatesiInArray {
                     System.out.println("Duplicate found at index:: " + j + " and the element is::" + arr[j]);
                     flag = false;
                     //break;
-
                 }
             }
            // break;
@@ -26,5 +35,4 @@ public class DuplicatesiInArray {
         if (flag)
             System.out.println("No duplicates found in array");
     }
-
 }

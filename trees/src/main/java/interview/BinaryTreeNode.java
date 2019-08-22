@@ -38,7 +38,7 @@ public class BinaryTreeNode {
 
     @Override
     public String toString() {
-        return "BinaryTreeNode{" +
+        return "Node{" +
                 "data=" + data +
                 ", left=" + left +
                 ", right=" + right +
