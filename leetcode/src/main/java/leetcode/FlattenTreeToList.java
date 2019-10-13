@@ -59,7 +59,7 @@ public class FlattenTreeToList {
     private static List<Integer> getAllNodeData(TreeNode root) {
         return _preOrder(root);
     }
-    private static List<Integer> _preOrder(TreeNode root) {
+    public static List<Integer> _preOrder(TreeNode root) {
         if (root==null)return null;
         else {
             Stack<TreeNode> s=new Stack<>();

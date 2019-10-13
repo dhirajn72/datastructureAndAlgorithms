@@ -7,15 +7,11 @@ import java.util.Arrays;
  * @date 10/08/19
  */
 public class KthLargest {
-
     public KthLargest(int k, int[] arr) {
-
-
     }
 
     public int add(int val) {
         return 0;
-
     }
 
     class Heap {

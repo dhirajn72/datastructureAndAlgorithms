@@ -25,12 +25,11 @@ public class TreeFromInOrderAndPostOrder {
         int val = postOrder[postEnd];
         int offset = inStart;
         BinaryTreeNode cur = new BinaryTreeNode(val);
-        // search for the inorder index
         for(; offset < inEnd; offset++){
             if(inOrder[offset] == val)
                 break;
         }
-        cur.setLeft(buildBT(postOrder, postStart, postStart + offset - inStart - 1, inOrder, inStart, offset - 1));
+        cur.left=(buildBT(postOrder, postStart, postStart + offset - inStart - 1, inOrder, inStart, offset - 1));
         cur.right = buildBT(postOrder, postStart + offset - inStart, postEnd - 1, inOrder, offset + 1, inEnd);
         return cur;
     }

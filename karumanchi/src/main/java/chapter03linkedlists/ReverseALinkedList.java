@@ -36,4 +36,28 @@ public class ReverseALinkedList{
         }
         return prev;
     }
+
+    public static void main(String[] args) {
+        ListNode head=new ListNode(1);
+        head.setNext(new ListNode(2));
+        head.getNext().setNext(new ListNode(3));
+        head.getNext().getNext().setNext(new ListNode(4));
+        head.getNext().getNext().getNext().setNext(new ListNode(5));
+        print(head);
+        //ListNode reverse=reverseListIterative(head);
+        ListNode[] arr=new ListNode[5];
+        reverseLinkedListRecursive(head,arr);
+        print(arr[0]);
+
+
+    }
+
+    private static void print(ListNode head) {
+        ListNode temp = head;
+        while (temp != null) {
+            System.out.print(temp.getData() + "->");
+            temp = temp.getNext();
+        }
+    }
+
 }

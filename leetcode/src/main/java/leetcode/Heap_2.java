@@ -67,21 +67,18 @@ public class Heap_2 {
     }
 
     public static void main(String[] args) {
-        Heap_2 heap= new Heap_2(10);
+        Heap_2 heap= new Heap_2(9);
         heap.insert(1);
-        heap.insert(2);
-        heap.insert(3);
-        heap.insert(4);
-        heap.insert(5);
-        heap.insert(6);
-        heap.insert(7);
-        heap.insert(8);
-        heap.insert(9);
         heap.insert(10);
-        System.out.println(heap);
-        System.out.println();
-        System.out.println();
-        heap.remove();
-        System.out.println(heap);
+        heap.insert(8);
+        heap.insert(4);
+        heap.insert(9);
+        heap.insert(0);
+        heap.insert(7);
+        heap.insert(2);
+        heap.insert(5);
+
+        while (heap.currentSize!=0)
+            System.out.print(heap.remove()+", ");
     }
 }

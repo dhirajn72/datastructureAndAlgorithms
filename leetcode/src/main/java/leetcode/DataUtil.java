@@ -5,7 +5,7 @@ package leetcode;
  * @date 07/08/19
  */
 public class DataUtil {
-    static TreeNode getTreeData(){
+    public static TreeNode getTreeData(){
         /*
                  1
                /  \
@@ -25,7 +25,7 @@ public class DataUtil {
         root.right.right=new TreeNode(7);
         return root;
     }
-    static TreeNode getTreeDataPreOrdered(){
+    public static TreeNode getTreeDataPreOrdered(){
         /*
                  1
                /  \
@@ -47,17 +47,69 @@ public class DataUtil {
     }
 
 
-    static TreeNode getBinarySearchTreeData(){
-        TreeNode root=new TreeNode(100);
-        root.left=new TreeNode(75);
-        root.right=new TreeNode(200);
-        root.right.left=new TreeNode(150);
-        root.right.right=new TreeNode(300);
+    public static TreeNode getBinarySearchTreeData(){
+        /*
+                        100
+                 75                 200
+             50     80         150       300
+         45    65        90
+         */
+        TreeNode root= /*new TreeNode(10);*/new TreeNode(100);
+        root.left=/*new TreeNode(5);*/new TreeNode(75);
+        root.right=/*new TreeNode(15);*/new TreeNode(200);
+        root.right.left=/*new TreeNode(6);*/new TreeNode(150);
+        root.right.right=/*new TreeNode(20);*/new TreeNode(300);
         root.left.left=new TreeNode(50);
         root.left.right=new TreeNode(80);
         root.left.right.right=new TreeNode(90);
         root.left.left.left=new TreeNode(45);
         root.left.left.right=new TreeNode(65);
         return root;
+
+        //[10,5,15,null,null,6,20]
+    }
+
+    public static ListNode getListData() {
+        ListNode node=new ListNode(1);
+        node.next=new ListNode(2);
+        node.next.next=new ListNode(3);
+        node.next.next.next=new ListNode(4);
+        node.next.next.next.next=new ListNode(5);
+        node.next.next.next.next.next=new ListNode(6);
+        node.next.next.next.next.next.next=new ListNode(7);
+        //node.next.next.next.next.next.next.next=new ListNode(8);
+        return node;
+    }
+
+    public static ListNode getDuplicatesListData() {
+        ListNode node=new ListNode(1);
+        node.next=new ListNode(1);
+        node.next.next=new ListNode(3);
+        node.next.next.next=new ListNode(4);
+        node.next.next.next.next=new ListNode(4);
+        node.next.next.next.next.next=new ListNode(6);
+        node.next.next.next.next.next.next=new ListNode(7);
+        node.next.next.next.next.next.next.next=new ListNode(7);
+        node.next.next.next.next.next.next.next.next=new ListNode(7);
+        node.next.next.next.next.next.next.next.next.next=new ListNode(8);
+        return node;
+    }
+    public static ListNode getDuplicatesList() {
+        ListNode node=new ListNode(1);
+        node.next=new ListNode(1);
+        node.next.next=new ListNode(1);
+        node.next.next.next=new ListNode(2);
+        node.next.next.next.next=new ListNode(3);
+        return node;
+    }
+    public static ListNode getListDataShuffled() {
+        ListNode node=new ListNode(1);
+        node.next=new ListNode(9);
+        node.next.next=new ListNode(4);
+        node.next.next.next=new ListNode(6);
+        node.next.next.next.next=new ListNode(8);
+        node.next.next.next.next.next=new ListNode(2);
+        node.next.next.next.next.next.next=new ListNode(7);
+        return node;
     }
 }

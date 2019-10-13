@@ -16,14 +16,14 @@ public class ValidPalindrome {
     public static boolean isPalindrome(String s) {
         if (s==null||s.length()==0 || "".equalsIgnoreCase(s.trim()))return true;
         if (s.length()==1)return true;
+        s=s.toLowerCase();
 
         String str="";
         for (int i=0;i<s.length();i++){
-            if ( (s.charAt(i)>=65 && s.charAt(i)<=90) || (s.charAt(i)>=97 && s.charAt(i)<=122) ){
+            if ( (s.charAt(i)>=97 && s.charAt(i)<=122) ){
                 str+=s.charAt(i)+"";
             }
         }
-        str=str.toLowerCase();
         int i=0,j=str.length()-1;
 
         while (i<j){

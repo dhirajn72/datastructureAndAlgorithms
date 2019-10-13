@@ -3,8 +3,8 @@
 package chapter03linkedlists;
 
 public class ListNode{
-	public static ListNode next;
-	public static int data;
+	public  ListNode next;
+	public  int data;
 
 	// Creates an empty node.
 	public ListNode(){
@@ -41,5 +41,6 @@ public class ListNode{
 	// Sets the data stored in this node.
 	public String toString (){
 		return Integer.toString(data);
-	}	
+	}
+
 }

@@ -13,6 +13,7 @@ public class QueueWithTwoStacks {
     private Stack<Integer> s2= new Stack<>();
     public void add(int data){enqueue(data);}
     public void enqueue(int data){
+
         s1.push(data);
     }
 

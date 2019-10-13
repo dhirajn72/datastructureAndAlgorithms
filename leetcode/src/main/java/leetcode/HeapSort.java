@@ -16,8 +16,5 @@ public class HeapSort {
             System.out.print(heap.remove()+", ");
             i--;
         }
-
-
-
     }
 }

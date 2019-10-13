@@ -25,15 +25,6 @@ public class LongestCommonSubSequense {
                 }
             }
         }
-
-        System.out.println(Arrays.toString(matrix[0]));
-        System.out.println(Arrays.toString(matrix[1]));
-        System.out.println(Arrays.toString(matrix[2]));
-        System.out.println(Arrays.toString(matrix[3]));
-        System.out.println(Arrays.toString(matrix[4]));
-        System.out.println(Arrays.toString(matrix[5]));
-        System.out.println(Arrays.toString(matrix[6]));
-
         StringBuilder builder=new StringBuilder();
         for (int i=str1.length(),j=str2.length();i!=0&&j!=0;){
             if (matrix[i][j]==matrix[i-1][j])

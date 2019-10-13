@@ -5,8 +5,8 @@ package com.java.graph;
  * @date 01/08/19
  */
 public class Vertices {
-    char lable;
-    boolean isVisited;
+    public char lable;
+    public boolean isVisited;
 
     public Vertices(char vertex) {
         this.lable=vertex;

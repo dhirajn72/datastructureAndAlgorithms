@@ -10,9 +10,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
         //String s="abcabcbb";
-        String s="pwwkew";
+        //String s="pwwkew";
         //String s="aab";
-        //String s = "dvdf";
+        String s = "dvdf";
         System.out.println(lengthOfLongestSubstring(s));
     }
 

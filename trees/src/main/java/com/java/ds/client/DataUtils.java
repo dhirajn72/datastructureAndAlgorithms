@@ -1,6 +1,7 @@
 package com.java.ds.client;
 
 
+import interview.BinarySearchTreeNode;
 import interview.BinaryTreeNode;
 import interview.TreeNode;
 
@@ -174,6 +175,27 @@ public class DataUtils {
         root.setRight(new BinaryTreeNode(12));
         root.getRight().setRight(new BinaryTreeNode(13));
         root.getRight().setLeft(new BinaryTreeNode(11));
+        return root;
+
+    }
+    public static TreeNode getTree(){
+        TreeNode root= new TreeNode(10);
+        root.setLeft(new TreeNode(8));
+        root.getLeft().setLeft(new TreeNode(7));
+        root.getLeft().setRight(new TreeNode(9));
+        root.setRight(new TreeNode(12));
+        root.getRight().setRight(new TreeNode(13));
+        root.getRight().setLeft(new TreeNode(11));
+        return root;
+
+    }   public static BinarySearchTreeNode getBinarySearchTreeNode(){
+        BinarySearchTreeNode root= new BinarySearchTreeNode(10);
+        root.setLeft(new BinarySearchTreeNode(8));
+        root.getLeft().setLeft(new BinarySearchTreeNode(7));
+        root.getLeft().setRight(new BinarySearchTreeNode(9));
+        root.setRight(new BinarySearchTreeNode(12));
+        root.getRight().setRight(new BinarySearchTreeNode(13));
+        root.getRight().setLeft(new BinarySearchTreeNode(11));
         return root;
 
     }

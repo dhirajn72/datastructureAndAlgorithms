@@ -1,8 +1,5 @@
 package com.java.ds.tree.practice;
 
-import com.java.ds.trees.BinaryTreeNode;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -13,17 +10,17 @@ import java.util.Queue;
  */
 public class LevelOrderIterative {
 
-    public ArrayList<ArrayList<Integer>> levelOrderIterative(BinaryTreeNode root){
+    public static ArrayList<ArrayList<Integer>> levelOrderIterative(BinarySearchTreeNode root){
         ArrayList<ArrayList<Integer>> res= new ArrayList<>();
         if (root==null)
             return res;
-        Queue<BinaryTreeNode> q= new LinkedList<>();
+        Queue<BinarySearchTreeNode> q= new LinkedList<>();
         q.offer(root);
         q.offer(null);
 
         ArrayList<Integer> curr= new ArrayList<>();
         while (!q.isEmpty()){
-            BinaryTreeNode temp= q.poll();
+            BinarySearchTreeNode temp= q.poll();
             if (temp!=null){
                 curr.add(temp.getData());
                 if (temp.left!=null)
@@ -39,6 +36,7 @@ public class LevelOrderIterative {
                     q.offer(null);
             }
         }
+        System.out.println(res);
         return res;
     }
 }

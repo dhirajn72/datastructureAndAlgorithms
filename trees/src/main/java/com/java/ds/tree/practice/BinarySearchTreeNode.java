@@ -5,9 +5,9 @@ package com.java.ds.tree.practice;
  * @date 29/01/19
  */
 public class BinarySearchTreeNode {
-    private int data;
-    private BinarySearchTreeNode left;
-    private BinarySearchTreeNode right;
+     int data;
+     BinarySearchTreeNode left;
+     BinarySearchTreeNode right;
 
     public BinarySearchTreeNode(int data) {
         this.data = data;

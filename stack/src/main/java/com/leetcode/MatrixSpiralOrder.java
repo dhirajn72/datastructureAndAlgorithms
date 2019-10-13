@@ -9,13 +9,10 @@ public class MatrixSpiralOrder {
         int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; // 1,2,3,6,9,8,7,4,5
         spiralOrder(arr, arr.length, arr[0].length);
         System.out.println();
-
     }
-
     public static void spiralOrder(int[][] arr, int m, int n) {
         int rowStart = 0, columnStart = 0;
         int rowEnd = m - 1, columnEnd = n - 1;
-
         while (rowStart <= rowEnd && columnStart <= columnEnd) {
             int i = rowStart, j = columnStart;
             for (j = columnStart; j <= columnEnd; j++)

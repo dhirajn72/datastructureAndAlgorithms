@@ -79,6 +79,5 @@ class DoStuff{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }

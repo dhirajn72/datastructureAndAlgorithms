@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class TestQuickSort {
     @Test
     public void testCase1(){
-        int[] arr1=new int[]{9,8,7,5,6,6,3,4,5};
+        int[] arr1=new int[]{8,9,7,4,5,6,3,5,6};
         int[] arr2=new int[]{9,8,7,5,6,6,3,4,5};
         QuickSort._sort(arr1);
 

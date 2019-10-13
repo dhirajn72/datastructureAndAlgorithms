@@ -61,6 +61,11 @@ public class Heap {
         }
         arr[index]=top;
     }
+
+    public int getCurr() {
+        return currentSize;
+    }
+
     static class Node{
         int data;
 
@@ -86,15 +91,18 @@ public class Heap {
     }
 
     public static void main(String[] args) {
-        Heap heap=new Heap(5);
+        Heap heap=new Heap(8);
+        heap.insert(8);
         heap.insert(1);
-        heap.insert(2);
+        heap.insert(9);
         heap.insert(3);
+        heap.insert(7);
+        heap.insert(5);
+        heap.insert(2);
         heap.insert(4);
+        while (heap.getCurr()!=0)
+            System.out.print(heap.remove()+", ");
 
-
-
-        System.out.println(heap);
 
     }
 }
