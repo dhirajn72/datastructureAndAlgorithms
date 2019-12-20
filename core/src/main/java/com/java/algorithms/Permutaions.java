@@ -9,7 +9,7 @@ import java.math.BigInteger;
 public class Permutaions {
     public static void main(String[] args) {
         String s="ABCDEFGH";
-        //permutaions(s);
+        permutaions(s);
        // printPermutations(s);
         //fibonacciIterative(800);
 
