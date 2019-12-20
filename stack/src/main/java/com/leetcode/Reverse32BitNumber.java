@@ -8,8 +8,11 @@ public class Reverse32BitNumber {
 
     public static void main(String[] args) {
         //System.out.println(reverse(123));
-        System.out.println(reverse(-1234567891));
+        //System.out.println(reverse(-1234567891));
         System.out.println(reverse(123));
+        System.out.println();
+        //reverseRecursive(-1234567891);
+        reverseRecursive(123);
 
 
 
@@ -33,5 +36,14 @@ public class Reverse32BitNumber {
         if(result > Integer.MAX_VALUE) return 0;
         return (int) result;
         //return isNegtive  ? 0 - ((int)result) : (int)result;
+    }
+
+    public static void reverseRecursive(int x) {
+        if (x<10)
+            System.out.println(x);
+        else {
+            System.out.print(x%10);
+            reverseRecursive(x/10);
+        }
     }
 }
