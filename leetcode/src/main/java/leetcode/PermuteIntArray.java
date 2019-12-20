@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class PermuteIntArray {
     public static void main(String[] args) {
-        //_permutation(new int[]{1, 2, 3}, 0);
+        _permutation(new int[]{1, 2, 3}, 0);
         _permutation("ABC");
     }
 
@@ -43,6 +43,4 @@ public class PermuteIntArray {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
-
 }
