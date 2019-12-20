@@ -30,10 +30,10 @@ public class Client3 {
         InOrderIterativeTraversal inOrderIterativeTraversal= new InOrderIterativeTraversal();
         System.out.println(inOrderIterativeTraversal.inOrderIterativeTraversal(root));
 
-        System.out.println("****PreOrder Karumanchi******");
+        System.out.println("****TreeTraversals Karumanchi******");
         PreOrderIterative preOrderIterative= new PreOrderIterative();
         System.out.println(preOrderIterative.preorderTraversal(root));
-        System.out.println("****PreOrder Mine******");
+        System.out.println("****TreeTraversals Mine******");
         PreOrderIterativeTraversal preOrderIterativeTraversal= new PreOrderIterativeTraversal();
         System.out.println(preOrderIterativeTraversal.preOrderIterativeTraversal(root));
         System.out.println("****LevelOrder Karumanchi******");
