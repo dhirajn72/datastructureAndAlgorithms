@@ -22,7 +22,7 @@ bin/ directory in your project directory).
 
 8. Make a new folder in the tomcat/webapps/djview/ folder named "WEB-INF".
 
-9. Place a copy of the jsp/web.xml file there. This file maps the Servlet class to a URL 
+9. Place a copy of the jsp/hibernate.xml file there. This file maps the Servlet class to a URL
 for the form post/get in index.html
 
 10. Create a set of folders that create the path: 
