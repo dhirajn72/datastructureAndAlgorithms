@@ -25,7 +25,7 @@ public class LongestPalindromicSubSequence {
 
         return matrix[0][s.length() - 1];
     }*/
-    public static int longestPalindrmicSubSequence(String str){
+    public static int   longestPalindrmicSubSequence(String str){
         int[][] matrix=new int[str.length()][str.length()];
         for (int i = 0; i < str.length(); i++) {
             matrix[i][i]=1;

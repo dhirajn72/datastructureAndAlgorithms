@@ -157,7 +157,6 @@ public class DataUtils {
         return treeNode;
     }
 
-
     /**
                         10
                 8                 12
@@ -178,7 +177,7 @@ public class DataUtils {
         return root;
 
     }
-    public static TreeNode getTree(){
+    public static TreeNode getBSTTreeNode(){
         TreeNode root= new TreeNode(10);
         root.setLeft(new TreeNode(8));
         root.getLeft().setLeft(new TreeNode(7));

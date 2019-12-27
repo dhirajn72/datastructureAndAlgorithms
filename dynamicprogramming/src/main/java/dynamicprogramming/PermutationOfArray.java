@@ -10,8 +10,8 @@ public class PermutationOfArray {
     public static void main(String[] args) {
 
         //System.out.println(permute(new int[]{1,1,3}));
-        //permute(new int[]{1, 2, 3}, 0);
-        permuteAgain(new int[]{1, 2, 3}, 0);
+        permute(new int[]{1, 2, 3}, 0);
+        //permuteAgain(new int[]{1, 2, 3}, 0);
     }
 
     private static void permuteAgain(int[] ints, int i) {
@@ -52,10 +52,4 @@ public class PermutationOfArray {
             swap(arr, i, j);      // backtracking
         }
     }
-
-
-
-
-
-
 }
