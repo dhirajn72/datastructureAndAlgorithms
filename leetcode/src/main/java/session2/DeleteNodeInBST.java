@@ -63,6 +63,7 @@ public class DeleteNodeInBST {
 
     public static TreeNode deleteNode(TreeNode root, int key) {
         if (root==null){
+            return root;
         }
         else if (key<root.val)
             root.left=deleteNode(root.left,key);

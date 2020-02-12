@@ -9,7 +9,7 @@ import interview.TreeNode;
  */
 public class PrintBoundry_Leetcode {
     public static void main(String args[]) {
-        TreeNode tree = DataUtils.getTreeNode();
+        TreeNode tree = DataUtils.getBSTTreeNode();
         boundaryLevelTraversal(tree);
     }
 
@@ -38,13 +38,13 @@ public class PrintBoundry_Leetcode {
             return;
 
         // if leaf node, ignore while printing edges
-        if (root.left == null && root.right == null) { // excluding last leaf node in right boundary
+        if (root.left == null && root.right == null) { // Excluding last leaf node in right boundary
             return;
         }
 
         if (root.right != null) {
             printRightBottomUp(root.right);
-        } else if (root.left != null) {
+        } else {
             printRightBottomUp(root.left);
         }
 

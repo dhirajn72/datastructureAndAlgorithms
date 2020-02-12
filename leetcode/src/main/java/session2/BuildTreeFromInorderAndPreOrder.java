@@ -62,14 +62,16 @@ public class BuildTreeFromInorderAndPreOrder {
         return root;
     }*/
 
-       if (inorder==null||preorder==null||inorder.length!=preorder.length)return null;
+       if (inorder==null||preorder==null||inorder.length!=preorder.length)
+           return null;
        return _buildTree(preorder,0,preorder.length-1,inorder,0,inorder.length-1);
 
 
 }
 
     private static TreeNode _buildTree(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
-        if (preStart>preEnd||inStart>inEnd)return null;
+        if (preStart>preEnd||inStart>inEnd)
+            return null;
         int data=preorder[preStart];
         TreeNode root=new TreeNode(data);
         int offSet=inStart;

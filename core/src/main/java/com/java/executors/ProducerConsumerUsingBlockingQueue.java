@@ -7,7 +7,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * @date 11/06/19
  */
 public class ProducerConsumerUsingBlockingQueue {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         LinkedBlockingQueue linkedBlockingQueue= new LinkedBlockingQueue();
         Producer_1 producer= new Producer_1(linkedBlockingQueue);
         Consumer_1 consumer= new Consumer_1(linkedBlockingQueue);

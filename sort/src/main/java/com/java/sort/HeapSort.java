@@ -1,24 +1,39 @@
-package session2;
+package com.java.sort;
 
 /**
  * @author Dhiraj
- * @date 19/10/19
+ * @date 26/01/20
  */
-public class Heap {
-    private Node[] arr;
-    int curr;
-    int max;
-
-    public Heap(int max) {
-        this.arr = new Node[max];
-        this.max = max;
+public class HeapSort {
+    public static void main(String[] args) {
+        int[] arr={3,1,4,2,7,5,8,6,9};
+        Heap heap=new Heap(arr.length);
+        for (int i:arr)
+            heap.insert(i);
+        while (!heap.isEmpty())
+            System.out.print(heap.remove()+", ");
     }
 
+}
+
+
+
+class Heap{
+    private Node[] arr;
+    private int max;
+    private int curr;
+
+    public Heap(int max) {
+        this.max = max;
+        arr=new Node[max];
+    }
     public void insert(int data){
-        if (curr==max)return;
+        if(max==curr)
+            return;
         Node node=new Node(data);
         arr[curr]=node;
         trickleUp(curr++);
+
     }
 
     private void trickleUp(int index) {
@@ -33,6 +48,7 @@ public class Heap {
     }
 
     public int remove(){
+        if (curr==0)return -1;
         Node top=arr[0];
         arr[0]=arr[--curr];
         arr[curr]=null;
@@ -41,11 +57,11 @@ public class Heap {
     }
 
     private void trickleDown(int index) {
-        Node top=arr[index];
         int largeChild=0;
+        Node top=arr[index];
         while (index<curr/2){
-            int leftChild=2*index+1;
-            int rightChild=2*index+2;
+            int leftChild=(2*index)+1;
+            int rightChild=(2*index)+2;
             if (rightChild<curr && arr[leftChild].data>arr[rightChild].data)
                 largeChild=rightChild;
             else
@@ -56,35 +72,15 @@ public class Heap {
         }
         arr[index]=top;
     }
-
-    public int getCurr() {
-        return curr==0?Integer.MIN_VALUE:curr;
+    public boolean isEmpty() {
+        return curr==0;
     }
+}
 
+class Node{
+    int data;
 
-    class Node{
-        int data;
-
-        public Node(int data) {
-            this.data = data;
-        }
+    public Node(int data) {
+        this.data = data;
     }
-
-    public static void main(String[] args) {
-        int[] arr={3,4,1,9,0,8,7,5,6};
-        Heap heap=new Heap(arr.length);
-        for (int i:arr)
-            heap.insert(i);
-        while (heap.getCurr()!=Integer.MIN_VALUE){
-            System.out.print(heap.remove()+", ");
-
-        }
-
-
-    }
-
-
-
-
-
 }

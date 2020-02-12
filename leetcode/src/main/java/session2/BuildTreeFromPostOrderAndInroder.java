@@ -1,6 +1,5 @@
 package session2;
 
-import leetcode.FlattenTreeToList;
 import leetcode.TreeNode;
 
 /**
@@ -24,7 +23,8 @@ public class BuildTreeFromPostOrderAndInroder {
     }
 
     private static TreeNode _buildTree(int[] postorder, int postStart, int postEnd, int[] inorder, int inStart, int inEnd) {
-        if (postStart>postEnd||inStart>inEnd)return null;
+        if (postStart>postEnd||inStart>inEnd)
+            return null;
         int data=postorder[postEnd];
         TreeNode root=new TreeNode(data);
         int offset=inStart;

@@ -101,7 +101,7 @@ public class DataUtil {
         node.next=new ListNode(2);
         node.next.next=new ListNode(3);
         node.next.next.next=new ListNode(4);
-        node.next.next.next.next=new ListNode(5);
+        //node.next.next.next.next=new ListNode(5);
         //node.next.next.next.next.next=new ListNode(6);
         //node.next.next.next.next.next.next=new ListNode(7);
         //node.next.next.next.next.next.next.next=new ListNode(8);
