@@ -15,9 +15,9 @@ public class CountDownLatchTest {
         ExecutorService service = Executors.newFixedThreadPool(threadCount);
 
         try {
-            //for (int i=0;i<5;i++){
+            for (int i=0;i<5;i++){
                 service.execute(()->{new TestClass_1().performTask(latch);});
-          //  }
+            }
             latch.await();
             System.out.println("main is waiting");
         } catch (InterruptedException e) {

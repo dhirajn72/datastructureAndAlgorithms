@@ -1,5 +1,6 @@
 package session2;
 
+import leetcode.DataUtil;
 import leetcode.TreeNode;
 
 /**
@@ -7,9 +8,23 @@ import leetcode.TreeNode;
  * @date 31/08/19
  */
 public class LCAOfBST {
+    public static void main(String[] args) {
+        TreeNode root= DataUtil.getTreeDataPreOrdered();
+        System.out.println(lowestCommonAncestor(root,root.right.right,root.right.left));
 
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    }
+
+    /*
+                     1
+                   /  \
+                 2     5
+                / \   / \
+               3  4  6   7
+
+
+     */
+    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root==null)return null;
         if (root==p||root==q)
             return root;

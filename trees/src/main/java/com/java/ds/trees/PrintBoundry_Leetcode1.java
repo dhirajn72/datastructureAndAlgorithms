@@ -10,7 +10,7 @@ import interview.TreeNode;
 public class PrintBoundry_Leetcode1 {
     // Driver program to test above functions
     public static void main(String args[]) {
-        TreeNode tree = DataUtils.getTreeNode();
+        TreeNode tree = DataUtils.getUnbalancedTreeData();
         boundaryLevelTraversal(tree);
     }
 
