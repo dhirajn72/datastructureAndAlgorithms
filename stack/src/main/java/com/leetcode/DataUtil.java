@@ -16,14 +16,14 @@ public class DataUtil {
      *
      * @return
      */
-    public  static  TreeNode getTree(){
-        TreeNode node= new TreeNode(1);
-        node.left=new TreeNode(2);
-        node.right=new TreeNode(3);
-        node.left.left=new TreeNode(4);
-        node.left.right=new TreeNode(5);
-        node.right.left=new TreeNode(6);
-        node.right.right=new TreeNode(7);
+    public  static TreeNode_1 getTree(){
+        TreeNode_1 node= new TreeNode_1(1);
+        node.left=new TreeNode_1(2);
+        node.right=new TreeNode_1(3);
+        node.left.left=new TreeNode_1(4);
+        node.left.right=new TreeNode_1(5);
+        node.right.left=new TreeNode_1(6);
+        node.right.right=new TreeNode_1(7);
         return node;
     }
 }

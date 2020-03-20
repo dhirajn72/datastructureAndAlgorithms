@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -8,8 +8,8 @@ import leetcode.TreeNode;
  */
 public class InsertIntoBST {
 
-    public TreeNode insertIntoBST(TreeNode rootNode, int data) {
-        if (rootNode==null)return new TreeNode(data);
+    public TreeNode_1 insertIntoBST(TreeNode_1 rootNode, int data) {
+        if (rootNode==null)return new TreeNode_1(data);
         else {
             if (rootNode.val>data){
                 rootNode.left=insertIntoBST(rootNode.left,data);

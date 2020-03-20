@@ -12,7 +12,7 @@ import java.util.Queue;
 public class DeleteNodeFromBinarySearchTree {
 
     public static void main(String[] args) {
-        TreeNode treeNode=DataUtil.getBinarySearchTreeData();
+        TreeNode_1 treeNode=DataUtil.getBinarySearchTreeData();
         System.out.println(treeNode);
         _levelOrder(treeNode);
         _deleteNodeFromTree(treeNode,75);
@@ -20,16 +20,16 @@ public class DeleteNodeFromBinarySearchTree {
         System.out.println(treeNode);
     }
 
-    public static void _levelOrder(TreeNode root) {
+    public static void _levelOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<List<Integer>> list= new ArrayList<>();
             List<Integer> integers= new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)
@@ -48,7 +48,7 @@ public class DeleteNodeFromBinarySearchTree {
         }
     }
 
-    private static TreeNode _deleteNodeFromTree(TreeNode root, int key) {
+    private static TreeNode_1 _deleteNodeFromTree(TreeNode_1 root, int key) {
         if (root==null)
             return null;
         if (root.val<key)
@@ -61,14 +61,14 @@ public class DeleteNodeFromBinarySearchTree {
             else if(root.right==null)
                 return root.right;
 
-            TreeNode min=findMin(root.right);
+            TreeNode_1 min=findMin(root.right);
             root.val=min.val;
             root.right=_deleteNodeFromTree(min.right,min.val);
         }
         return root;
     }
 
-    private static TreeNode findMin(TreeNode root) {
+    private static TreeNode_1 findMin(TreeNode_1 root) {
         if (root==null)return null;
         while (root.left!=null)
             root= root.left;

@@ -1,7 +1,6 @@
 package com.karumanchi;
 
-import com.leetcode.DataUtil;
-import com.leetcode.TreeNode;
+import com.leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -14,22 +13,22 @@ import java.util.Queue;
  */
 public class ZigZagTraversal {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);//DataUtil.getTree();
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(20));
-        /*root.getRight().setLeft(new TreeNode(15));
-        root.getRight().setRight(new TreeNode(7));*/
+        TreeNode_1 root = new TreeNode_1(3);//DataUtil.getTree();
+        root.setLeft(new TreeNode_1(9));
+        root.setRight(new TreeNode_1(20));
+        /*root.getRight().setLeft(new TreeNode_1(15));
+        root.getRight().setRight(new TreeNode_1(7));*/
 
 
-        System.out.println(zigzagLevelOrder(root));; // 1 2 3 7 6 5 4
+        System.out.println(zigzagLevelOrder(root));// 1 2 3 7 6 5 4
 
     }
 
-    public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public static List<List<Integer>> zigzagLevelOrder(TreeNode_1 root) {
         if (root==null)
             return new ArrayList<>();
         else {
-            Queue<TreeNode> q = new LinkedList<>();
+            Queue<TreeNode_1> q = new LinkedList<>();
             q.offer(root);
             q.offer(null);
             ArrayList<Integer> integers = new ArrayList<>();
@@ -37,7 +36,7 @@ public class ZigZagTraversal {
             boolean flag = true;
             List<Integer> integers1 = new ArrayList<>();
             while (!q.isEmpty()) {
-                TreeNode temp = q.poll();
+                TreeNode_1 temp = q.poll();
                 if (temp != null) {
                     integers.add(temp.getData());
                     if (temp.getLeft() != null)

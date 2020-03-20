@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -9,13 +9,13 @@ import leetcode.TreeNode;
  */
 public class SumRootToLeafNumbers {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         System.out.println(sumNumbers(root));
 
     }
 
 
-    public static int sumNumbers(TreeNode root) {
+    public static int sumNumbers(TreeNode_1 root) {
         if (root==null)return 0;
         int[] dp=new int[1000];
         int[] res=new int[1];
@@ -23,7 +23,7 @@ public class SumRootToLeafNumbers {
         return res[0];
     }
 
-    private static void _sumRootToLeaf(TreeNode root, int[] dp, int i,int[] res) {
+    private static void _sumRootToLeaf(TreeNode_1 root, int[] dp, int i, int[] res) {
         if (root==null)return;
         dp[i++]=root.val;
         if (root.left==null && root.right==null)

@@ -17,11 +17,7 @@ public class DinerMenuIterator implements Iterator<MenuItem> {
 	}
  
 	public boolean hasNext() {
-		if (position >= list.length || list[position] == null) {
-			return false;
-		} else {
-			return true;
-		}
+        return position < list.length && list[position] != null;
 	}
  
 	public void remove() {

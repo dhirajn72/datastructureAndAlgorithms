@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -24,23 +24,23 @@ import java.util.Queue;
 public class DeleteNodeInBST {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getBinarySearchTreeData();
+        TreeNode_1 root= DataUtil.getBinarySearchTreeData();
         _levelOrder(root);
         System.out.println(deleteNode(root,150));
         _levelOrder(root);
 
     }
 
-    private static void _levelOrder(TreeNode root) {
+    private static void _levelOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> ints=new ArrayList<>();
             List<List<Integer>> result=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     ints.add(temp.val);
                     if (temp.left!=null)
@@ -61,7 +61,7 @@ public class DeleteNodeInBST {
     }
 
 
-    public static TreeNode deleteNode(TreeNode root, int key) {
+    public static TreeNode_1 deleteNode(TreeNode_1 root, int key) {
         if (root==null){
             return root;
         }
@@ -75,14 +75,14 @@ public class DeleteNodeInBST {
             else if (root.right==null)
                 return root.left;
 
-            TreeNode min=findMin(root.right);
+            TreeNode_1 min=findMin(root.right);
             root.val=min.val;
             root.right=deleteNode(root.right,min.val);
         }
         return root;
     }
 
-    private static TreeNode findMin(TreeNode root) {
+    private static TreeNode_1 findMin(TreeNode_1 root) {
         while (root.left!=null){
             root=root.left;
         }

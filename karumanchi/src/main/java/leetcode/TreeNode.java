@@ -6,8 +6,8 @@ package leetcode;
  */
 public class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNode_1 left;
+    TreeNode_1 right;
 
     TreeNode(int x) {
         val = x;
@@ -15,7 +15,7 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{" +
+        return "TreeNode_1{" +
                 "val=" + val +
                 ", left=" + left +
                 ", right=" + right +

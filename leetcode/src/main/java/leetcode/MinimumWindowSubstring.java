@@ -14,7 +14,7 @@ public class MinimumWindowSubstring {
 
     public String minWindow(String s, String t) {
         HashMap<Character,Character> map= new HashMap<>();
-        boolean flag=true;;
+        boolean flag=true;
         while (flag){
             int i=0;
             int j=s.length()-1;

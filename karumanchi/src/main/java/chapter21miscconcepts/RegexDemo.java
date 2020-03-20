@@ -1,6 +1,6 @@
 package chapter21miscconcepts;
 
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
 class RegexDemo{
 	public static void main (String[] args) throws java.lang.Exception{

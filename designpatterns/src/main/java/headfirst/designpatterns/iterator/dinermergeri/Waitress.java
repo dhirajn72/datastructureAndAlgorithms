@@ -43,11 +43,8 @@ public class Waitress {
 			return true;
 		}
 		Iterator<MenuItem> dinerIterator = dinerMenu.createIterator();
-		if (isVegetarian(name, dinerIterator)) {
-			return true;
-		}
-		return false;
-	}
+        return isVegetarian(name, dinerIterator);
+    }
 
 
 	private void printVegetarianMenu(Iterator<MenuItem> iterator) {

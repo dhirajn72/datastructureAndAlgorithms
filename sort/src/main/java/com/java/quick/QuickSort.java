@@ -11,9 +11,9 @@ public class QuickSort {
         //int[] arr = {9, 2, 5, 1, 8, 7, 4, 3};
         int[] arr = {9, 1, 8, 10, 7, 4, 2};
 
-        System.out.println(Arrays.toString(arr));;
+        System.out.println(Arrays.toString(arr));
         sort(arr);
-        System.out.println(Arrays.toString(arr));;
+        System.out.println(Arrays.toString(arr));
     }
     public static void sort(int[] arr){
         _quickSort(arr,0,arr.length-1);

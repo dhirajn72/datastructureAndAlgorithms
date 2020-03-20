@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -9,16 +9,16 @@ import leetcode.TreeNode;
  */
 public class Test {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         _ancesstors(root,root.right.right);
     }
 
-    private static void _ancesstors(TreeNode root,TreeNode node) {
+    private static void _ancesstors(TreeNode_1 root, TreeNode_1 node) {
         if (root==null)return;
         _printAllAncesstors(root,node);
     }
 
-    private static boolean _printAllAncesstors(TreeNode root,TreeNode node) {
+    private static boolean _printAllAncesstors(TreeNode_1 root, TreeNode_1 node) {
         if (root==null)return false;
         else if (root.left==node ||root.right==node ||_printAllAncesstors(root.left,node) || _printAllAncesstors(root.right,node)){
             System.out.println(root.val);

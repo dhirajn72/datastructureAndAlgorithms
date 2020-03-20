@@ -3,8 +3,6 @@ package session2;
 import leetcode.DataUtil;
 import leetcode.ListNode;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 08/09/19

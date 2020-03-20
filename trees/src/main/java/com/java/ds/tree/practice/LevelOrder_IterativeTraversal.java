@@ -58,8 +58,8 @@ public class LevelOrder_IterativeTraversal {
                    Preorder: 1,2,4,5,3,6,7
          */
 
-        System.out.println(levelOrder_IterativeTraversal(root));;
+        System.out.println(levelOrder_IterativeTraversal(root));
 
-}
+    }
 
 }

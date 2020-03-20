@@ -1,7 +1,8 @@
 
 
 package chapter04stacks;
-import chapter03linkedlists.*;
+
+import chapter03linkedlists.ListNode;
 
 import java.util.EmptyStackException;
 

@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.*;
 
@@ -11,14 +11,14 @@ import java.util.*;
  */
 public class TreeZigZagTraversals {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         System.out.println(zigzagLevelOrder(root));
     }
 
-    public  static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public  static List<List<Integer>> zigzagLevelOrder(TreeNode_1 root) {
         if (root==null)return new ArrayList<>();
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<List<Integer>> result=new ArrayList<>();
@@ -26,7 +26,7 @@ public class TreeZigZagTraversals {
             Stack<Integer> stack=new Stack<>();
             boolean flag=true;
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     if (flag)
                         integers.add(temp.val);

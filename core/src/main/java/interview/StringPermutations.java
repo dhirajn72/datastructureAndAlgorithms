@@ -1,8 +1,5 @@
 package interview;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Dhiraj
  * @date 17/12/18

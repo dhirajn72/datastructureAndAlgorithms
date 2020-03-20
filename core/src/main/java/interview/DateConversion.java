@@ -2,11 +2,7 @@ package interview;
 
 
 import java.sql.Date;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 /**
@@ -20,10 +16,7 @@ public class DateConversion {
        // System.out.println(d);
         // 7-Mar-2019
         //7-Mar
-        System.out.println(getDateWithoutTime(d));;
-
-
-
+        System.out.println(getDateWithoutTime(d));
 
 
     }

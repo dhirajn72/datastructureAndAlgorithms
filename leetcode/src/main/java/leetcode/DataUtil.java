@@ -2,14 +2,12 @@ package leetcode;
 
 import session2.PopulateNextRightPointerInEachNode;
 
-import java.util.function.Supplier;
-
 /**
  * @author Dhiraj
  * @date 07/08/19
  */
 public class DataUtil {
-    public static TreeNode getTreeData(){
+    public static TreeNode_1 getTreeData(){
         /*
                  1
                /  \
@@ -20,16 +18,16 @@ public class DataUtil {
 
          */
 
-        TreeNode root=new TreeNode(1);
-        root.left=new TreeNode(2);
-        root.right=new TreeNode(3);
-        root.left.left=new TreeNode(4);
-        root.left.right=new TreeNode(5);
-        root.right.left=new TreeNode(6);
-        root.right.right=new TreeNode(7);
+        TreeNode_1 root=new TreeNode_1(1);
+        root.left=new TreeNode_1(2);
+        root.right=new TreeNode_1(3);
+        root.left.left=new TreeNode_1(4);
+        root.left.right=new TreeNode_1(5);
+        root.right.left=new TreeNode_1(6);
+        root.right.right=new TreeNode_1(7);
         return root;
     }
-    public static TreeNode getUnbalancedTreeData(){
+    public static TreeNode_1 getUnbalancedTreeData(){
         /*
                  1
                /  \
@@ -44,19 +42,19 @@ public class DataUtil {
 
          */
 
-        TreeNode root=new TreeNode(1);
-        root.left=new TreeNode(2);
-        root.right=new TreeNode(3);
-        root.left.left=new TreeNode(4);
-        root.left.right=new TreeNode(5);
-        root.right.left=new TreeNode(6);
-        root.right.right=new TreeNode(7);
-        root.right.right.right=new TreeNode(7);
-        root.right.right.right.right=new TreeNode(7);
+        TreeNode_1 root=new TreeNode_1(1);
+        root.left=new TreeNode_1(2);
+        root.right=new TreeNode_1(3);
+        root.left.left=new TreeNode_1(4);
+        root.left.right=new TreeNode_1(5);
+        root.right.left=new TreeNode_1(6);
+        root.right.right=new TreeNode_1(7);
+        root.right.right.right=new TreeNode_1(7);
+        root.right.right.right.right=new TreeNode_1(7);
 
         return root;
     }
-    public static TreeNode getTreeDataPreOrdered(){
+    public static TreeNode_1 getTreeDataPreOrdered(){
         /*
                  1
                /  \
@@ -67,34 +65,34 @@ public class DataUtil {
 
          */
 
-        TreeNode root=new TreeNode(1);
-        root.left=new TreeNode(2);
-        root.right=new TreeNode(5);
-        root.left.left=new TreeNode(3);
-        root.left.right=new TreeNode(4);
-        root.right.left=new TreeNode(6);
-        root.right.right=new TreeNode(7);
+        TreeNode_1 root=new TreeNode_1(1);
+        root.left=new TreeNode_1(2);
+        root.right=new TreeNode_1(5);
+        root.left.left=new TreeNode_1(3);
+        root.left.right=new TreeNode_1(4);
+        root.right.left=new TreeNode_1(6);
+        root.right.right=new TreeNode_1(7);
         return root;
     }
 
 
-    public static TreeNode getBinarySearchTreeData(){
+    public static TreeNode_1 getBinarySearchTreeData(){
         /*
                         100
                  75                 200
              50     80         150       300
          45    65        90
          */
-        TreeNode root= /*new TreeNode(10);*/new TreeNode(100);
-        root.left=/*new TreeNode(5);*/new TreeNode(75);
-        root.right=/*new TreeNode(15);*/new TreeNode(200);
-        root.right.left=/*new TreeNode(6);*/new TreeNode(150);
-        root.right.right=/*new TreeNode(20);*/new TreeNode(300);
-        root.left.left=new TreeNode(50);
-        root.left.right=new TreeNode(80);
-        root.left.right.right=new TreeNode(90);
-        root.left.left.left=new TreeNode(45);
-        root.left.left.right=new TreeNode(65);
+        TreeNode_1 root= /*new TreeNode_1(10);*/new TreeNode_1(100);
+        root.left=/*new TreeNode_1(5);*/new TreeNode_1(75);
+        root.right=/*new TreeNode_1(15);*/new TreeNode_1(200);
+        root.right.left=/*new TreeNode_1(6);*/new TreeNode_1(150);
+        root.right.right=/*new TreeNode_1(20);*/new TreeNode_1(300);
+        root.left.left=new TreeNode_1(50);
+        root.left.right=new TreeNode_1(80);
+        root.left.right.right=new TreeNode_1(90);
+        root.left.left.left=new TreeNode_1(45);
+        root.left.left.right=new TreeNode_1(65);
         return root;
 
         //[10,5,15,null,null,6,20]

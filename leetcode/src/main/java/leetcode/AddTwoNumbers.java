@@ -1,7 +1,6 @@
 package leetcode;
 
 import java.math.BigInteger;
-import java.util.Arrays;
 
 /**
  * @author Dhiraj

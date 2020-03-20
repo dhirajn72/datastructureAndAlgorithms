@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,17 +12,17 @@ import java.util.Queue;
 public class BSTIterator {
 
     Heap heap;
-    public BSTIterator(TreeNode root) {
+    public BSTIterator(TreeNode_1 root) {
         int treeSize=_getTreeSize(root);
         heap=new Heap(treeSize);
         _insertIntoHeap(root);
     }
 
-    private void _insertIntoHeap(TreeNode root) {
-        Queue<TreeNode> q=new LinkedList<>();
+    private void _insertIntoHeap(TreeNode_1 root) {
+        Queue<TreeNode_1> q=new LinkedList<>();
         q.offer(root);
         while (!q.isEmpty()){
-            TreeNode temp=q.poll();
+            TreeNode_1 temp=q.poll();
             if (temp!=null){
                 heap.insert(temp.val);
                 if (temp.left!=null)
@@ -33,12 +33,12 @@ public class BSTIterator {
         }
     }
 
-    private int _getTreeSize(TreeNode root) {
+    private int _getTreeSize(TreeNode_1 root) {
         int count=0;
-        Queue<TreeNode> q=new LinkedList<>();
+        Queue<TreeNode_1> q=new LinkedList<>();
         q.offer(root);
         while (!q.isEmpty()){
-            TreeNode temp=q.poll();
+            TreeNode_1 temp=q.poll();
             if (temp!=null){
                 count++;
                 if (temp.left!=null)

@@ -1,7 +1,5 @@
 package com.java.ds.tree.practice;
 
-import com.java.ds.client.DataUtils;
-import com.java.ds.trees.excercise.LevelOrder;
 import interview.TreeNode;
 
 /**

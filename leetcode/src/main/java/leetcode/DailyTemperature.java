@@ -12,7 +12,6 @@ public class DailyTemperature {
         //int[] arr={73, 74, 75, 71, 69, 72, 76, 73};
         int[] arr = {55, 38, 53, 81, 61, 93, 97, 32, 43, 78};//[3,1,1,2,1,1,0,1,1,0]
         System.out.println(Arrays.toString(dailyTemperatures(arr)));
-        ;
     }
 
     public static int[] dailyTemperatures(int[] arr) {

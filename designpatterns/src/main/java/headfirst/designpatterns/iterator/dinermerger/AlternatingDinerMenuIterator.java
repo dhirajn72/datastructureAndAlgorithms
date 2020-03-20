@@ -16,11 +16,7 @@ public class AlternatingDinerMenuIterator implements Iterator {
 		return menuItem;
 	}
 	public boolean hasNext() {
-		if (position >= list.length || list[position] == null) {
-			return false;
-		} else {
-			return true;
-		}
+        return position < list.length && list[position] != null;
 	}
 	public String toString() {
 		return "Alternating Diner Menu Iterator";

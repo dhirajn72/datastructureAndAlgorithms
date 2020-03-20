@@ -3,7 +3,6 @@ package com.leetcode;
 import com.java.linkedlist.ListNode;
 
 import java.math.BigInteger;
-import java.util.List;
 
 /**
  * @author Dhiraj

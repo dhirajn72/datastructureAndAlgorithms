@@ -14,7 +14,7 @@ public class CircularList {
         list.add(2);
         list.add(3);
         System.out.println(list);
-        System.out.println(list.remove(4));;
+        System.out.println(list.remove(4));
         System.out.println(list);
     }
 

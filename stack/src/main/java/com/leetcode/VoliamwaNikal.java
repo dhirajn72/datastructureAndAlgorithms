@@ -1,7 +1,5 @@
 package com.leetcode;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 06/07/19

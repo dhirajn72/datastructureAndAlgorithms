@@ -11,23 +11,23 @@ import java.util.Queue;
  */
 public class BinaryTreeRightSideView {
     public static void main(String[] args) {
-        TreeNode root=DataUtil.getTreeData() ;
-        System.out.println(rightSideView(null));;
+        TreeNode_1 root=DataUtil.getTreeData() ;
+        System.out.println(rightSideView(null));
     }
 
-    public static List<Integer> rightSideView(TreeNode root) {
+    public static List<Integer> rightSideView(TreeNode_1 root) {
         return _levelOrder(root);
     }
-    private static List<Integer> _levelOrder(TreeNode root) {
+    private static List<Integer> _levelOrder(TreeNode_1 root) {
         if (root==null)return new ArrayList<>();
         else {
-            Queue<TreeNode>  q=new LinkedList<>();
+            Queue<TreeNode_1>  q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             ArrayList<Integer> out=new ArrayList<>();
             List<Integer> result=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     out.add(temp.val);
                     if (temp.left!=null)

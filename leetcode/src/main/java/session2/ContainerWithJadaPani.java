@@ -1,7 +1,5 @@
 package session2;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 27/08/19
@@ -10,7 +8,7 @@ public class ContainerWithJadaPani {
 
     public static void main(String[] args) {
         int[] arr={0,1,0,2,1,0,1,3,2,1,2,1};
-        System.out.println(trap(arr));;
+        System.out.println(trap(arr));
     }
 
     public static int trap(int[] height) {

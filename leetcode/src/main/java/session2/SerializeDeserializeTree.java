@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,23 +15,23 @@ import java.util.Queue;
 public class SerializeDeserializeTree {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         String ser=serialize(root);
         System.out.println(ser);
-        TreeNode des=deserialize(ser);
+        TreeNode_1 des=deserialize(ser);
         System.out.println(root);
         System.out.println(des);
     }
 
 
-    public static String serialize(TreeNode root) {
+    public static String serialize(TreeNode_1 root) {
         if (root==null)return null;
         else {
             List<String> list=new ArrayList<>();
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     list.add(String.valueOf(temp.val));
                     q.offer(temp.left);
@@ -46,30 +46,30 @@ public class SerializeDeserializeTree {
     }
 
     // Decodes your encoded data to tree.
-    public static TreeNode deserialize(String data) {
+    public static TreeNode_1 deserialize(String data) {
         if (data==null)
             return null;
         String[] arr=data.split(",");
         if (arr[0].equals("#"))
             return null;
-        TreeNode root=new TreeNode(Integer.valueOf(arr[0]));
-        Queue<TreeNode> q=new LinkedList<>();
+        TreeNode_1 root=new TreeNode_1(Integer.valueOf(arr[0]));
+        Queue<TreeNode_1> q=new LinkedList<>();
         q.offer(root);
         int i=1;
         while (!q.isEmpty()){
-            TreeNode temp=q.poll();
+            TreeNode_1 temp=q.poll();
             if (temp!=null){
-                TreeNode left=null;
+                TreeNode_1 left=null;
                 if (!arr[i].equals("#")){
-                    left=new TreeNode(Integer.valueOf(arr[i]));
+                    left=new TreeNode_1(Integer.valueOf(arr[i]));
                 }
                 temp.left=left;
                 q.offer(left);
                 i++;
 
-                TreeNode right=null;
+                TreeNode_1 right=null;
                 if (!arr[i].equals("#")){
-                    right=new TreeNode(Integer.valueOf(arr[i]));
+                    right=new TreeNode_1(Integer.valueOf(arr[i]));
                 }
                 temp.right=right;
                 q.offer(right);

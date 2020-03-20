@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -8,19 +8,19 @@ import leetcode.TreeNode;
  */
 public class SameTree {
     public static void main(String[] args) {
-        TreeNode p=new TreeNode(1);
-        p.left=new TreeNode(2);
-        TreeNode q=new TreeNode(1);
-        q.right=new TreeNode(2);
+        TreeNode_1 p=new TreeNode_1(1);
+        p.left=new TreeNode_1(2);
+        TreeNode_1 q=new TreeNode_1(1);
+        q.right=new TreeNode_1(2);
         System.out.println(isSameTree(p,q));
     }
 
-    public static boolean isSameTree(TreeNode p, TreeNode q) {
+    public static boolean isSameTree(TreeNode_1 p, TreeNode_1 q) {
         if (p==q) return true;
         return _isSame(p,q);
     }
 
-    private static boolean _isSame(TreeNode p, TreeNode q) {
+    private static boolean _isSame(TreeNode_1 p, TreeNode_1 q) {
         if (p==q)return true;
         if (p!=null && q==null)return false;
         if (p==null && q!=null) return false;

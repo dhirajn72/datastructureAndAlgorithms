@@ -1,7 +1,5 @@
 package gfg;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 08/06/19

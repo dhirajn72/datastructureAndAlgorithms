@@ -1,6 +1,9 @@
 package leetcode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -13,7 +16,7 @@ public class SumWith4 {
         int[] arr={-3,-2,-1,0,0,1,2,3};
 
 
-        System.out.println(fourSum(arr,0));;
+        System.out.println(fourSum(arr,0));
     }
 
     public static List<List<Integer>> fourSum(int[] nums, int target) {

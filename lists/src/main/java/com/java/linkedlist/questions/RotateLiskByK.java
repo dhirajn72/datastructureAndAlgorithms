@@ -19,7 +19,7 @@ public class RotateLiskByK {
 
         System.out.println(list);
 
-        System.out.println(rotateList(list,3));;
+        System.out.println(rotateList(list,3));
 
 
     }

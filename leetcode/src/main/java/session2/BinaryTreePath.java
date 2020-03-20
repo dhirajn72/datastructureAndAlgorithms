@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +13,11 @@ import java.util.List;
 public class BinaryTreePath {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         System.out.println(binaryTreePaths(root));
     }
 
-    public static List<String> binaryTreePaths(TreeNode root) {
+    public static List<String> binaryTreePaths(TreeNode_1 root) {
         if (root==null)return new ArrayList<>();
         int[] arr=new int[100];
         List<String> res=new ArrayList<>();
@@ -25,7 +25,7 @@ public class BinaryTreePath {
         return res;
     }
 
-    private static void _print(TreeNode root, int[] arr, int i, List<String> res) {
+    private static void _print(TreeNode_1 root, int[] arr, int i, List<String> res) {
         if (root==null)return;
         arr[i++]=root.val;
         if (root.left==null && root.right==null)

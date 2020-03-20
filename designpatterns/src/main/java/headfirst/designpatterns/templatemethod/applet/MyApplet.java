@@ -1,7 +1,7 @@
 package headfirst.designpatterns.templatemethod.applet;
 
 import java.applet.Applet;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class MyApplet extends Applet {
 	private static final long serialVersionUID = 2L;

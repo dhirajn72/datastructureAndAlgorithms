@@ -1,10 +1,9 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * @author Dhiraj
@@ -12,18 +11,18 @@ import java.util.Stack;
  */
 public class SumOfLeftLeaves {
 
-    public int sumOfLeftLeaves(TreeNode root) {
+    public int sumOfLeftLeaves(TreeNode_1 root) {
         return sum(root);
     }
 
-    private int sum(TreeNode root) {
+    private int sum(TreeNode_1 root) {
         if (root==null)return 0;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             int count=0;
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     if (temp.left!=null && temp.left.left==null && temp.left.right==null){
                         count+=temp.left.val;

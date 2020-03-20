@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -17,7 +17,7 @@ public class DiameterOfTree {
      * @return
      */
 
-    public int diameterOfBinaryTree(TreeNode root) {
+    public int diameterOfBinaryTree(TreeNode_1 root) {
         if (root==null) return 0;
         int height=_height(root.left)+_height(root.right);
         int lDiameter=diameterOfBinaryTree(root.left);
@@ -25,7 +25,7 @@ public class DiameterOfTree {
         return Math.max(height,Math.max(lDiameter,rDiameter));
     }
 
-    private int _height(TreeNode root) {
+    private int _height(TreeNode_1 root) {
         if (root==null)return 0;
         int left=_height(root.left);
         int right=_height(root.right);

@@ -144,6 +144,6 @@ public class Trie {
     public static void main(String[] args) {
         Trie trie=new Trie();
         trie.insert("mississippi is a country");
-        System.out.println(trie.search("country"));;
+        System.out.println(trie.search("country"));
     }
 }

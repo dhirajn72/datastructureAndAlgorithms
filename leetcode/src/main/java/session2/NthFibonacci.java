@@ -1,14 +1,12 @@
 package session2;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 01/09/19
  */
 public class NthFibonacci {
     public static void main(String[] args) {
-        System.out.println(fib(3));;
+        System.out.println(fib(3));
     }
 
 

@@ -1,8 +1,5 @@
 package com.java.core;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 /**
  * @author Dhiraj
  * @date 29/09/19

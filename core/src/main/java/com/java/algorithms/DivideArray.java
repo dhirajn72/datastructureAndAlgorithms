@@ -1,8 +1,6 @@
 package com.java.algorithms;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author Dhiraj

@@ -2,7 +2,6 @@ package session2;
 
 import leetcode.DataUtil;
 import leetcode.ListNode;
-import leetcode.Node;
 
 /**
  * @author Dhiraj

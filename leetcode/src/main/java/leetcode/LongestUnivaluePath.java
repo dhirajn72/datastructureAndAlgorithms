@@ -6,12 +6,12 @@ package leetcode;
  */
 public class LongestUnivaluePath {
     public static void main(String[] args) {
-        TreeNode root= new TreeNode(5);
-        root.left=new TreeNode(4);
-        root.right=new TreeNode(5);
-        root.left.left=new TreeNode(1);
-        root.left.right=new TreeNode(1);
-        root.right.right=new TreeNode(5);
+        TreeNode_1 root= new TreeNode_1(5);
+        root.left=new TreeNode_1(4);
+        root.right=new TreeNode_1(5);
+        root.left.left=new TreeNode_1(1);
+        root.left.right=new TreeNode_1(1);
+        root.right.right=new TreeNode_1(5);
 
         System.out.println(longestUnivaluePath(root));
 
@@ -28,13 +28,13 @@ public class LongestUnivaluePath {
     }
 
     static int max;
-    public static int longestUnivaluePath(TreeNode root) {
+    public static int longestUnivaluePath(TreeNode_1 root) {
         max = 0;
         longestPath(root);
         return max;
     }
 
-    public static int longestPath(TreeNode node) {
+    public static int longestPath(TreeNode_1 node) {
         // Base case: if null node, return 0
         if (node == null) {
             return 0;

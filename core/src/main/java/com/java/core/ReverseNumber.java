@@ -1,8 +1,5 @@
 package com.java.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Dhiraj
  * @date 12/09/19

@@ -19,12 +19,12 @@ public class ConvertSortedListtoBinarySearchTree {
         arr[7]=8;
         arr[8]=9;
         arr[9]=10;
-        TreeNode result=_sortedArrayToBST(arr,0,arr.length-1);
-        System.out.println(isBST(result));;
+        TreeNode_1 result=_sortedArrayToBST(arr,0,arr.length-1);
+        System.out.println(isBST(result));
     }
 
 
-    public static TreeNode sortedListToBST(ListNode head) {
+    public static TreeNode_1 sortedListToBST(ListNode head) {
         if (head==null)return null;
         int size=0;
         ListNode temp=head;
@@ -40,16 +40,16 @@ public class ConvertSortedListtoBinarySearchTree {
             temp=temp.next;
         }
         Arrays.sort(arr);
-        TreeNode result=_sortedArrayToBST(arr,0,arr.length-1);
-        System.out.println(isBST(result));;
+        TreeNode_1 result=_sortedArrayToBST(arr,0,arr.length-1);
+        System.out.println(isBST(result));
         return result;
     }
 
-    private static boolean isBST(TreeNode root) {
+    private static boolean isBST(TreeNode_1 root) {
         return _isBST(root);
     }
 
-    private static boolean _isBST(TreeNode root) {
+    private static boolean _isBST(TreeNode_1 root) {
         if (root==null)
             return true;
         if (root.left==null && root.right==null)
@@ -60,12 +60,12 @@ public class ConvertSortedListtoBinarySearchTree {
 
     }
 
-    private static TreeNode _sortedArrayToBST(int[] arr,int start,int end) {
+    private static TreeNode_1 _sortedArrayToBST(int[] arr, int start, int end) {
         if (start>end){
             return null;
         }
         int mid=(start+end)/2;
-        TreeNode root=new TreeNode(arr[mid]);
+        TreeNode_1 root=new TreeNode_1(arr[mid]);
         root.left=_sortedArrayToBST(arr,start,mid-1);
         root.right=_sortedArrayToBST(arr,mid+1,end);
         return root;

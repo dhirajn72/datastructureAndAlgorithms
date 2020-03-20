@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -9,16 +9,16 @@ import leetcode.TreeNode;
  */
 public class SearchBST {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getBinarySearchTreeData();
+        TreeNode_1 root= DataUtil.getBinarySearchTreeData();
         System.out.println(searchBST(root,65));
     }
 
-    public static TreeNode searchBST(TreeNode root, int val) {
+    public static TreeNode_1 searchBST(TreeNode_1 root, int val) {
         if (root==null)return null;
         return _search(root,val);
     }
 
-    private static TreeNode _search(TreeNode root, int val) {
+    private static TreeNode_1 _search(TreeNode_1 root, int val) {
         if (root==null)return null;
         if (val<root.val){
            return  _search(root.left,val);

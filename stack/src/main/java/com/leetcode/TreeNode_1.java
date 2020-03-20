@@ -4,12 +4,12 @@ package com.leetcode;
  * @author Dhiraj
  * @date 05/07/19
  */
-public class TreeNode {
+public class TreeNode_1 {
     int data;
-    TreeNode left;
-    TreeNode right;
+    TreeNode_1 left;
+    TreeNode_1 right;
 
-    public TreeNode(int data) {
+    public TreeNode_1(int data) {
         this.data = data;
     }
 
@@ -21,19 +21,19 @@ public class TreeNode {
         this.data = data;
     }
 
-    public TreeNode getLeft() {
+    public TreeNode_1 getLeft() {
         return left;
     }
 
-    public void setLeft(TreeNode left) {
+    public void setLeft(TreeNode_1 left) {
         this.left = left;
     }
 
-    public TreeNode getRight() {
+    public TreeNode_1 getRight() {
         return right;
     }
 
-    public void setRight(TreeNode right) {
+    public void setRight(TreeNode_1 right) {
         this.right = right;
     }
 

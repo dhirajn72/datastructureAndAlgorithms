@@ -1,14 +1,12 @@
 package com.leetcode;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 19/07/19
  */
 public class FirstBadVersion {
     public static void main(String[] args) {
-        System.out.println(firstBadVersion(10));;
+        System.out.println(firstBadVersion(10));
 
     }
 

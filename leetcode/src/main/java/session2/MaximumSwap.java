@@ -22,7 +22,7 @@ public class MaximumSwap {
         String s2=String.valueOf("hello");
         System.out.println(s1==(s2));
 
-        List integers=Arrays.asList(new Integer[]{1,2,3,4});
+        List integers=Arrays.asList(1,2,3,4);
         System.out.println(integers);
 
 

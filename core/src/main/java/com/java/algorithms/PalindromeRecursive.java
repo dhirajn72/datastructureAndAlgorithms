@@ -6,7 +6,7 @@ package com.java.algorithms;
  */
 public class PalindromeRecursive {
     public static void main(String[] args) {
-        System.out.println(isPalindrome("abcdcba"));;
+        System.out.println(isPalindrome("abcdcba"));
     }
 
     private static boolean isPalindrome(String str) {
@@ -20,7 +20,6 @@ public class PalindromeRecursive {
             high--;
            return _isPalidromeRecursive(str, low, high);
         }
-        if (low==high)return true;
-        return false;
+        return low == high;
     }
 }

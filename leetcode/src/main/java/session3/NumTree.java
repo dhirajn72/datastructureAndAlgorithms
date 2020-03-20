@@ -1,7 +1,7 @@
 package session3;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ import java.util.*;
 public class NumTree {
     public static void main(String[] args) {
         System.out.println(numTrees(5));
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         System.out.println(zigzagLevelOrder(root));
         printPaths(root);
     }
@@ -49,17 +49,17 @@ public class NumTree {
      * @param root
      * @return
      */
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode_1 root) {
         if (root==null)
             return new ArrayList<>();
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> integers=new ArrayList<>();
             List<List<Integer>> list=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)
@@ -90,18 +90,18 @@ public class NumTree {
      * @param root
      * @return
      */
-    public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public static List<List<Integer>> zigzagLevelOrder(TreeNode_1 root) {
         if (root==null)
             return new ArrayList<>();
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             boolean flag=true;
             List<Integer> integers=new ArrayList<>();
             List<List<Integer>> list=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)
@@ -142,16 +142,16 @@ public class NumTree {
      * @param root
      * @return
      */
-    public int maxDepth(TreeNode root) {
+    public int maxDepth(TreeNode_1 root) {
         if (root==null)
             return 0;
         else {
-            Queue<TreeNode> q = new LinkedList<>();
+            Queue<TreeNode_1> q = new LinkedList<>();
             q.offer(root);
             q.offer(null);
             int count=0;
             while (!q.isEmpty()) {
-                TreeNode temp = q.poll();
+                TreeNode_1 temp = q.poll();
                 if (temp != null) {
                     if (temp.left != null)
                         q.offer(temp.left);
@@ -179,17 +179,17 @@ public class NumTree {
      * @param root
      * @return
      */
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(TreeNode_1 root) {
         if (root==null)
             return new ArrayList<>();
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> integers=new ArrayList<>();
             Stack<List<Integer>> s=new Stack<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)
@@ -223,16 +223,16 @@ public class NumTree {
      * @param root
      * @return
      */
-    public int minDepth(TreeNode root) {
+    public int minDepth(TreeNode_1 root) {
         if (root==null)
             return 0;
         else {
-            Queue<TreeNode> q = new LinkedList<>();
+            Queue<TreeNode_1> q = new LinkedList<>();
             q.offer(root);
             q.offer(null);
             int count=0;
             while (!q.isEmpty()) {
-                TreeNode temp = q.poll();
+                TreeNode_1 temp = q.poll();
                 if (temp != null) {
                     if (temp.left==null && temp.right==null)
                         break;
@@ -251,14 +251,14 @@ public class NumTree {
         }
     }
 
-    public static void printPaths(TreeNode root){
+    public static void printPaths(TreeNode_1 root){
         if (root==null)return;
         int[] arr=new int[100];
         _printPaths(root,arr,0);
 
     }
 
-    private static void _printPaths(TreeNode root, int[] arr, int i) {
+    private static void _printPaths(TreeNode_1 root, int[] arr, int i) {
         if (root==null)
             return;
         arr[i++]=root.val;
@@ -278,7 +278,7 @@ public class NumTree {
         System.out.println();
     }
 
-    private static void _printPathsSum(TreeNode root, int[] arr, int i,int sum,List<Boolean> booleans) {
+    private static void _printPathsSum(TreeNode_1 root, int[] arr, int i, int sum, List<Boolean> booleans) {
         if (root==null)
             return;
         arr[i++]=root.val;
@@ -312,14 +312,12 @@ public class NumTree {
      * @param sum
      * @return
      */
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSum(TreeNode_1 root, int sum) {
         if (root==null)return false;
         int[] arr=new int[100];
         List<Boolean> booleans=new ArrayList<>();
         _printPathsSum(root,arr,0,sum,booleans);
-        if (!booleans.isEmpty())
-            return true;
-        return false;
+        return !booleans.isEmpty();
     }
 
 
@@ -334,7 +332,7 @@ public class NumTree {
      * @param sum
      * @return
      */
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public List<List<Integer>> pathSum(TreeNode_1 root, int sum) {
         if (root==null)return new ArrayList<>();
         int[] arr=new int[100];
         List<List<Integer>> list=new ArrayList<>();
@@ -342,7 +340,7 @@ public class NumTree {
         return list;
     }
 
-    private static void _getPathsSum(TreeNode root, int[] arr, int i,int sum,List<List<Integer>> list) {
+    private static void _getPathsSum(TreeNode_1 root, int[] arr, int i, int sum, List<List<Integer>> list) {
         if (root==null)
             return;
         arr[i++]=root.val;

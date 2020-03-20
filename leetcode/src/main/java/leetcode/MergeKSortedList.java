@@ -114,7 +114,6 @@ public class MergeKSortedList {
             int largeChild = 0;
             while (index < currentCount / 2) {
                 int leftChild = 2 * index + 1;
-                ;
                 int rightChild = 2 * index + 2;
                 if (rightChild < currentCount && arr[leftChild].data > arr[rightChild].data)
                     largeChild = rightChild;

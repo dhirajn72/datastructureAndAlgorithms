@@ -27,7 +27,7 @@ public class SymetricOrMirroredTree {
      * @param root
      * @return
      */
-    public static boolean isSymmetric(TreeNode root) {
+    public static boolean isSymmetric(TreeNode_1 root) {
         if (root==null)
             return true;
         if (root.left==null && root.right==null)
@@ -39,7 +39,7 @@ public class SymetricOrMirroredTree {
         return _areMirrored(root.left,root.right) && _areMirrored(root.right,root.left);
     }
 
-    private static boolean _areMirrored(TreeNode right, TreeNode left) {
+    private static boolean _areMirrored(TreeNode_1 right, TreeNode_1 left) {
         if (left==null && right==null)
             return true;
         if (left==null ||right==null)

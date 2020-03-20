@@ -25,8 +25,6 @@ public class EvaluateExpression_2 {
             else
                 s.push(str.charAt(i));
         }
-        if (s.isEmpty())
-            return true;
-        return false;
+        return s.isEmpty();
     }
 }

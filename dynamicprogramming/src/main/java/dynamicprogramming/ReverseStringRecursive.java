@@ -7,7 +7,7 @@ package dynamicprogramming;
 public class ReverseStringRecursive {
     public static void main(String[] args) {
         String s="I am";
-        System.out.println(_reverse(s));;
+        System.out.println(_reverse(s));
     }
 
     private static String _reverse(String s) {

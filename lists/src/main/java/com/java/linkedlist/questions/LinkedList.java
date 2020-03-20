@@ -36,12 +36,12 @@ public class LinkedList {
         public static void main(String[] args)
         {
             LinkedList llist = new LinkedList();
-            llist.push(20);
-            llist.push(4);
-            llist.push(15);
-            llist.push(10);
+            push(20);
+            push(4);
+            push(15);
+            push(10);
 
-            llist.head.next.next.next.next = llist.head;
+            head.next.next.next.next = head;
             if (detectLoop(head))
                 System.out.println("Loop found");
             else

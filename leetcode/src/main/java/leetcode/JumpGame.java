@@ -37,7 +37,6 @@ public class JumpGame {
             if (first==length)return true;
             if (arr[0]==0)return false;
         }
-        if (first>length)return false;
-        return true;
+        return first <= length;
     }
 }

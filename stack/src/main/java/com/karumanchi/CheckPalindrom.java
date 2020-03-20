@@ -39,8 +39,6 @@ public class CheckPalindrom {
             i++;
             j--;
         }
-        if (i==j)
-            return true;
-        return false;
+        return i == j;
     }
 }

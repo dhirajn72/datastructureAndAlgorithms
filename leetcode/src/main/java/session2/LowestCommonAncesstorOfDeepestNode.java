@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -13,20 +13,20 @@ import java.util.Queue;
  */
 public class LowestCommonAncesstorOfDeepestNode {
 
-    public TreeNode lcaDeepestLeaves(TreeNode root) {
+    public TreeNode_1 lcaDeepestLeaves(TreeNode_1 root) {
         if (root==null)return null;
-        TreeNode ancesstor=_getAncesstor(root);
+        TreeNode_1 ancesstor=_getAncesstor(root);
         return ancesstor;
     }
 
-    private TreeNode _getAncesstor(TreeNode root) {
+    private TreeNode_1 _getAncesstor(TreeNode_1 root) {
         if (root==null)return null;
         else {
-            Queue<TreeNode> queue = new LinkedList<>();
+            Queue<TreeNode_1> queue = new LinkedList<>();
             queue.offer(root);
-            List<TreeNode> treeNodes=new ArrayList<>();
+            List<TreeNode_1> treeNodes=new ArrayList<>();
             while (!queue.isEmpty()){
-                TreeNode temp= queue.poll();
+                TreeNode_1 temp= queue.poll();
                 if (temp!=null){
                     treeNodes.add(temp);
                     if (temp.left!=null)

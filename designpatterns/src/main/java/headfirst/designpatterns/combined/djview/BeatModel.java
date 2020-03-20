@@ -1,8 +1,7 @@
 package headfirst.designpatterns.combined.djview;
 
 import javax.sound.midi.*;
-
-import java.util.*;
+import java.util.ArrayList;
 
 public class BeatModel implements BeatModelInterface, MetaEventListener {
 	Sequencer sequencer;
@@ -49,7 +48,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 
 	public void notifyBeatObservers() {
 		for(int i = 0; i < beatObservers.size(); i++) {
-			BeatObserver observer = (BeatObserver)beatObservers.get(i);
+			BeatObserver observer = beatObservers.get(i);
 			observer.updateBeat();
 		}
 	}
@@ -60,7 +59,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 
 	public void notifyBPMObservers() {
 		for(int i = 0; i < bpmObservers.size(); i++) {
-			BPMObserver observer = (BPMObserver)bpmObservers.get(i);
+			BPMObserver observer = bpmObservers.get(i);
 			observer.updateBPM();
 		}
 	}

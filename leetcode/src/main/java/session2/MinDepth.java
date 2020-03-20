@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,19 +12,19 @@ import java.util.Queue;
  */
 public class MinDepth {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getBinarySearchTreeData();
+        TreeNode_1 root= DataUtil.getBinarySearchTreeData();
         System.out.println(minDepth(root));
     }
 
-    public static int minDepth(TreeNode root) {
+    public static int minDepth(TreeNode_1 root) {
         if (root == null) return 0;
         else {
-            Queue<TreeNode> q = new LinkedList<>();
+            Queue<TreeNode_1> q = new LinkedList<>();
             q.offer(root);
             q.offer(null);
             int levelCount=0;
             while (!q.isEmpty()) {
-                TreeNode temp = q.poll();
+                TreeNode_1 temp = q.poll();
                 if (temp != null) {
                     if (temp.left==null && temp.right==null)
                         return levelCount;

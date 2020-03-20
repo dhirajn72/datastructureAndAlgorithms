@@ -50,9 +50,7 @@ public class LongestPalindromeSubstring {
             }
             else break;
         }
-        if (i==j || i>j)
-            return true;
-        return false;
+        return i == j || i > j;
     }
 
 }

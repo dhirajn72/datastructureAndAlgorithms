@@ -7,7 +7,7 @@ package com.leetcode;
 public class FibboMemoized {
     public static void main(String[] args) {
 
-        System.out.println( _fibo(5));;
+        System.out.println( _fibo(5));
     }
     private static int _fibo(int n) {
         if (n==0)return 0;

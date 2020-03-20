@@ -2,7 +2,6 @@ package com.java.core.LTI.questions;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.StringTokenizer;
 
 /**
  * @author Dhiraj

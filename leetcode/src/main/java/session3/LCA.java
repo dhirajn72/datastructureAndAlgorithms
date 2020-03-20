@@ -1,6 +1,6 @@
 package session3;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -15,13 +15,13 @@ Runtime: 4 ms, faster than 100.00% of Java online submissions for Lowest Common 
 Memory Usage: 42.2 MB, less than 5.55% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
  */
 public class LCA {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode_1 lowestCommonAncestor(TreeNode_1 root, TreeNode_1 p, TreeNode_1 q) {
         if (root==null)
             return root;
         if (root==p||root==q)
             return root;
-        TreeNode left=lowestCommonAncestor(root.left,p,q);
-        TreeNode right=lowestCommonAncestor(root.right,p,q);
+        TreeNode_1 left=lowestCommonAncestor(root.left,p,q);
+        TreeNode_1 right=lowestCommonAncestor(root.right,p,q);
         if (left!=null && right!=null)
             return root;
         else

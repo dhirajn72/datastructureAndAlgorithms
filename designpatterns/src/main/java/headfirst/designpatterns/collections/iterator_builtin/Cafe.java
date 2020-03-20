@@ -1,6 +1,6 @@
 package headfirst.designpatterns.collections.iterator_builtin;
 
-import java.util.*;
+import java.util.Iterator;
 
 public class Cafe {
 
@@ -20,7 +20,7 @@ public class Cafe {
  
 	private static void printMenu(Iterator<String> iterator) {
 		while (iterator.hasNext()) {
-			String menuItem = (String)iterator.next();
+			String menuItem = iterator.next();
 			System.out.println(menuItem);
 
 		}

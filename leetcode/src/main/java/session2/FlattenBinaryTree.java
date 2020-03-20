@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.Stack;
 
@@ -19,11 +19,11 @@ public class FlattenBinaryTree {
      Memory Usage: 35.9 MB, less than 100.00% of Java online submissions for Flatten Binary Tree to Linked List.
      * @param root
      */
-    public void flatten(TreeNode root) {
+    public void flatten(TreeNode_1 root) {
         if (root==null)return;
 
-        Stack<TreeNode> s = new Stack<>();
-        TreeNode temp=root;
+        Stack<TreeNode_1> s = new Stack<>();
+        TreeNode_1 temp=root;
         while (!s.isEmpty()||temp!=null){
             if (temp.right!=null)
                 s.push(temp.right);
@@ -32,7 +32,7 @@ public class FlattenBinaryTree {
                 temp.left=null;
             }
             else if (!s.isEmpty()){
-                TreeNode r=s.pop();
+                TreeNode_1 r=s.pop();
                 temp.right=r;
             }
             temp=temp.right;

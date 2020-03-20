@@ -73,9 +73,7 @@ public class FindPathFromSourceToDestination {
 
     public boolean findPathFromSourceToDestination(int source,int dest){
         dfs(source);
-        if (vertices[dest].visited==true)
-            return true;
-        return false;
+        return vertices[dest].visited == true;
 
     }
 }

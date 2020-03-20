@@ -1,7 +1,6 @@
 package com.java.core.clients;
 
 import com.java.core.thread.Thread1;
-import com.java.core.thread.Thread2;
 
 /**
  * @author Dhiraj

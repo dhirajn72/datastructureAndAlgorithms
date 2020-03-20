@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class GenerateTree {
 
-    public List<TreeNode> generateTrees(int n) {
+    public List<TreeNode_1> generateTrees(int n) {
 
         return null;
     }

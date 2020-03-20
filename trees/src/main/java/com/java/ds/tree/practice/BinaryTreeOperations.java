@@ -17,15 +17,11 @@ public class BinaryTreeOperations {
         //System.out.println(areIdenticals(root1,root2));
         //System.out.println(areMirrors(root1,root2));
         //postOrder(root1);
-        System.out.println(diameter(root1));;
+        System.out.println(diameter(root1));
         printPaths(DataUtils.getSmallBinaryOrderedTree());
         System.out.println("*******");
         printPaths(root1);
-        System.out.println(haspathSum(DataUtils.getBinaryOrderedTree(),10));;
-
-
-
-
+        System.out.println(haspathSum(DataUtils.getBinaryOrderedTree(),10));
 
 
     }

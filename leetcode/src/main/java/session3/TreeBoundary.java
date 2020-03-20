@@ -1,7 +1,7 @@
 package session3;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -9,12 +9,12 @@ import leetcode.TreeNode;
  */
 public class TreeBoundary {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getUnbalancedTreeData();
+        TreeNode_1 root= DataUtil.getUnbalancedTreeData();
         boundary(root);
     }
 
 
-    public static void boundary(TreeNode root){
+    public static void boundary(TreeNode_1 root){
         if (root==null)
             return;
         System.out.print(root.val+",");
@@ -23,7 +23,7 @@ public class TreeBoundary {
         right(root.right);
     }
 
-    private static void right(TreeNode root) {
+    private static void right(TreeNode_1 root) {
         if (root==null)
             return;
         if (root.left==null && root.right==null)
@@ -36,7 +36,7 @@ public class TreeBoundary {
             right(root.left);
     }
 
-    private static void bottom(TreeNode root) {
+    private static void bottom(TreeNode_1 root) {
         if (root==null)
             return;
         if (root.left==null&& root.right==null){
@@ -47,7 +47,7 @@ public class TreeBoundary {
         bottom(root.right);
     }
 
-    private static void left(TreeNode root) {
+    private static void left(TreeNode_1 root) {
         if (root==null)
             return;
         if (root.left==null && root.right==null)

@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.Stack;
 
@@ -11,18 +11,18 @@ import java.util.Stack;
  */
 public class CountCompleteTreeNode {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         countNodes(root);
 
     }
-    public static int countNodes(TreeNode root) {
+    public static int countNodes(TreeNode_1 root) {
         if (root==null)return 0;
         else {
-            Stack<TreeNode> s=new Stack<>();
+            Stack<TreeNode_1> s=new Stack<>();
             s.push(root);
             int res=0;
             while (!s.isEmpty()){
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 if (temp!=null){
                     ++res;
                     if (temp.left!=null)

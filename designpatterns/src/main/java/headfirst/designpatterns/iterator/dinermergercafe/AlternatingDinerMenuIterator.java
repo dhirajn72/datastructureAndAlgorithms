@@ -1,7 +1,7 @@
 package headfirst.designpatterns.iterator.dinermergercafe;
 
-import java.util.Iterator;
 import java.util.Calendar;
+import java.util.Iterator;
 
 public class AlternatingDinerMenuIterator implements Iterator<MenuItem> {
 	MenuItem[] items;
@@ -17,11 +17,7 @@ public class AlternatingDinerMenuIterator implements Iterator<MenuItem> {
 		return menuItem;
 	}
 	public boolean hasNext() {
-		if (position >= items.length || items[position] == null) {
-			return false;
-		} else {
-			return true;
-		}
+        return position < items.length && items[position] != null;
 	}
 	/* 
 	 * No longer needed as of Java 8

@@ -1,7 +1,6 @@
 package com.java.stack;
 
 
-import java.util.Arrays;
 import java.util.Stack;
 
 /**

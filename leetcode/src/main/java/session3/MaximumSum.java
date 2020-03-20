@@ -1,7 +1,7 @@
 package session3;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -10,18 +10,18 @@ import leetcode.TreeNode;
 public class MaximumSum {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         System.out.println(maxPathSum(root));
     }
 
-    public static int maxPathSum(TreeNode root) {
+    public static int maxPathSum(TreeNode_1 root) {
         int max[] = new int[1];
         max[0] = Integer.MIN_VALUE;
         calculateSum(root, max);
         return max[0];
     }
 
-    public static int calculateSum(TreeNode root, int[] max) {
+    public static int calculateSum(TreeNode_1 root, int[] max) {
         if (root == null)
             return 0;
 

@@ -1,10 +1,9 @@
 package session3;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -14,15 +13,15 @@ import java.util.Stack;
  */
 public class MinimumDistanceInBST {
     public static void main(String[] args) {
-        TreeNode treeNode= DataUtil.getBinarySearchTreeData();
+        TreeNode_1 treeNode= DataUtil.getBinarySearchTreeData();
         minDiffInBST(treeNode);
 
     }
 
-    public static int minDiffInBST(TreeNode root) {
+    public static int minDiffInBST(TreeNode_1 root) {
         if (root==null)
             return 0;
-        Stack<TreeNode> s=new Stack<>();
+        Stack<TreeNode_1> s=new Stack<>();
         List<Integer> integerList=new ArrayList<>();
 
         while (!s.isEmpty()||root!=null){
@@ -31,7 +30,7 @@ public class MinimumDistanceInBST {
                 root=root.left;
             }
             else {
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 integerList.add(temp.val);
                 root=temp.right;
             }

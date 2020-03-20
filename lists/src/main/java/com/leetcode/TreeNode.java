@@ -6,8 +6,8 @@ package com.leetcode;
  */
 public class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNode_1 left;
+    TreeNode_1 right;
 
     TreeNode(int x) {
         val = x;

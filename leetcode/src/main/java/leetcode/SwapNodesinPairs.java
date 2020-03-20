@@ -17,7 +17,7 @@ public class SwapNodesinPairs {
         head.next.next.next.next.next=new ListNode(6);
         head.next.next.next.next.next.next=new ListNode(7);
 
-        System.out.println(swapPairs(head));;
+        System.out.println(swapPairs(head));
     }
 
     public static ListNode swapPairs(ListNode head) {

@@ -13,7 +13,7 @@ public class PatternSearchingInString {
     private static void _patterSearching(String str, String pattern) {
         int patternLength=pattern.length();
         for (int i=0;i<str.length();i++){
-            if (str.substring(i,patternLength).equals(pattern)? true:false){
+            if (str.substring(i, patternLength).equals(pattern)){
                 System.out.println("Found");
             }
         }

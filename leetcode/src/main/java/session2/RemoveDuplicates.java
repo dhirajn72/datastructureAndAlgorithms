@@ -3,7 +3,6 @@ package session2;
 import leetcode.DataUtil;
 import leetcode.ListNode;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 

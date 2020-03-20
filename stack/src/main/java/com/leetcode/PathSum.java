@@ -22,21 +22,21 @@ public class PathSum {
 
          */
 
-        TreeNode root= new TreeNode(5);// DataUtil.getTree();
-        root.setLeft(new TreeNode(4));
-        root.setRight(new TreeNode(8));
-        root.getLeft().setLeft(new TreeNode(11));
-        root.getLeft().getLeft().setLeft(new TreeNode(7));
-        root.getLeft().getLeft().setRight(new TreeNode(2));
-        root.getRight().setLeft(new TreeNode(13));
-        root.getRight().setRight(new TreeNode(4));
-        root.getRight().getRight().setRight(new TreeNode(1));
+        TreeNode_1 root= new TreeNode_1(5);// DataUtil.getTree();
+        root.setLeft(new TreeNode_1(4));
+        root.setRight(new TreeNode_1(8));
+        root.getLeft().setLeft(new TreeNode_1(11));
+        root.getLeft().getLeft().setLeft(new TreeNode_1(7));
+        root.getLeft().getLeft().setRight(new TreeNode_1(2));
+        root.getRight().setLeft(new TreeNode_1(13));
+        root.getRight().setRight(new TreeNode_1(4));
+        root.getRight().getRight().setRight(new TreeNode_1(1));
 
         System.out.println(hasPathSum(root,22));
 
     }
 
-    public static boolean hasPathSum(TreeNode root, int sum) {
+    public static boolean hasPathSum(TreeNode_1 root, int sum) {
         if (root==null) return false;
         int[] arr=new int[100];
         List<List<Integer>> integers= new ArrayList<>();
@@ -48,7 +48,7 @@ public class PathSum {
         return false;
     }
 
-    private static void  _printPath(TreeNode root, int[] arr, int i, int target,List<List<Integer>> integers) {
+    private static void  _printPath(TreeNode_1 root, int[] arr, int i, int target, List<List<Integer>> integers) {
         if (root==null)return;
         arr[i++]=root.data;
         if (root.left==null && root.right==null) {

@@ -1,7 +1,7 @@
 package session3;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -24,17 +24,17 @@ Memory Usage: 43.2 MB, less than 9.76% of Java online submissions for Count Comp
 public class CountNodes {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeDataPreOrdered();
+        TreeNode_1 root= DataUtil.getTreeDataPreOrdered();
         System.out.println(countNodes(root));
     }
-    public static int countNodes(TreeNode root) {
+    public static int countNodes(TreeNode_1 root) {
         if (root==null)
             return 0;
-        Queue<TreeNode> q=new LinkedList<>();
+        Queue<TreeNode_1> q=new LinkedList<>();
         q.offer(root);
-        List<TreeNode> list=new ArrayList<>();
+        List<TreeNode_1> list=new ArrayList<>();
         while (!q.isEmpty()){
-            TreeNode temp=q.poll();
+            TreeNode_1 temp=q.poll();
             list.add(temp);
             if (temp!=null) {
                 q.offer(temp.left);

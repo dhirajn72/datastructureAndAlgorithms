@@ -1,10 +1,5 @@
 package com.java.core.questions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * @author Dhiraj
  * @date 12/04/18

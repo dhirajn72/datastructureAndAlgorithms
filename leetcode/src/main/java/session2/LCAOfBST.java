@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -9,7 +9,7 @@ import leetcode.TreeNode;
  */
 public class LCAOfBST {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeDataPreOrdered();
+        TreeNode_1 root= DataUtil.getTreeDataPreOrdered();
         System.out.println(lowestCommonAncestor(root,root.right.right,root.right.left));
 
 
@@ -24,12 +24,12 @@ public class LCAOfBST {
 
 
      */
-    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public static TreeNode_1 lowestCommonAncestor(TreeNode_1 root, TreeNode_1 p, TreeNode_1 q) {
         if (root==null)return null;
         if (root==p||root==q)
             return root;
-        TreeNode left=lowestCommonAncestor(root.left,p,q);
-        TreeNode right=lowestCommonAncestor(root.right,p,q);
+        TreeNode_1 left=lowestCommonAncestor(root.left,p,q);
+        TreeNode_1 right=lowestCommonAncestor(root.right,p,q);
         if (left!=null && right!=null)
             return root;
         else

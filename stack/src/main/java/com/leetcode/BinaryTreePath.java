@@ -9,12 +9,12 @@ import java.util.List;
  */
 public class BinaryTreePath {
     public static void main(String[] args) {
-        //TreeNode root = DataUtil.getTree();
-        TreeNode root= null;
+        //TreeNode_1 root = DataUtil.getTree();
+        TreeNode_1 root= null;
         System.out.println(binaryTreePaths(root));
     }
 
-    public static List<String> binaryTreePaths(TreeNode root) {
+    public static List<String> binaryTreePaths(TreeNode_1 root) {
         List<String> list = new ArrayList<>();
         if (root == null) return list;
         int[] arr = new int[100];
@@ -22,7 +22,7 @@ public class BinaryTreePath {
         return list;
     }
 
-    private static void _printPath(int[] arr, TreeNode root, int i,List<String> strings) {
+    private static void _printPath(int[] arr, TreeNode_1 root, int i, List<String> strings) {
         if (root == null) return;
         arr[i++] = root.getData();
         if (root.right == null && root.left == null) {

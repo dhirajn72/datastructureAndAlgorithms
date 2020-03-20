@@ -6,21 +6,20 @@ package leetcode;
  */
 public class SumRoottoLeafNumbers {
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
-        System.out.println(sumNumbers(null));;
-
+        TreeNode_1 root= DataUtil.getTreeData();
+        System.out.println(sumNumbers(null));
 
 
     }
 
 
-    public static int sumNumbers(TreeNode root) {
+    public static int sumNumbers(TreeNode_1 root) {
         int[] arr=new int[500];
         int[] dp=new int[1];
         return _printPaths(arr,0,root,dp);
     }
 
-    private static int _printPaths(int[] arr, int i,TreeNode root,int[] dp) {
+    private static int _printPaths(int[] arr, int i, TreeNode_1 root, int[] dp) {
         if (root==null)return 0;
         arr[i++]=root.val;
         if (root.left==null && root.right==null)

@@ -6,16 +6,16 @@ package leetcode;
  */
 public class TreeOperations {
     public static void main(String[] args) {
-        TreeNode t1=new TreeNode(1);
-        t1.left=new TreeNode(2);
-        t1.right=new TreeNode(3);
-        TreeNode t2=new TreeNode(1);
-        t2.left=new TreeNode(2);
-        t2.right=new TreeNode(3);
-        t2.right.left=new TreeNode(4);
+        TreeNode_1 t1=new TreeNode_1(1);
+        t1.left=new TreeNode_1(2);
+        t1.right=new TreeNode_1(3);
+        TreeNode_1 t2=new TreeNode_1(1);
+        t2.left=new TreeNode_1(2);
+        t2.right=new TreeNode_1(3);
+        t2.right.left=new TreeNode_1(4);
         System.out.println(isSameTree(t1,t2));
     }
-    public static boolean isSameTree(TreeNode p, TreeNode q) {
+    public static boolean isSameTree(TreeNode_1 p, TreeNode_1 q) {
         if (p==null && q==null)
             return true;
         if (p==null||q==null)

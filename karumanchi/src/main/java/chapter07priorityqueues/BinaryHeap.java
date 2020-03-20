@@ -75,7 +75,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>>{
 			percolateDown( i );
 	}
 
-	// Test if the priority queue is logically empty.
+	// Test_1 if the priority queue is logically empty.
 	public boolean isEmpty( ){
 		return currentSize == 0;
 	}
@@ -108,7 +108,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>>{
 		A[ hole ] = tmp;
 	}
 
-	// Test program
+	// Test_1 program
 	public static void main( String [ ] args ){
 		int numItems = 10000;
 		BinaryHeap<Integer> h = new BinaryHeap<Integer>( );

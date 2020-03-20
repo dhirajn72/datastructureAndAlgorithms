@@ -26,9 +26,9 @@ Expected
         minStack.push(512);
 
         minStack.pop();
-        System.out.println(minStack.getMin());;    //  --> Returns 0.
+        System.out.println(minStack.getMin());//  --> Returns 0.
         minStack.pop();
-        System.out.println(minStack.getMin());;  // --> Returns -2.
+        System.out.println(minStack.getMin());// --> Returns -2.
         minStack.pop();
         System.out.println(minStack.getMin());
     }

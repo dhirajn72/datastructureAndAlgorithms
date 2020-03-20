@@ -16,7 +16,7 @@ public class InOrderTraversals {
 
         TreeNode root=DataUtils.getTreeNode();
         System.out.println(root);
-        System.out.println(inorderTraversal(root));;
+        System.out.println(inorderTraversal(root));
 
     }
 

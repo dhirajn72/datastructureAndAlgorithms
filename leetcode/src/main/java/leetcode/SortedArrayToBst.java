@@ -22,19 +22,19 @@ public class SortedArrayToBst {
         arr[9]=10;
         System.out.println(Arrays.toString(arr));
 
-        TreeNode tree=_sortedArrayToBST(arr,0,arr.length-1);
+        TreeNode_1 tree=_sortedArrayToBST(arr,0,arr.length-1);
         DeleteNodeFromBinarySearchTree._levelOrder(tree);
         System.out.println(tree);
 
 
     }
 
-    private static TreeNode _sortedArrayToBST(int[] arr,int start,int end) {
+    private static TreeNode_1 _sortedArrayToBST(int[] arr, int start, int end) {
         if (start>end){
             return null;
         }
         int mid=(start+end)/2;
-        TreeNode root=new TreeNode(arr[mid]);
+        TreeNode_1 root=new TreeNode_1(arr[mid]);
         root.left=_sortedArrayToBST(arr,start,mid-1);
         root.right=_sortedArrayToBST(arr,mid+1,end);
         return root;

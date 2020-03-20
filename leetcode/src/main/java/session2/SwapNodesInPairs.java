@@ -14,7 +14,7 @@ public class SwapNodesInPairs {
 
     public static void main(String[] args) {
         ListNode head = DataUtil.getListData();
-        System.out.println(swapPairs(head));;
+        System.out.println(swapPairs(head));
     }
 
 

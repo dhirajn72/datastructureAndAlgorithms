@@ -75,7 +75,7 @@ public class Huffman{
 		// (could make its own method)
 		while ( !bh.isEmpty() ) {  
 			// Get the first member from the binary heap
-			HuffmanTreeNode m1 = (HuffmanTreeNode)bh.deleteMin();
+			HuffmanTreeNode m1 = bh.deleteMin();
 			
 			// If binary heap is now empty, exit this loop
 			if( bh.isEmpty() ){
@@ -99,7 +99,7 @@ public class Huffman{
 			}
 			
 			// Get the next member from the binary heap
-			HuffmanTreeNode m2 = (HuffmanTreeNode)bh.deleteMin();
+			HuffmanTreeNode m2 = bh.deleteMin();
 			
 			// Create a new inner node
 			HuffmanTreeNode m3 = new HuffmanTreeNode(m1.getWeight()+m2.getWeight(),-1);
@@ -120,10 +120,7 @@ public class Huffman{
 	
 	// Returns true if Huffman tree is empty
 	private boolean isEmpty(){
-		if( ht_root == null )
-			return true;
-		else
-			return false;
+        return ht_root == null;
 	}
 	
 	// Traverses tree filling huffman codes for all nodes

@@ -1,7 +1,7 @@
 package com.karumanchi;
 
 import com.leetcode.DataUtil;
-import com.leetcode.TreeNode;
+import com.leetcode.TreeNode_1;
 
 import java.util.*;
 import java.util.Stack;
@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 public class BinaryTreeOperations {
     public static void main(String[] args) {
-        TreeNode root = DataUtil.getTree();
+        TreeNode_1 root = DataUtil.getTree();
         _preOrder(root);
         System.out.println();
         _postOrder(root);
@@ -23,37 +23,37 @@ public class BinaryTreeOperations {
         System.out.println();
 
         int[] arr= {1,2,3,4,5,6,7};
-        TreeNode t=sortedArrayToBT(arr);
+        TreeNode_1 t=sortedArrayToBT(arr);
         System.out.println(t);
         System.out.println();
 
     }
 
-    public static TreeNode sortedArrayToBT(int[] arr){
+    public static TreeNode_1 sortedArrayToBT(int[] arr){
         return _sortedArrayToTree(arr,0,arr.length-1);
     }
 
-    private static TreeNode _sortedArrayToTree(int[] arr, int low, int high) {
+    private static TreeNode_1 _sortedArrayToTree(int[] arr, int low, int high) {
         if (low>high)
             return null;
         int mid=(low+high)/2;
-        TreeNode root=new TreeNode(arr[mid]);
+        TreeNode_1 root=new TreeNode_1(arr[mid]);
 
         root.setLeft(_sortedArrayToTree(arr,low,mid-1));
         root.setRight(_sortedArrayToTree(arr,mid+1,high));
         return root;
     }
 
-    private static void _levelOrder(TreeNode root) {
+    private static void _levelOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Queue<TreeNode> q= new LinkedList<>();
+            Queue<TreeNode_1> q= new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> integers= new ArrayList<>();
             List<List<Integer>> list= new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     //System.out.print(temp.getData()+", ");
                     integers.add(temp.getData());
@@ -64,7 +64,7 @@ public class BinaryTreeOperations {
                 }
                 else {
                     list.add(new ArrayList<>(integers));
-                    integers.clear();;
+                    integers.clear();
                     if (!q.isEmpty())
                         q.offer(null);
 
@@ -74,17 +74,17 @@ public class BinaryTreeOperations {
         }
     }
 
-    private static void _inOrder(TreeNode root) {
+    private static void _inOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Stack<TreeNode> s= new Stack<>();
+            Stack<TreeNode_1> s= new Stack<>();
             while (!s.isEmpty() ||root!=null ){
                 if (root!=null){
                     s.push(root);
                     root=root.getLeft();
                 }
                 else {
-                    TreeNode temp=s.pop();
+                    TreeNode_1 temp=s.pop();
                     System.out.print(temp.getData()+", ");
                     root=temp.getRight();
                 }
@@ -93,14 +93,14 @@ public class BinaryTreeOperations {
 
     }
 
-    private static void _postOrder(TreeNode root) {
+    private static void _postOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Stack<TreeNode> s= new Stack<>();
+            Stack<TreeNode_1> s= new Stack<>();
             Stack<Integer> out= new Stack<>();
             s.push(root);
             while (!s.isEmpty()){
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 if (temp != null) {
                     out.push(temp.getData());
                     if (temp.getLeft()!=null)
@@ -113,13 +113,13 @@ public class BinaryTreeOperations {
                 System.out.print(out.pop()+", ");
         }
     }
-    private static void _preOrder(TreeNode root) {
+    private static void _preOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Stack<TreeNode> s= new Stack<>();
+            Stack<TreeNode_1> s= new Stack<>();
             s.push(root);
             while (!s.isEmpty()){
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 if (temp!=null){
                     System.out.print(temp.getData()+", ");
                     if (temp.getRight()!=null)

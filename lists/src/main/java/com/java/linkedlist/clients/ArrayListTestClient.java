@@ -2,8 +2,6 @@ package com.java.linkedlist.clients;
 
 import com.java.linkedlist.ArrayList;
 
-import java.util.List;
-
 /**
  * @author Dhiraj
  * @date 26/09/18

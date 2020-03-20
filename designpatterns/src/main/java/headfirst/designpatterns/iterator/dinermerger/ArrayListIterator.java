@@ -17,10 +17,6 @@ public class ArrayListIterator implements Iterator {
 	}
  
 	public boolean hasNext() {
-		if (position >= items.size()) {
-			return false;
-		} else {
-			return true;
-		}
+        return position < items.size();
 	}
 }

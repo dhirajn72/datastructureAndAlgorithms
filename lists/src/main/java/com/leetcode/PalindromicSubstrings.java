@@ -1,8 +1,5 @@
 package com.leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author Dhiraj
  * @date 28/07/19
@@ -42,10 +39,6 @@ public class PalindromicSubstrings {
                 break;
             }
         }
-        if (i == j || i>j) {
-            return true;
-        } else {
-            return false;
-        }
+        return i == j || i > j;
     }
 }

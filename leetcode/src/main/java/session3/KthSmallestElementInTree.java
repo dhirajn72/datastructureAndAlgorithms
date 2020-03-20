@@ -1,7 +1,7 @@
 package session3;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,21 +15,21 @@ import java.util.Queue;
 public class KthSmallestElementInTree {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getBinarySearchTreeData();
+        TreeNode_1 root= DataUtil.getBinarySearchTreeData();
         System.out.println(kthSmallest(root,7));
 
 
     }
 
 
-    public static int kthSmallest(TreeNode root, int k) {
+    public static int kthSmallest(TreeNode_1 root, int k) {
         if (root == null) return 0;
         else {
-            Queue<TreeNode> q = new LinkedList<>();
+            Queue<TreeNode_1> q = new LinkedList<>();
             q.offer(root);
             List<Integer> result = new ArrayList<>();
             while (!q.isEmpty()) {
-                TreeNode temp = q.poll();
+                TreeNode_1 temp = q.poll();
                 if (temp != null) {
                     result.add(temp.val);
                     if (temp.left != null)

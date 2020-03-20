@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class CamelCase {
     public static void main(String[] args) {
         String str="I am in bangalore";
-        System.out.println(getCamelCase(str));;
+        System.out.println(getCamelCase(str));
     }
 
     private static String getCamelCase(String str) {

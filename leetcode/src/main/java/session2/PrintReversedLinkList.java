@@ -10,7 +10,7 @@ import leetcode.ListNode;
 public class PrintReversedLinkList {
     public static void main(String[] args) {
         ListNode head= DataUtil.getListData();
-        System.out.println(_reverseRecursive(head));;
+        System.out.println(_reverseRecursive(head));
     }
 
     private static String _reverseRecursive(ListNode head) {

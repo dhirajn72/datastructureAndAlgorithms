@@ -1,6 +1,8 @@
 package headfirst.designpatterns.templatemethod.barista;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class CoffeeWithHook extends CaffeineBeverageWithHook {
  
@@ -16,11 +18,7 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
 
 		String answer = getUserInput();
 
-		if (answer.toLowerCase().startsWith("y")) {
-			return true;
-		} else {
-			return false;
-		}
+        return answer.toLowerCase().startsWith("y");
 	}
  
 	private String getUserInput() {

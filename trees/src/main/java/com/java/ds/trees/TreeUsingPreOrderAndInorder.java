@@ -1,6 +1,5 @@
 package com.java.ds.trees;
 
-import com.java.ds.client.DataUtils;
 import interview.TreeNode;
 
 /**

@@ -1,7 +1,5 @@
 package com.leetcode;
 
-import java.util.List;
-
 /**
  * @author Dhiraj
  * @date 20/07/19

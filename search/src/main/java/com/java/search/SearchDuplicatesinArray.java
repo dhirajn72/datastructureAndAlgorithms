@@ -7,7 +7,7 @@ package com.java.search;
 public class SearchDuplicatesinArray {
     public static void main(String[] args) {
         int[] arr = {1,2, 3, 4, 5};
-        System.out.println(findDups(arr));;
+        System.out.println(findDups(arr));
     }
 
     private static int findDups(int[] arr) {

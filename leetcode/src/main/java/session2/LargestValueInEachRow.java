@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -14,16 +14,16 @@ import java.util.Queue;
 public class LargestValueInEachRow {
 
 
-    public List<Integer> largestValues(TreeNode root) {
+    public List<Integer> largestValues(TreeNode_1 root) {
         if (root==null)return new ArrayList<>();
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> res=new ArrayList<>();
             List<Integer> ints=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     ints.add(temp.val);
                     if (temp.left!=null)

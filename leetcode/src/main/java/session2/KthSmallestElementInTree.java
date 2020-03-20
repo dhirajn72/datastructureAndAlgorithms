@@ -1,7 +1,6 @@
 package session2;
 
-import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +12,11 @@ import java.util.Stack;
  */
 public class KthSmallestElementInTree {
     public static void main(String[] args) {
-        System.out.println(kthSmallest(new TreeNode(2),2));
+        System.out.println(kthSmallest(new TreeNode_1(2),2));
 
     }
 
-    public  static int kthSmallest(TreeNode root, int k) {
+    public  static int kthSmallest(TreeNode_1 root, int k) {
         List<Integer> preOrdered=_getPostOrderOfTree(root);
         if (preOrdered.size()<k)return 0;
         Heap heap=new Heap(preOrdered.size());
@@ -29,14 +28,14 @@ public class KthSmallestElementInTree {
         return min;
     }
 
-    private static List<Integer> _getPostOrderOfTree(TreeNode root) {
+    private static List<Integer> _getPostOrderOfTree(TreeNode_1 root) {
         if (root==null)return null;
         else {
-            Stack<TreeNode> s=new Stack<>();
+            Stack<TreeNode_1> s=new Stack<>();
             s.push(root);
             List<Integer> integers=new ArrayList<>();
             while (!s.isEmpty()){
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.right!=null)

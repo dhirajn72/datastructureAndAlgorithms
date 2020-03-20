@@ -3,7 +3,6 @@ package session2;
 import leetcode.ListNode;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author Dhiraj

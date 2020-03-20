@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -16,20 +16,20 @@ public class TreeFromPostOrderAndInorder_1 {
     public static void main(String[] args) {
         int[] postOrder={4,5,2,6,7,3,1};
         int[] inOrder={4,2,5,1,6,3,7};
-        TreeNode root=buildTree(inOrder,postOrder);
+        TreeNode_1 root=buildTree(inOrder,postOrder);
         System.out.println(root);
         _levelOrder(root);
     }
 
-    public  static TreeNode buildTree(int[] inorder, int[] postorder) {
+    public  static TreeNode_1 buildTree(int[] inorder, int[] postorder) {
         if (inorder==null||postorder==null||inorder.length!=postorder.length)return null;
         return _buildTree(postorder,0,postorder.length-1,inorder,0,inorder.length-1);
     }
 
-    private static TreeNode _buildTree(int[] postorder, int postStart, int postEnd, int[] inorder, int inStart, int inEnd) {
+    private static TreeNode_1 _buildTree(int[] postorder, int postStart, int postEnd, int[] inorder, int inStart, int inEnd) {
         if (postStart>postEnd || inStart >inEnd)return null;
         int data=postorder[postEnd];
-        TreeNode root=new TreeNode(data);
+        TreeNode_1 root=new TreeNode_1(data);
         int offset=inStart;
         for (;offset<inEnd;offset++){
             if (inorder[offset]==data)break;
@@ -40,16 +40,16 @@ public class TreeFromPostOrderAndInorder_1 {
     }
 
 
-    public static void _levelOrder(TreeNode root){
+    public static void _levelOrder(TreeNode_1 root){
         if (root==null)return;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> integers=new ArrayList<>();
             List<List<Integer>> list=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)

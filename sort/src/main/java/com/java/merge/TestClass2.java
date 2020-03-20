@@ -2,8 +2,6 @@ package com.java.merge;
 
 import com.java.sort.client.DataUtils;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 25/11/18

@@ -10,11 +10,11 @@ import java.util.Queue;
 public class MinDepth {
     public static void main(String[] args) {
 
-        TreeNode root= new TreeNode(3);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(20));
-        root.getRight().setRight(new TreeNode(7));
-        root.getRight().setLeft(new TreeNode(15));
+        TreeNode_1 root= new TreeNode_1(3);
+        root.setLeft(new TreeNode_1(9));
+        root.setRight(new TreeNode_1(20));
+        root.getRight().setRight(new TreeNode_1(7));
+        root.getRight().setLeft(new TreeNode_1(15));
 
 
 
@@ -34,15 +34,15 @@ public class MinDepth {
 
     }
 
-    public static int minDepth(TreeNode root) {
+    public static int minDepth(TreeNode_1 root) {
         if (root==null)return 0;
         else {
-            Queue<TreeNode> q= new LinkedList<>();
+            Queue<TreeNode_1> q= new LinkedList<>();
             q.offer(root);
             q.offer(null);
             int count=1;
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     if (temp.getLeft()==null && temp.getRight()==null)
                        return count;

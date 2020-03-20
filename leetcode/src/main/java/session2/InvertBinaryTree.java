@@ -1,7 +1,6 @@
 package session2;
 
-import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,8 +14,8 @@ import java.util.Queue;
 public class InvertBinaryTree {
 
     public static void main(String[] args) {
-        TreeNode root= new TreeNode(1);//DataUtil.getTreeData();
-        root.right=new TreeNode(2);
+        TreeNode_1 root= new TreeNode_1(1);//DataUtil.getTreeData();
+        root.right=new TreeNode_1(2);
         System.out.println(root);
         _levelOrder(root);
         System.out.println(invertTree(root));
@@ -24,16 +23,16 @@ public class InvertBinaryTree {
 
     }
 
-    private static void _levelOrder(TreeNode root) {
+    private static void _levelOrder(TreeNode_1 root) {
         if (root==null)return;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> integers=new ArrayList<>();
             List<List<Integer>> list=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)
@@ -53,16 +52,16 @@ public class InvertBinaryTree {
     }
 
 
-    public static TreeNode invertTree(TreeNode root) {
+    public static TreeNode_1 invertTree(TreeNode_1 root) {
         return _invert(root);
     }
 
-    private static TreeNode _invert(TreeNode root) {
+    private static TreeNode_1 _invert(TreeNode_1 root) {
         if (root==null)return root;
         _invert(root.left);
         _invert(root.right);
         //if (root.left!=null && root.right!=null){
-            TreeNode temp=root.left;
+            TreeNode_1 temp=root.left;
             root.left=root.right;
             root.right=temp;
         //}

@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 /**
  * @author Dhiraj
@@ -9,16 +9,16 @@ import leetcode.TreeNode;
  */
 public class RootToLeaf {
     public static void main(String[] args) {
-        TreeNode root = DataUtil.getTreeData();
+        TreeNode_1 root = DataUtil.getTreeData();
         _printPath(root);
     }
 
-    private static void _printPath(TreeNode root) {
+    private static void _printPath(TreeNode_1 root) {
         int[] arr = new int[100];
         _print(root, 0, arr);
     }
 
-    private static void _print(TreeNode root, int i, int[] arr) {
+    private static void _print(TreeNode_1 root, int i, int[] arr) {
         if (root == null) return;
         arr[i++] = root.val;
         if (root.left==null && root.right==null)

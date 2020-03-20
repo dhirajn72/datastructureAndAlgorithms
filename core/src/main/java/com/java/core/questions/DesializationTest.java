@@ -2,7 +2,6 @@ package com.java.core.questions;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 
 /**
  * @author Dhiraj

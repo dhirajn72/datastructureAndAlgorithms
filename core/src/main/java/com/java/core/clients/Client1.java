@@ -1,6 +1,5 @@
 package com.java.core.clients;
 
-import com.java.utils.ArrayList;
 import com.java.utils.MyArrayList;
 
 /**

@@ -20,20 +20,20 @@ public class FlattenTreeToList {
      * @param args
      */
     public static void main(String[] args) {
-        TreeNode root=DataUtil.getTreeDataPreOrdered();
-        root=new TreeNode(1);
-        root.left=new TreeNode(2);
-        root.right=new TreeNode(5);
-        root.left.left=new TreeNode(3);
-        root.left.right=new TreeNode(4);
-        root.right.right=new TreeNode(6);
+        TreeNode_1 root=DataUtil.getTreeDataPreOrdered();
+        root=new TreeNode_1(1);
+        root.left=new TreeNode_1(2);
+        root.right=new TreeNode_1(5);
+        root.left.left=new TreeNode_1(3);
+        root.left.right=new TreeNode_1(4);
+        root.right.right=new TreeNode_1(6);
         flatten(root);
     }
 
-    public static void flatten(TreeNode root) {
+    public static void flatten(TreeNode_1 root) {
         if (root==null)return;
         List<Integer> integers=getAllNodeData(root);
-        TreeNode temp=null;
+        TreeNode_1 temp=null;
         for (int i:integers){
             if (temp==null)
                 temp=addToTreeNode(temp,i);
@@ -46,27 +46,27 @@ public class FlattenTreeToList {
         root.left=null;
         System.out.println(root);
     }
-    private static TreeNode addToTreeNode(TreeNode head, int i) {
-        if (head==null)head=new TreeNode(i);
+    private static TreeNode_1 addToTreeNode(TreeNode_1 head, int i) {
+        if (head==null)head=new TreeNode_1(i);
         else {
-            TreeNode p,q;
+            TreeNode_1 p,q;
             for (p=head;((q=p.right)!=null);p=q);
-            p.right=new TreeNode(i);
+            p.right=new TreeNode_1(i);
         }
         return head;
     }
 
-    private static List<Integer> getAllNodeData(TreeNode root) {
+    private static List<Integer> getAllNodeData(TreeNode_1 root) {
         return _preOrder(root);
     }
-    public static List<Integer> _preOrder(TreeNode root) {
+    public static List<Integer> _preOrder(TreeNode_1 root) {
         if (root==null)return null;
         else {
-            Stack<TreeNode> s=new Stack<>();
+            Stack<TreeNode_1> s=new Stack<>();
             s.push(root);
             List<Integer> integers= new ArrayList<>();
             while (!s.isEmpty()){
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.right!=null)

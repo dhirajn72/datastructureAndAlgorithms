@@ -2,8 +2,6 @@ package com.java.linkedlist;
 
 import com.java.linkedlist.questions.DataUtils;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 30/06/19

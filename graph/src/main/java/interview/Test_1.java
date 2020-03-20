@@ -7,7 +7,7 @@ import java.util.List;
  * @author Dhiraj
  * @date 24/01/19
  */
-public class Test {
+public class Test_1 {
     public static void main(String[] args) {
         List list= new ArrayList(2);
         list.add(1);

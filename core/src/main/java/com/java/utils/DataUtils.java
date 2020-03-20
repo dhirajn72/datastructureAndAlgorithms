@@ -90,7 +90,7 @@ class Test {
 
     @Override
     public String toString() {
-        return "Test{" +
+        return "Test_1{" +
                 "name='" + name + '\'' +
                 '}';
     }

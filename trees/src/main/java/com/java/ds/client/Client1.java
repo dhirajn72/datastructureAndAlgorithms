@@ -1,9 +1,7 @@
 package com.java.ds.client;
 
-import com.java.ds.trees.*;
+import com.java.ds.trees.BinaryTreeNode;
 import com.java.ds.trees.excercise.MaxInBinaryTreeRecursive;
-
-import java.util.Stack;
 
 /**
  * @author Dhiraj

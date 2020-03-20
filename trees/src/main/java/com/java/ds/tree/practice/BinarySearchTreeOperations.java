@@ -63,11 +63,11 @@ public class BinarySearchTreeOperations {
         treeOperations.insert(root,47);
         treeOperations.insert(root,41);*/
 
-        BinarySearchTreeNode root= /*new TreeNode(10);*/new BinarySearchTreeNode(100);
-        root.left=/*new TreeNode(5);*/new BinarySearchTreeNode(75);
-        root.right=/*new TreeNode(15);*/new BinarySearchTreeNode(200);
-        root.right.left=/*new TreeNode(6);*/new BinarySearchTreeNode(150);
-        root.right.right=/*new TreeNode(20);*/new BinarySearchTreeNode(300);
+        BinarySearchTreeNode root= /*new TreeNode_1(10);*/new BinarySearchTreeNode(100);
+        root.left=/*new TreeNode_1(5);*/new BinarySearchTreeNode(75);
+        root.right=/*new TreeNode_1(15);*/new BinarySearchTreeNode(200);
+        root.right.left=/*new TreeNode_1(6);*/new BinarySearchTreeNode(150);
+        root.right.right=/*new TreeNode_1(20);*/new BinarySearchTreeNode(300);
         root.left.left=new BinarySearchTreeNode(50);
         root.left.right=new BinarySearchTreeNode(80);
         root.left.right.right=new BinarySearchTreeNode(90);
@@ -76,7 +76,7 @@ public class BinarySearchTreeOperations {
 
         System.out.println(root);
         LevelOrderIterative.levelOrderIterative(root);
-        treeOperations.delete(root,150);
+        delete(root,150);
         LevelOrderIterative.levelOrderIterative(root);
         /*
                           50

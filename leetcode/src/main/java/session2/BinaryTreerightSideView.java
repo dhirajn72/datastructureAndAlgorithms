@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -16,20 +16,20 @@ public class BinaryTreerightSideView {
 
     }
 
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView(TreeNode_1 root) {
         return _rightSIdeView(root);
     }
 
-    private List<Integer> _rightSIdeView(TreeNode root) {
+    private List<Integer> _rightSIdeView(TreeNode_1 root) {
         if (root==null)return null;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> result=new ArrayList<>();
             List<Integer> integers=new ArrayList<>();
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null)

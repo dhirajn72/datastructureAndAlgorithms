@@ -12,7 +12,7 @@ import java.util.Set;
 public class BinarySearchTree {
 
     public static void main(String[] args) {
-        TreeNode root=new TreeNode(100);
+        TreeNode_1 root=new TreeNode_1(100);
         insert(root,75);
         insert(root,200);
         insert(root,50);
@@ -26,10 +26,10 @@ public class BinarySearchTree {
         System.out.println(root);
         int[] arr=generateArray(3);
         List<List<Integer>> permutation=_permutation(arr);
-        List<TreeNode> treeNodes=new ArrayList<>();
+        List<TreeNode_1> treeNodes=new ArrayList<>();
         System.out.println("Below are the trees::");
         for (List<Integer> integers:permutation){
-            TreeNode root1=insert(null,integers.get(0));
+            TreeNode_1 root1=insert(null,integers.get(0));
             for (int i=1;i<integers.size();i++){
                 insert(root1,integers.get(i));
             }
@@ -76,13 +76,13 @@ public class BinarySearchTree {
         arr[j]=temp;
     }
 
-    public static TreeNode insert(TreeNode root,int data){
+    public static TreeNode_1 insert(TreeNode_1 root, int data){
        return  _insertHelper(root,data);
     }
 
-    private static TreeNode _insertHelper(TreeNode root, int data) {
+    private static TreeNode_1 _insertHelper(TreeNode_1 root, int data) {
         if (root==null)
-            root=new TreeNode(data);
+            root=new TreeNode_1(data);
         else {
             if (root.val>data)
                 root.left=_insertHelper(root.left,data);

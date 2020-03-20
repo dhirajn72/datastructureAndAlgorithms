@@ -1,7 +1,6 @@
 package multithreading;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -11,7 +10,7 @@ import java.util.List;
 public class TestFinal {
     public static void main(String[] args) {
 
-        List<String> list= Arrays.asList(new String[]{"a","b","c","d"});
+        List<String> list= Arrays.asList("a","b","c","d");
         list.add("r");
         System.out.println(list);
 

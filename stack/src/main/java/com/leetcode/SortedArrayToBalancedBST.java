@@ -11,13 +11,13 @@ import java.util.Set;
 public class SortedArrayToBalancedBST {
     public static void main(String[] args) {
 
-        TreeNode root = sortedArrayToBST(new int[]{1, 2, 3, 4, 5/*, 6, 7, 8, 9, 10*/});
+        TreeNode_1 root = sortedArrayToBST(new int[]{1, 2, 3, 4, 5/*, 6, 7, 8, 9, 10*/});
         System.out.println(root);
         System.out.println();
         System.out.println();
     }
 
-    public static TreeNode sortedArrayToBST(int[] nums) {
+    public static TreeNode_1 sortedArrayToBST(int[] nums) {
 
         Set<Integer> integers=new HashSet<>();
         for (int i:nums)
@@ -38,7 +38,7 @@ public class SortedArrayToBalancedBST {
      * @param high
      * @return
      */
-    private static TreeNode _createTree(int[] nums, int low, int high) {
+    private static TreeNode_1 _createTree(int[] nums, int low, int high) {
         if (low > high)
             return null;
         int mid = low + (high - low) / 2;
@@ -47,7 +47,7 @@ public class SortedArrayToBalancedBST {
         System.out.println();
         System.out.println("Mid::"+nums[mid]);
         System.out.println();
-        TreeNode node = new TreeNode(nums[mid]);
+        TreeNode_1 node = new TreeNode_1(nums[mid]);
         node.setLeft(_createTree(nums, 0, mid - 1));
         node.setRight(_createTree(nums, mid + 1, high));
         return node;

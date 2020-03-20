@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +11,14 @@ import java.util.Stack;
  * @date 25/08/19
  */
 public class PostOrder {
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode_1 root) {
         if (root==null)return new ArrayList<>();
         else {
-            Stack<TreeNode> s=new Stack<>();
+            Stack<TreeNode_1> s=new Stack<>();
             s.push(root);
             Stack<Integer> out=new Stack<>();
             while (!s.isEmpty()){
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 if (temp!=null){
                     out.push(temp.val);
                     if (temp.left!=null)

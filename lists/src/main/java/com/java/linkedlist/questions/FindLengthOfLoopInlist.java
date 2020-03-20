@@ -2,8 +2,6 @@ package com.java.linkedlist.questions;
 
 import com.java.linkedlist.ListNode;
 
-import java.util.List;
-
 /**
  * @author Dhiraj
  * @date 11/05/18

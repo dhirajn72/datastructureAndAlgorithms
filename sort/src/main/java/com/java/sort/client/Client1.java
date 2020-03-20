@@ -1,6 +1,7 @@
 package com.java.sort.client;
 
-import com.java.sort.*;
+import com.java.sort.BubbleSort_2;
+import com.java.sort.MergeSort;
 
 import java.util.Arrays;
 

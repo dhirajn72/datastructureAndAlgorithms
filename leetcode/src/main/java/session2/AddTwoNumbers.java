@@ -14,7 +14,7 @@ public class AddTwoNumbers {
     public static void main(String[] args) {
         ListNode l1= DataUtil.getListData();
         ListNode l2= DataUtil.getListData();
-        System.out.println(addTwoNumbers(l1,l2));;
+        System.out.println(addTwoNumbers(l1,l2));
 
     }
 

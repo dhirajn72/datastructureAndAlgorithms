@@ -3,12 +3,12 @@
 package com.java.ds.trees;
 
 import com.java.ds.client.DataUtils;
+import interview.BinarySearchTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import interview.BinarySearchTreeNode;
 
 public class GenerateBSTs {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class GenerateBSTs {
         for (BinarySearchTreeNode treeNode:node)
             _levelOrder(treeNode);
         System.out.println("***********");
-        System.out.println(_levelOrder(DataUtils.getBinarySearchTreeNode()));;
+        System.out.println(_levelOrder(DataUtils.getBinarySearchTreeNode()));
 
     }
     public static List<ArrayList<Integer>> _levelOrder(BinarySearchTreeNode root){

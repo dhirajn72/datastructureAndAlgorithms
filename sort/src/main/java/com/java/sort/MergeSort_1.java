@@ -9,9 +9,9 @@ import java.util.Arrays;
 public class MergeSort_1 {
     public static void main(String[] args) {
         int[] arr = {9, 2, 5, 1, 8, 7, 4, 3};
-        System.out.println(Arrays.toString(arr));;
+        System.out.println(Arrays.toString(arr));
         sort(arr,0,arr.length-1);
-        System.out.println(Arrays.toString(arr));;
+        System.out.println(Arrays.toString(arr));
 
     }
 

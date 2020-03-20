@@ -1,7 +1,5 @@
 package com.java.core;
 
-import java.util.Objects;
-
 /**
  * @author Dhiraj
  * @date 29/02/20

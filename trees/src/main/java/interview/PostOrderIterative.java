@@ -2,7 +2,6 @@ package interview;
 
 import com.java.ds.client.DataUtils;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 /**

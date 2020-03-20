@@ -1,6 +1,6 @@
 package session2;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -13,17 +13,17 @@ import java.util.Queue;
  */
 public class BottomLeftTreeNode {
 
-    public int findBottomLeftValue(TreeNode root) {
+    public int findBottomLeftValue(TreeNode_1 root) {
         if (root==null)return 0;
         else {
-            Queue<TreeNode> q=new LinkedList<>();
+            Queue<TreeNode_1> q=new LinkedList<>();
             q.offer(root);
             q.offer(null);
             List<Integer> result=new ArrayList<>();
             List<Integer> integers=new ArrayList<>();
             int left=0;
             while (!q.isEmpty()){
-                TreeNode temp=q.poll();
+                TreeNode_1 temp=q.poll();
                 if (temp!=null){
                     integers.add(temp.val);
                     if (temp.left!=null) {

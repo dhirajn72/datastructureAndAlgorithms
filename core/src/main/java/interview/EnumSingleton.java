@@ -10,7 +10,7 @@ public enum EnumSingleton {
     public static void doSomething(){
         //do something
     }
-    private EnumSingleton(){
+    EnumSingleton(){
     }
 }
 

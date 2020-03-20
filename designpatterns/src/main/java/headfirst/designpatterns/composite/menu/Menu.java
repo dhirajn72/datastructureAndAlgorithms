@@ -1,7 +1,7 @@
 package headfirst.designpatterns.composite.menu;
 
-import java.util.Iterator;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Menu extends MenuComponent {
 	ArrayList<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
@@ -22,7 +22,7 @@ public class Menu extends MenuComponent {
 	}
  
 	public MenuComponent getChild(int i) {
-		return (MenuComponent)menuComponents.get(i);
+		return menuComponents.get(i);
 	}
  
 	public String getName() {
@@ -40,8 +40,8 @@ public class Menu extends MenuComponent {
   
 		Iterator<MenuComponent> iterator = menuComponents.iterator();
 		while (iterator.hasNext()) {
-			MenuComponent menuComponent = 
-				(MenuComponent)iterator.next();
+			MenuComponent menuComponent =
+                    iterator.next();
 			menuComponent.print();
 		}
 	}

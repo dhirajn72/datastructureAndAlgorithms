@@ -1,6 +1,9 @@
 package headfirst.designpatterns.collections;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Vector;
 
 public class Collections {
 	public static void main (String args[]) {		
@@ -13,7 +16,7 @@ public class Collections {
 		}
 		
 		System.out.println("Using iterator with Vector");
-		Iterator<String> iterator = (Iterator<String>) v.iterator();
+		Iterator<String> iterator = v.iterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}

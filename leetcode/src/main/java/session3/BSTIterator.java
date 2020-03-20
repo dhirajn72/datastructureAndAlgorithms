@@ -1,6 +1,6 @@
 package session3;
 
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,20 +14,20 @@ public class BSTIterator {
 
     Queue<Integer> q=new LinkedList<>();
 
-    public BSTIterator(TreeNode root) {
+    public BSTIterator(TreeNode_1 root) {
         inOrder(root);
     }
 
-    private void inOrder(TreeNode root) {
+    private void inOrder(TreeNode_1 root) {
 
-        Stack<TreeNode> s=new Stack<>();
+        Stack<TreeNode_1> s=new Stack<>();
         while (!s.isEmpty()||root!=null){
             if (root!=null){
                 s.push(root);
                 root=root.left;
             }
             else {
-                TreeNode temp=s.pop();
+                TreeNode_1 temp=s.pop();
                 q.offer(temp.val);
                 root=temp.right;
             }

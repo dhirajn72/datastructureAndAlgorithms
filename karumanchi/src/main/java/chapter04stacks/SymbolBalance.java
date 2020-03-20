@@ -28,9 +28,6 @@ public class SymbolBalance {
                 stk.push(s.charAt(i));
             }
         }
-        if(stk.isEmpty())
-            return true;
-        else
-            return false;
+        return stk.isEmpty();
     }
 }

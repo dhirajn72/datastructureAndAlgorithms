@@ -8,7 +8,7 @@ import java.util.List;
  * @author Dhiraj
  * @date 09/07/19
  */
-public class SlidingWindow {
+public class SlidingWindow_1 {
     /*
 Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3
 Output: [3,3,5,5,6,7] []

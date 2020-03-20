@@ -1,9 +1,5 @@
 package com.java.linkedlist;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
-
 /**
  * @author Dhiraj
  * @date 27/09/18

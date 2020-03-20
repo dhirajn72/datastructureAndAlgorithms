@@ -35,8 +35,6 @@ public class ValidPalindrome {
                 return false;
             }
         }
-        if (i==j)
-            return true;
-        return false;
+        return i == j;
     }
 }

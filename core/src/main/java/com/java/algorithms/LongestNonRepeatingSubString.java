@@ -14,7 +14,7 @@ public class LongestNonRepeatingSubString {
         //String str="mynameistechleadandiamthetechlead";
         //String str="iamthetopcoder";
         //String str="pwwkew";
-        System.out.println(findMaxNonRepeatingSubStringLength(str));;
+        System.out.println(findMaxNonRepeatingSubStringLength(str));
     }
 
     private static int findMaxNonRepeatingSubStringLength(String str) {

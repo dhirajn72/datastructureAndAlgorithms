@@ -27,8 +27,6 @@ public class PalindromeOneMistake {
         for (int i=deleted.length()-1;i>=0;i--){
             reversed.append(deleted.charAt(i));
         }
-        if (reversed.toString().equalsIgnoreCase(deleted.toString()))
-            return true;
-        return false;
+        return reversed.toString().equalsIgnoreCase(deleted.toString());
     }
 }

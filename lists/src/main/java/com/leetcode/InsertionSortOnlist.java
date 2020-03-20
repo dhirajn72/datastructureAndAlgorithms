@@ -2,8 +2,6 @@ package com.leetcode;
 
 import com.java.linkedlist.ListNode;
 
-import java.util.Arrays;
-
 /**
  * @author Dhiraj
  * @date 02/07/19

@@ -1,8 +1,6 @@
 package interview;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author Dhiraj

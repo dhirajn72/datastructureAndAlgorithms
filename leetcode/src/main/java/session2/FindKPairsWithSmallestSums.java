@@ -1,6 +1,7 @@
 package session2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Dhiraj

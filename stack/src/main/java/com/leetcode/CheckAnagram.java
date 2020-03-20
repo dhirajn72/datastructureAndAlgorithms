@@ -21,7 +21,7 @@ Output: false
         System.out.println(isAnagram("anagram","nagaram"));
         System.out.println(isAnagram("rat","tar"));
 
-        double x=(double)(-91283472332.00);
+        double x= -91283472332.00;
         System.out.println((int)x);
     }
 

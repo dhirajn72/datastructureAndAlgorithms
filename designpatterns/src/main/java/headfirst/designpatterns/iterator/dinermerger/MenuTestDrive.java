@@ -1,6 +1,6 @@
 package headfirst.designpatterns.iterator.dinermerger;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class MenuTestDrive {
 	public static void main(String args[]) {
@@ -43,7 +43,7 @@ public class MenuTestDrive {
 		// Exposing implementation
 		System.out.println("USING FOR LOOPS");
 		for (int i = 0; i < breakfastItems.size(); i++) {
-			MenuItem menuItem = (MenuItem)breakfastItems.get(i);
+			MenuItem menuItem = breakfastItems.get(i);
 			System.out.print(menuItem.getName());
 			System.out.println("\t\t" + menuItem.getPrice());
 			System.out.println("\t" + menuItem.getDescription());

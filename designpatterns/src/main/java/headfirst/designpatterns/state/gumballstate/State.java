@@ -2,10 +2,10 @@ package headfirst.designpatterns.state.gumballstate;
 
 public interface State {
  
-	public void insertQuarter();
-	public void ejectQuarter();
-	public void turnCrank();
-	public void dispense();
+	void insertQuarter();
+	void ejectQuarter();
+	void turnCrank();
+	void dispense();
 	
-	public void refill();
+	void refill();
 }

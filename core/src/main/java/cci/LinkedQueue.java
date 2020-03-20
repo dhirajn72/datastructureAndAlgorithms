@@ -1,8 +1,5 @@
 package cci;
 
-import java.util.Arrays;
-import java.util.EmptyStackException;
-
 /**
  * @author Dhiraj
  * @date 27/06/19
@@ -47,7 +44,7 @@ public class LinkedQueue {
     @Override
     public String toString() {
         StringBuilder builder= new StringBuilder("[");
-        if (size()==0){builder.append("]");return builder.toString();};
+        if (size()==0){builder.append("]");return builder.toString();}
         ListNode temp=front;
         while (temp!=null){
             builder.append(temp.getData()).append(",");

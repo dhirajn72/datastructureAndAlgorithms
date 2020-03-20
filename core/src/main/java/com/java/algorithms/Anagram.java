@@ -1,7 +1,5 @@
 package com.java.algorithms;
 
-import java.util.Scanner;
-
 /**
  * @author Dhiraj
  * @date 13/06/19

@@ -1,7 +1,5 @@
 package com.java.algorithms;
 
-import interview.Stream;
-
 import java.util.stream.IntStream;
 
 /**

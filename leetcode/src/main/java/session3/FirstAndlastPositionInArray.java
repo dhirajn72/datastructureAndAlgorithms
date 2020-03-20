@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class FirstAndlastPositionInArray {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(searchRange(new int[]{5,7,7,8,8,10},10)));;
-        System.out.println(Arrays.toString(searchRange(new int[]{2,2},2)));;
+        System.out.println(Arrays.toString(searchRange(new int[]{5,7,7,8,8,10},10)));
+        System.out.println(Arrays.toString(searchRange(new int[]{2,2},2)));
 
 
     }

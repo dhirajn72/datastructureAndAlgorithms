@@ -34,8 +34,6 @@ public class EvaluateExpression {
                 stack.push(str.charAt(i)); // [{(
             }
         }
-        if (stack.isEmpty())
-            return true;
-        return false;
+        return stack.isEmpty();
     }
 }

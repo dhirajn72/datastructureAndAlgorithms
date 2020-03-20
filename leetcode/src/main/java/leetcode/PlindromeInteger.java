@@ -14,6 +14,6 @@ public class PlindromeInteger {
             result=result+x%10;
             x=x/10;
         }
-        return x1==result?true:false;
+        return x1 == result;
     }
 }

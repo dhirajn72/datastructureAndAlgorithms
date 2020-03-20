@@ -1,7 +1,7 @@
 package session2;
 
 import leetcode.DataUtil;
-import leetcode.TreeNode;
+import leetcode.TreeNode_1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import java.util.List;
 public class PathSum {
 
     public static void main(String[] args) {
-        TreeNode root= DataUtil.getTreeData();
+        TreeNode_1 root= DataUtil.getTreeData();
         System.out.println(hasPathSum(root,20));
     }
 
 
-    public static boolean hasPathSum(TreeNode root, int sum) {
+    public static boolean hasPathSum(TreeNode_1 root, int sum) {
         if (root==null)return false;
         int[] arr=new int[100];
         List<List<Integer>> list= new ArrayList<>();
@@ -31,7 +31,7 @@ public class PathSum {
         return false;
     }
 
-    private  static void _getPaths(int[] arr, TreeNode root, int i, List<List<Integer>> list) {
+    private  static void _getPaths(int[] arr, TreeNode_1 root, int i, List<List<Integer>> list) {
         if (root==null)return;
         arr[i++]=root.val;
         if (root.left==null && root.right==null){

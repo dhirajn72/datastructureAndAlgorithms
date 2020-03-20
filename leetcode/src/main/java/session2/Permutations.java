@@ -1,7 +1,6 @@
 package session2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -11,7 +10,7 @@ import java.util.List;
  */
 public class Permutations {
     public static void main(String[] args) {
-        System.out.println(permute(new int[]{1, 2, 3}));;
+        System.out.println(permute(new int[]{1, 2, 3}));
     }
 
     public static List<List<Integer>> permute(int[] nums) {

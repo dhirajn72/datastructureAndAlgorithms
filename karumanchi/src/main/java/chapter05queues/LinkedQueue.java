@@ -1,7 +1,8 @@
 
 
 package chapter05queues;
-import chapter03linkedlists.*;
+
+import chapter03linkedlists.ListNode;
 
 public class LinkedQueue{
 	private int length;
