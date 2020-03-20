@@ -53,7 +53,7 @@ public class TreeOperations {
                 }
                 else {
                     list.add(new ArrayList<Integer>(integers));
-                    integers.clear();;
+                    integers.clear();
                     if (!q.isEmpty())
                         q.offer(null);
                 }
